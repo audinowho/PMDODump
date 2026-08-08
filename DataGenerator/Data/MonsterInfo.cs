@@ -1462,6 +1462,40 @@ namespace DataGenerator.Data
 
                     MonsterFormData formEntry = LoadForme(m_dbTLConnection, version, index, dexId, formId, entry.Name);
                     formEntry.Generation = genVersion(version);
+
+                    if (index == 128)
+                    {
+                        if (read > 1 && formEntry.FormName.DefaultText != entry.Name.DefaultText)
+                            throw new Exception("Form name updated; no need for hacky code");
+                        if (read == 2)
+                            formEntry.FormName.DefaultText = "Combat Breed " + entry.Name.DefaultText;
+                        else if (read == 3)
+                            formEntry.FormName.DefaultText = "Blaze Breed " + entry.Name.DefaultText;
+                        else if (read == 4)
+                            formEntry.FormName.DefaultText = "Aqua Breed " + entry.Name.DefaultText;
+                    }
+                    else if (index == 194)
+                    {
+                        if (read > 1 && formEntry.FormName.DefaultText != entry.Name.DefaultText)
+                            throw new Exception("Form name updated; no need for hacky code");
+                        if (read == 2)
+                            formEntry.FormName.DefaultText = "Paldean " + entry.Name.DefaultText;
+                    }
+                    else if (index == 964)
+                    {
+                        if (read > 1 && formEntry.FormName.DefaultText != entry.Name.DefaultText)
+                            throw new Exception("Form name updated; no need for hacky code");
+                        if (read == 2)
+                            formEntry.FormName.DefaultText = "Hero " + entry.Name.DefaultText;
+                    }
+                    else if (index == 999)
+                    {
+                        if (read > 1 && formEntry.FormName.DefaultText != entry.Name.DefaultText)
+                            throw new Exception("Form name updated; no need for hacky code");
+                        if (read == 2)
+                            formEntry.FormName.DefaultText = "Roaming " + entry.Name.DefaultText;
+                    }
+
                     if (Ratio == -1)
                     {
                         formEntry.GenderlessWeight = 8;
@@ -1530,6 +1564,13 @@ namespace DataGenerator.Data
                         formEntry.Temporary = true;
 
                     int addFormToIndex = entry.Forms.Count;
+
+                    //Slowbro galar should come before mega
+                    if (index == 80)
+                    {
+                        if (read == 3)
+                            addFormToIndex = 1;
+                    }
 
                     //vivillon meadow form should be considered standard
                     if (index == 666)

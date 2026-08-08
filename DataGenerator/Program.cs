@@ -192,30 +192,30 @@ namespace DataGenerator
 
                 if (itemPrep)
                 {
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
-                    LuaEngine.Instance.LoadScripts();
+                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
+                    LuaEngine.Instance.LoadScripts();
 
                     AutoItemInfo.CreateContentLists();
                 }
 
                 if (zonePrep)
                 {
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
-                    LuaEngine.Instance.LoadScripts();
+                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
+                    LuaEngine.Instance.LoadScripts();
 
                     ZoneInfo.CreateContentLists();
                 }
 
                 if (monsterPrep)
                 {
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
-                    LuaEngine.Instance.LoadScripts();
+                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
+                    LuaEngine.Instance.LoadScripts();
 
                     MonsterInfo.CreateContentLists();
                 }
@@ -223,10 +223,10 @@ namespace DataGenerator
                 if (loadStrings)
                 {
                     //we need the datamanager for this
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
-                    LuaEngine.Instance.LoadScripts();
+                    DataManager.InitInstance();
                     DataManager.Instance.InitData();
+                    LuaEngine.Instance.LoadScripts();
 
                     Localization.PrintDescribedStringTable(DataManager.DataType.Skill, DataManager.Instance.GetSkill);
                     Localization.PrintDescribedStringTable(DataManager.DataType.Intrinsic, DataManager.Instance.GetIntrinsic);
@@ -245,8 +245,8 @@ namespace DataGenerator
                 }
                 if (saveStrings)
                 {
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
+                    DataManager.InitInstance();
                     LuaEngine.Instance.LoadScripts();
                     //we need the datamanager for this
                     DataManager.Instance.InitData();
@@ -318,8 +318,8 @@ namespace DataGenerator
                         GraphicsManager.RebuildIndices(GraphicsManager.AssetType.All);
                     }
 
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
+                    DataManager.InitInstance();
                     LuaEngine.Instance.LoadScripts();
                     DataManager.Instance.LoadConversions();
                     RogueEssence.Dev.DevHelper.PrepareAssetConversion();
@@ -331,8 +331,8 @@ namespace DataGenerator
                     DiagManager.Instance.LogInfo("Beginning Reserialization");
                     //we need the datamanager for this, but only while data is hardcoded
                     //TODO: remove when data is no longer hardcoded
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
+                    DataManager.InitInstance();
                     LuaEngine.Instance.LoadScripts();
                     DataManager.Instance.LoadConversions();
 
@@ -360,8 +360,8 @@ namespace DataGenerator
                 {
                     //we need the datamanager for this, but only while data is hardcoded
                     //TODO: remove when data is no longer hardcoded
-                    DataManager.InitInstance();
                     LuaEngine.InitInstance();
+                    DataManager.InitInstance();
                     LuaEngine.Instance.LoadScripts();
                     DataManager.Instance.LoadConversions();
                     DataManager.InitDataDirs(PathMod.ModPath(""));
@@ -387,8 +387,8 @@ namespace DataGenerator
                     //dump = addTypeDependency(dump, DataManager.DataType.AI, DataManager.DataType.Zone);
 
                     {
-                        DataManager.InitInstance();
                         LuaEngine.InitInstance();
+                        DataManager.InitInstance();
                         LuaEngine.Instance.LoadScripts();
 
                         DataManager.Instance.LoadConversions();
@@ -470,8 +470,8 @@ namespace DataGenerator
                 if (dumpMin)
                 {
                     {
-                        DataManager.InitInstance();
                         LuaEngine.InitInstance();
+                        DataManager.InitInstance();
                         LuaEngine.Instance.LoadScripts();
 
                         DataInfo.AddEditorOps();

@@ -100,7 +100,7 @@ Galarian Rapidash	78	1		x		x	x	x		x			x	x	x	x	x	x	x		x	x	x	x					x
 Slowpoke	79	0	x		x	x						x		x																
 Galarian Slowpoke	79	1	x		x	x						x		x																
 Slowbro	80	0	x		x	x				x		x		x				x	x										x	
-Galarian Slowbro	80	2	x		x	x				x		x		x				x	x										x	
+Galarian Slowbro	80	1																												
 Magnemite	81	0	x	x		x			x																					
 Magneton	82	0		x		x			x																					
 Farfetch'd	83	0	x	x	x	x	x			x		x	x	x	x		x	x	x			x	x	x					x	
@@ -158,9 +158,9 @@ Electabuzz	125	0		x						x		x	x	x	x		x		x			x	x	x					x
 Magmar	126	0		x		x	x			x		x	x		x		x	x	x			x	x	x					x	
 Pinsir	127	0		x						x			x		x		x		x			x	x	x					x	
 Tauros	128	0		x						x			x	x	x		x	x	x			x	x	x					x	
-Tauros	128	1																						x						
-Tauros	128	2																						x						
-Tauros	128	3																						x						
+Combat Breed Tauros	128	1																						x						
+Blaze Breed Tauros	128	2																						x						
+Aqua Breed Tauros	128	3																						x						
 Magikarp	129	0	x	x	x	x					x	x		x	x	x		x												
 Gyarados	130	0		x						x			x		x		x					x								
 Lapras	131	0	x	x	x	x	x					x		x		x		x	x		x	x		x					x	
@@ -231,7 +231,7 @@ Sunkern	191	0	x		x	x					x	x		x						x				x
 Sunflora	192	0	x	x	x	x					x	x			x	x	x		x		x	x	x	x					x	
 Yanma	193	0	x		x	x					x	x		x			x		x				x	x					x	
 Wooper	194	0	x	x	x						x	x		x	x		x		x				x	x					x	
-Wooper	194	1																						x						
+Paldean Wooper	194	1																						x						
 Quagsire	195	0	x	x	x	x	x			x		x		x	x		x		x			x	x	x					x	
 Espeon	196	0	x	x		x	x					x				x		x	x		x	x	x	x					x	
 Umbreon	197	0	x	x		x	x			x		x	x	x			x	x	x		x	x	x	x					x	
@@ -1143,7 +1143,7 @@ Wugtrio	961	0																						x
 Bombirdier	962	0																						x						
 Finizen	963	0																						x						
 Palafin	964	0																						x						
-Palafin	964	1						x				x																		
+Hero Palafin	964	1						x				x																		
 Varoom	965	0																						x						
 Revavroom	966	0																						x						
 Cyclizar	967	0																						x						
@@ -1182,7 +1182,7 @@ Frigibax	996	0																						x
 Arctibax	997	0																						x						
 Baxcalibur	998	0																						x						
 Gimmighoul	999	0																						x					x	
-Gimmighoul	999	1																						x					x	
+Roaming Gimmighoul	999	1																						x					x	
 Gholdengo	1000	0																						x					x	
 Wo-Chien	1001	0																										x		
 Chien-Pao	1002	0																										x		
