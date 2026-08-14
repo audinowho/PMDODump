@@ -91,6 +91,8 @@ def convertToDocs(node, backup_node, friendly_name):
         wiki_section.append("|example=")
         wiki_section.append("<br><br>".join(examples))
 
+    wiki_section.append("|notes=")
+
     wiki_section.append("}}")
     return "\n".join(wiki_section), "\n".join(table_section)
 
@@ -178,7 +180,7 @@ def convertClassesToWiki(main_out_file, friendly_name, is_singleton, is_quick_re
 
 
     for out_file in out_files:
-        outfile_full = os.path.join("..", "DataAsset", "WIKI", out_file + ".txt")
+        outfile_full = os.path.join("..", "DataAsset", "WIKI", "Docs", out_file + ".txt")
         outfile_dir, _ = os.path.split(outfile_full)
         os.makedirs(outfile_dir, exist_ok=True)
         with open(outfile_full, 'w', encoding='utf-8') as txt:
@@ -211,7 +213,7 @@ def convertClassesToWiki(main_out_file, friendly_name, is_singleton, is_quick_re
         write_rows = table_files[out_file]
         if len(write_rows) == 0:
             continue
-        outfile_full = os.path.join("..", "DataAsset", "WIKI", out_file, "Table.txt")
+        outfile_full = os.path.join("..", "DataAsset", "WIKI", "Docs", out_file, "Table.txt")
         outfile_dir, _ = os.path.split(outfile_full)
         os.makedirs(outfile_dir, exist_ok=True)
         with open(outfile_full, 'w', encoding='utf-8') as txt:
