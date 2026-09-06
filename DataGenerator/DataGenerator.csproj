@@ -42,6 +42,7 @@
     <Compile Include="Data\Zones\ZoneInfoBase.cs" />
     <Compile Include="Data\Zones\ZoneInfo.cs" />
     <Compile Include="Dev\Localization.cs" />
+    <Compile Include="Dev\WikiUtils.cs" />
     <Compile Include="GenPath.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>

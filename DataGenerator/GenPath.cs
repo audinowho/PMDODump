@@ -7,6 +7,7 @@ namespace DataGenerator
     {
         public static string DATA_GEN_PATH = "DataAsset/";
 
+        public static string WIKI_PATH { get => DATA_GEN_PATH + "Wiki/"; }
         public static string TL_PATH { get => DATA_GEN_PATH + "String/"; }
         public static string ITEM_PATH { get => DATA_GEN_PATH + "Item/"; }
         public static string MONSTER_PATH { get => DATA_GEN_PATH + "Monster/"; }

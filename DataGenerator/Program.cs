@@ -34,6 +34,7 @@ namespace DataGenerator
             bool zonePrep = false;
             bool monsterPrep = false;
             bool saveStrings = false;
+            bool printWiki = false;
             DataManager.DataType convertIndices = DataManager.DataType.None;
             DataManager.DataType reserializeIndices = DataManager.DataType.None;
             DataManager.DataType dump = DataManager.DataType.None;
@@ -59,6 +60,8 @@ namespace DataGenerator
                         GenPath.DATA_GEN_PATH = args[ii + 1];
                         ii++;
                     }
+                    else if (args[ii].ToLower() == "-wiki")
+                        printWiki = true;
                     else if (args[ii] == "-index")
                     {
                         int jj = 1;
@@ -522,6 +525,26 @@ namespace DataGenerator
                 }
 
 
+
+                if (printWiki)
+                {
+                    //print the guidebook in the chosen language
+                    //we need the datamanager for this
+                    LuaEngine.InitInstance();
+                    DataManager.InitInstance();
+                    DataManager.Instance.InitData();
+                    LuaEngine.Instance.LoadScripts();
+                    WikiUtils.DeleteWiki();
+                    //just print a guidebook and exit
+                    WikiUtils.PrintMoveWiki();
+                    WikiUtils.PrintItemWiki();
+                    WikiUtils.PrintAbilityWiki();
+                    WikiUtils.PrintMonsterWiki();
+                    WikiUtils.PrintMonsterFamilyWiki();
+                    WikiUtils.PrintDungeonEncounterWiki();
+                    //StrategyGuide.PrintDungeonWiki();
+                    return;
+                }
             }
             catch (Exception ex)
             {
