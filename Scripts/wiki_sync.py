@@ -17,6 +17,23 @@ class WikiGen:
     def __init__(self, credentials):
         self._credentials = credentials
 
+    def request_with_retry(self, request):
+
+        wait_sec = 2
+        for i in range(6):
+            response = request()
+            if response.status_code == 403:
+                pass
+            elif response.status_code == 500:
+                pass
+            else:
+                break
+            print("{0} {1} returned {2}, retrying in {3}s".format(response.request.method, response.request.url, response.status_code, wait_sec))
+            time.sleep(wait_sec)
+            wait_sec *= 2
+
+        return response
+
     def uploadPage(self, dir, file, page, mergeF):
         headers = {
             'User-Agent': 'MediaWiki REST API docs examples/0.1 (https://www.mediawiki.org/wiki/API_talk:REST_API)',
@@ -25,7 +42,7 @@ class WikiGen:
         }
 
         url = 'https://wiki.pmdo.pmdcollab.org/wiki/rest.php/v1/page/' + page
-        response = requests.get(url)
+        response = self.request_with_retry(lambda: requests.get(url))
         if response.status_code == 404:
             last_version = 0
             last_content = ""
@@ -51,9 +68,9 @@ class WikiGen:
             json_dict['latest'] = { 'id': last_version }
 
         print('writing {0}'.format(page))
-        response = requests.put(url, headers=headers, data=json.dumps(json_dict))
+        response = self.request_with_retry(lambda: requests.put(url, headers=headers, data=json.dumps(json_dict)))
         response.raise_for_status()
-        #time.sleep(1)
+        time.sleep(0.5)
 
     def takeOurs(self, content, last_content):
         return content
