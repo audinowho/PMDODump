@@ -134,9 +134,25 @@ namespace DataGenerator.Dev
             }
         }
 
+        public static Dictionary<string, string> formNameOverrideDict = new Dictionary<string, string>()
+        {
+            {"unown_0", DataManager.Instance.GetMonster("unown").Name.ToLocal()},
+            {"shellos_0", DataManager.Instance.GetMonster("shellos").Name.ToLocal()},
+            {"gastrodon_0", DataManager.Instance.GetMonster("gastrodon").Name.ToLocal()},
+            {"basculin_0", DataManager.Instance.GetMonster("basculin").Name.ToLocal()},
+            {"darmanitan_0", DataManager.Instance.GetMonster("darmanitan").Name.ToLocal()},
+            {"flabebe_0", DataManager.Instance.GetMonster("flabebe").Name.ToLocal()},
+            {"floette_0", DataManager.Instance.GetMonster("floette").Name.ToLocal()},
+            {"florges_0", DataManager.Instance.GetMonster("florges").Name.ToLocal()},
+            {"furfrou_0", DataManager.Instance.GetMonster("furfrou").Name.ToLocal()},
+            {"xerneas_0", DataManager.Instance.GetMonster("xerneas").Name.ToLocal()},
+            {"minior_0", DataManager.Instance.GetMonster("minior").Name.ToLocal()},
+            {"minior_7", "Core " + DataManager.Instance.GetMonster("minior").Name.ToLocal()}
+        };
+        
         public static void PrintMonsterWiki()
         {
-            Dictionary<string, string> encounterDict = PrintEncounterWiki();
+            //Dictionary<string, string> encounterDict = PrintEncounterWiki();
 
             List<string> itemKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
             for (int ii = 0; ii < itemKeys.Count; ii++)
@@ -166,6 +182,11 @@ namespace DataGenerator.Dev
                             lastValidForm = form;
 
                             string formName = formData.FormName.DefaultText;
+                            string uniqueFormIdentifier = key + "_" + form.ToString();
+                            if (formNameOverrideDict.ContainsKey(uniqueFormIdentifier))
+                            {
+                                formName = formNameOverrideDict[uniqueFormIdentifier];
+                            }
                             string strippedName = formName.Replace(".", "").Replace(":", "").Replace("?", "Question Mark").Replace("!", "Exclamation Mark").Replace("%", " Percent").Replace(" ", "_");
 
 
@@ -266,6 +287,7 @@ namespace DataGenerator.Dev
                             if (!stats_completed) // Check for duplicate form name and append form number as a fallback
                                 stats_completed = WriteToWiki(strippedName + "_" + form + "/Stats", statsFileContent);
 
+                            /*
                             // Write locations entry
                             if (encounterDict.ContainsKey(formName))
                             { 
@@ -286,6 +308,7 @@ namespace DataGenerator.Dev
                                     }
                                 }
                             }
+                            */
                         }
                     }
                 }
@@ -456,6 +479,7 @@ namespace DataGenerator.Dev
             // Get a list of first-form Pokemon to serve as the evolution tree's roots
             List<string> itemKeys = DataManager.Instance.DataIndices[DataManager.DataType.Monster].GetOrderedKeys(true);
             List<MonsterData> firstFormMonsters = new List<MonsterData>();
+            List<string> firstFormMonsterIDs = new List<string>();
             for (int ii = 0; ii < itemKeys.Count; ii++)
             {
                 string key = itemKeys[ii];
@@ -467,6 +491,7 @@ namespace DataGenerator.Dev
                         if (entry.IndexNum > 0)
                         {
                             firstFormMonsters.Add(entry);
+                            firstFormMonsterIDs.Add(key);
                         }
                     }
                 }
@@ -478,6 +503,7 @@ namespace DataGenerator.Dev
             for (int ii = 0; ii < firstFormMonsters.Count; ii++)
             {
                 List<List<MonsterFormData>> monsterFamilyData = new List<List<MonsterFormData>>();
+                List<List<string>> monsterFormIDData = new List<List<string>>();
 
                 // Get the base form
                 MonsterData startingMonster = firstFormMonsters[ii];
@@ -498,30 +524,43 @@ namespace DataGenerator.Dev
                         lastValidForm = form;
 
                         List<MonsterFormData> currentEvolutionBranch = new List<MonsterFormData>();
+                        List<string> currentBranchFormIDs = new List<string>();
                         currentEvolutionBranch.Add((MonsterFormData)startingMonster.Forms[form]);
+                        currentBranchFormIDs.Add(firstFormMonsterIDs[ii] + "_" + form.ToString());
 
                         // Get list of valid evolutions
-                        List<MonsterFormData> validEvolutions = StrategyGuide.EvaluateMonsterEvolution(startingMonster, form, startingMonster.Promotions);
-                        for (int validEvolutionIndex = 0; validEvolutionIndex < validEvolutions.Count; validEvolutionIndex++)
+                        Dictionary<string, MonsterFormData> validEvolutions = StrategyGuide.EvaluateMonsterEvolution(startingMonster, form, startingMonster.Promotions);
+                        foreach (string monsterFormID in validEvolutions.Keys)
                         {
                             singleStageFamily = false;
-                            MonsterFormData currentEvolution = validEvolutions[validEvolutionIndex];
+                            MonsterFormData currentEvolution = validEvolutions[monsterFormID];
                             if (currentEvolution.Released)
                             {
                                 if (currentEvolutionBranch.IndexOf(currentEvolution) == -1)
                                 {
                                     currentEvolutionBranch.Add(currentEvolution);
+                                    currentBranchFormIDs.Add(monsterFormID);
                                 }
                             }
                         }
 
                         // Add this branch of the family tree to the family list
                         monsterFamilyData.Add(currentEvolutionBranch);
+                        monsterFormIDData.Add(currentBranchFormIDs);
                     }
+                }
+
+                // Create redirects for family members
+                string firstFormStrippedName = startingMonster.Name.DefaultText;
+                firstFormStrippedName = firstFormStrippedName.Replace(".", "").Replace(":", "").Replace("?", "Question Mark").Replace("!", "Exclamation Mark").Replace("%", " Percent").Replace(" ", "_");
+                if (!singleStageFamily)
+                {
+                    firstFormStrippedName += "_family";
                 }
 
                 // Keep track of names that have already been used in the data structure
                 List<String> namesAlreadyUsed = new List<string>();
+                // List of monster names to make a redirect for
                 List<String> redirectNames = new List<string>();
                 int currentFormNumber = 0;
 
@@ -530,16 +569,22 @@ namespace DataGenerator.Dev
 
                 for (int evolutionBranchIndex = 0; evolutionBranchIndex < monsterFamilyData.Count; evolutionBranchIndex++)
                 {
-                    // Create tabs for each evolution branch
-                    fileContent += "\r\n\r\n<tabs>";
-
+                    fileContent += "\r\n\r\n<tabber class=\"mw-collapsible\">";
                     // For each Pokemon in the branch, add a tab for it
-                    for(int familyMemberIndex = 0; familyMemberIndex < monsterFamilyData[evolutionBranchIndex].Count; familyMemberIndex++)
+                    for (int familyMemberIndex = 0; familyMemberIndex < monsterFamilyData[evolutionBranchIndex].Count; familyMemberIndex++)
                     {
                         MonsterFormData currentMonsterForm = monsterFamilyData[evolutionBranchIndex][familyMemberIndex];
 
                         string formName = currentMonsterForm.FormName.DefaultText;
+                        //Console.WriteLine(monsterFormIDData[evolutionBranchIndex][familyMemberIndex]);
+                        if (formNameOverrideDict.ContainsKey(monsterFormIDData[evolutionBranchIndex][familyMemberIndex]))
+                        {
+                            formName = formNameOverrideDict[monsterFormIDData[evolutionBranchIndex][familyMemberIndex]];
+                        }
                         string strippedName = formName.Replace(".", "").Replace(":", "").Replace("?", "Question Mark").Replace("!", "Exclamation Mark").Replace("%", " Percent").Replace(" ", "_");
+
+                        //Console.WriteLine(formName);
+                        //Console.WriteLine(monsterFormIDData[evolutionBranchIndex][familyMemberIndex]);
 
                         if (namesAlreadyUsed.Contains(strippedName))
                         {
@@ -550,31 +595,19 @@ namespace DataGenerator.Dev
                         {
                             currentFormNumber = 0;
                         }
-
-                        fileContent += ("\r\n<tab name=\"" + formName + "\">{{:" + strippedName + "/Data|PokemonInfobox}}</tab>");
+                        fileContent += "\r\n|-|" + formName + "=";
+                        fileContent += "\r\n{{:" + strippedName + "/Data|PokemonInfobox}}";
 
                         namesAlreadyUsed.Add(strippedName);
                         redirectNames.Add(formName);
                     }
 
-                    // End the tab
-                    fileContent += "\r\n</tabs>";
+                    // End the tabber
+                    fileContent += "\r\n</tabber>";
                 }
-                /*
-                foreach (string nameUsed in namesAlreadyUsed)
-                {
-                    Console.WriteLine(nameUsed);
-                }
-                */
                 fileContent += "\r\n";
 
                 // Write to file
-                string firstFormStrippedName = startingMonster.Name.DefaultText;
-                firstFormStrippedName = firstFormStrippedName.Replace(".", "").Replace(":", "").Replace("?", "Question Mark").Replace("!", "Exclamation Mark").Replace("%", " Percent").Replace(" ", "_");
-                if (!singleStageFamily)
-                {
-                    firstFormStrippedName += "_family";
-                }
 
                 bool completed = WriteToWiki(firstFormStrippedName, fileContent);
                 if (!completed) // Check for duplicate form name and append form number as a fallback
@@ -591,8 +624,19 @@ namespace DataGenerator.Dev
                         }
                         else
                         {
-                            WriteToWiki(namesAlreadyUsed[redirectNameIndex], "#REDIRECT [[" + firstFormStrippedName.Replace("_", " ") + "#" + redirectNames[redirectNameIndex] + "]]");
+                            WriteToWiki(namesAlreadyUsed[redirectNameIndex], "#REDIRECT [[" + firstFormStrippedName.Replace("_", " ") + "#tabber-" + redirectNames[redirectNameIndex].Replace(" ", "_") + "]]");
                         }
+                    }
+                }
+
+                // Create redirects for other family members
+                foreach (List<string> monsterFormIDList in monsterFormIDData)
+                {
+                    foreach (string monsterFormID in monsterFormIDList)
+                    {
+                        MonsterData redirectMonster = DataManager.Instance.GetMonster(monsterFormID.Substring(0, monsterFormID.Length - 2));
+                        string redirectMonsterName = redirectMonster.Name.ToLocal();
+                        WriteToWiki(redirectMonster.Name.ToLocal(), "#REDIRECT [[" + firstFormStrippedName.Replace("_", " ") + "#tabber-" + redirectMonsterName.Replace(" ", "_") + "]]");
                     }
                 }
             }
