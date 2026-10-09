@@ -156,7 +156,7 @@ namespace DataGenerator.Dev
                         bool formIsCosmetic = false;
                         if (form > 0)
                         {
-                            formIsCosmetic = StrategyGuide.EvaluateCosmeticForm(entry, form, lastValidForm);
+                            formIsCosmetic = EvaluateCosmeticForm(entry, form, lastValidForm);
                         }
                         // Console.WriteLine(localName + "_" + form + ": " + formIsCosmetic);
 
@@ -490,7 +490,7 @@ namespace DataGenerator.Dev
                     bool formIsCosmetic = false;
                     if (form > 0)
                     {
-                        formIsCosmetic = StrategyGuide.EvaluateCosmeticForm(startingMonster, form, lastValidForm);
+                        formIsCosmetic = EvaluateCosmeticForm(startingMonster, form, lastValidForm);
                     }
                     if (!formIsCosmetic)
                     {
@@ -501,7 +501,7 @@ namespace DataGenerator.Dev
                         currentEvolutionBranch.Add((MonsterFormData)startingMonster.Forms[form]);
 
                         // Get list of valid evolutions
-                        List<MonsterFormData> validEvolutions = StrategyGuide.EvaluateMonsterEvolution(startingMonster, form, startingMonster.Promotions);
+                        List<MonsterFormData> validEvolutions = EvaluateMonsterEvolution(startingMonster, form, startingMonster.Promotions);
                         for (int validEvolutionIndex = 0; validEvolutionIndex < validEvolutions.Count; validEvolutionIndex++)
                         {
                             singleStageFamily = false;
@@ -598,6 +598,106 @@ namespace DataGenerator.Dev
             }
         }
 
+        public static List<MonsterFormData> EvaluateMonsterEvolution(MonsterData startingMonster, int baseForm, List<PromoteBranch> evolutionBranches)
+        {
+            List<MonsterFormData> validEvolutionForms = new List<MonsterFormData>();
+
+            for (int evolutionBranchIndex = 0; evolutionBranchIndex < evolutionBranches.Count; evolutionBranchIndex++)
+            {
+                PromoteBranch evolutionBranch = evolutionBranches[evolutionBranchIndex];
+                MonsterData evolvedMonster = DataManager.Instance.GetMonster(evolutionBranch.Result);
+                int lastValidForm = 0;
+
+                for (int formIndex = 0; formIndex < evolvedMonster.Forms.Count; formIndex++)
+                {
+                    BaseMonsterForm evolvedForm = evolvedMonster.Forms[formIndex];
+
+                    if (evolvedForm.PromoteForm == baseForm)
+                    {
+                        // Check if this form is purely cosmetic
+                        bool formIsCosmetic = false;
+                        if (formIndex > 0)
+                        {
+                            formIsCosmetic = EvaluateCosmeticForm(evolvedMonster, formIndex, lastValidForm);
+                        }
+                        if (!formIsCosmetic)
+                        {
+                            validEvolutionForms.Add((MonsterFormData)evolvedForm);
+                            lastValidForm = formIndex;
+                        }
+
+                        // Check this monster's evolved forms
+                        List<PromoteBranch> secondEvolutionBranches = evolvedMonster.Promotions;
+
+                        for (int secondEvolutionBranchIndex = 0; secondEvolutionBranchIndex < secondEvolutionBranches.Count; secondEvolutionBranchIndex++)
+                        {
+                            PromoteBranch secondEvolutionBranch = secondEvolutionBranches[secondEvolutionBranchIndex];
+                            MonsterData secondEvolvedMonster = DataManager.Instance.GetMonster(secondEvolutionBranch.Result);
+                            int lastValidSecondForm = 0;
+
+                            for (int secondFormIndex = 0; secondFormIndex < secondEvolvedMonster.Forms.Count; secondFormIndex++)
+                            {
+                                BaseMonsterForm secondEvolvedForm = secondEvolvedMonster.Forms[secondFormIndex];
+                                if (secondEvolvedForm.PromoteForm == baseForm)
+                                {
+                                    // Check if this form is purely cosmetic
+                                    bool secondFormIsCosmetic = false;
+                                    if (secondFormIndex > 0)
+                                    {
+                                        secondFormIsCosmetic = EvaluateCosmeticForm(secondEvolvedMonster, secondFormIndex, lastValidSecondForm);
+                                    }
+                                    if (!secondFormIsCosmetic)
+                                    {
+                                        validEvolutionForms.Add((MonsterFormData)secondEvolvedForm);
+                                        lastValidSecondForm = secondFormIndex;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return validEvolutionForms;
+        }
+
+
+        public static bool EvaluateCosmeticForm(MonsterData evaluatedMonster, int evaluatedFormIndex, int baseFormIndex = 0)
+        {
+            // Check if this form is purely cosmetic
+            bool formIsCosmetic = false;
+            MonsterFormData baseEvolvedData = (MonsterFormData)evaluatedMonster.Forms[baseFormIndex];
+            MonsterFormData evolvedData = (MonsterFormData)evaluatedMonster.Forms[evaluatedFormIndex];
+
+            // Compare types to see if they're identical
+            bool identicalElements = false;
+            if ((baseEvolvedData.Element1 == evolvedData.Element1) && (baseEvolvedData.Element2 == evolvedData.Element2))
+            {
+                identicalElements = true;
+            }
+
+            // Compare abilities to see if they're identical
+            bool identicalAbilities = false;
+            if ((baseEvolvedData.Intrinsic1 == evolvedData.Intrinsic1) && (baseEvolvedData.Intrinsic2 == evolvedData.Intrinsic2) && (baseEvolvedData.Intrinsic3 == evolvedData.Intrinsic3))
+            {
+                identicalAbilities = true;
+            }
+
+            // Compare stats to see if they're identical
+            bool identicalStats = false;
+
+            if ((baseEvolvedData.BaseAtk == evolvedData.BaseAtk) && (baseEvolvedData.BaseDef == evolvedData.BaseDef) && (baseEvolvedData.BaseMAtk == evolvedData.BaseMAtk) && (baseEvolvedData.BaseMDef == evolvedData.BaseMDef) && (baseEvolvedData.BaseSpeed == evolvedData.BaseSpeed))
+            {
+                identicalStats = true;
+            }
+
+            if (identicalElements && identicalAbilities && identicalStats)
+            {
+                formIsCosmetic = true;
+            }
+
+            return formIsCosmetic;
+        }
 
         public static void PrintMoveWiki()
         {
@@ -1587,6 +1687,7 @@ namespace DataGenerator.Dev
 
             return currentSpawnData;
         }
+
 
     }
 }
