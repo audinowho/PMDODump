@@ -101,7 +101,7 @@ namespace DataGenerator.Data
 
         public static void AddFloorData<T>(MapGen<T> layout, string music, int timeLimit, Map.SightRange tileSight, Map.SightRange charSight) where T : BaseMapGenContext
         {
-            MapDataStep<T> floorData = new MapDataStep<T>(music, timeLimit, tileSight, charSight);
+            MapDataStep<T> floorData = new MapDataStep<T>(music, timeLimit, tileSight, charSight, -1, -1);
             layout.GenSteps.Add(PR_FLOOR_DATA, floorData);
         }
 
