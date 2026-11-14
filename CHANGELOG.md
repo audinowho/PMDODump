@@ -7,3 +7,4 @@
 * Modding: Map warps are more easily replaced for ground maps
 * Modding: Expose ways to modify music and sound pitch in real time.
 * Modding: Custom dungeon restrictions
+* Modding: Ability to set Sight Range and SightShape
