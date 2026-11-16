@@ -120,12 +120,12 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Claw		diglett	50	True	True			diglett Claw	diglett's Family	D	*	2*	033: AcuteSniffer																			
 2* Ore		diglett	50	True	True			diglett Ore	diglett's Family	E	*	3*	000: None																			
 2* Pebble		dugtrio	50	False	True			dugtrio Pebble	dugtrio's Family	F	*	3*	000: None																			
-0* None	Noble Scarf	persian	52	True	True			Noble Scarf	persian's Family	A	*	5*	086: StatusOnCategoryUse		focus_energy			001: Physical														
-3* Ruff		persian	52	True	True			persian Ruff	persian's Family	B	*	4*	055: CloseDodge																			
-1* Claw		meowth	52	True	True			meowth Claw	meowth's Family	C	*	1*	033: AcuteSniffer																			
-1* Fang		meowth	52	True	True			meowth Fang	meowth's Family	D	*	2*	084: HitAndRun																			
-0* None	Coin Charm	meowth	52	True	True			Coin Charm	meowth's Family	E	*	3*	063: CoinWatcher																			
-0* None	Insight Rock	persian	52	False	True			Insight Rock	persian's Family	F	*	3*	064: HiddenStairFinder																			
+3* Ruff		perrserker	52	True	False	meowth, perrserker		perrserker Ruff	meowth, perrserker	A	CDE	5*	086: StatusOnCategoryUse		focus_energy			001: Physical														
+0* None	Noble Scarf	persian	52	True	False	meowth, persian		Noble Scarf	meowth, persian	B	CDE	5*	086: StatusOnCategoryUse		focus_energy			003: Status														
+1* Claw		meowth	52	True	True			meowth Claw	meowth's Family	C		1*	033: AcuteSniffer																			
+1* Fang		meowth	52	True	True			meowth Fang	meowth's Family	D		2*	084: HitAndRun																			
+0* None	Coin Charm	meowth	52	True	True			Coin Charm	meowth's Family	E	CD	3*	063: CoinWatcher																			
+0* None	Insight Rock	meowth	52	False	True			Insight Rock	meowth's Family	F	CDE	3*	064: HiddenStairFinder																			
 0* None	Paddle Scarf	golduck	54	True	True			Paddle Scarf	golduck's Family	A	*	5*	037: WarpPayback	electric																		
 3* Hat		golduck	54	True	True			golduck Hat	golduck's Family	B	*	4*	057: SelfCurer																			
 1* Card		psyduck	54	True	True			psyduck Card	psyduck's Family	C	*	1*	053: ClutchPerformer																			
@@ -198,12 +198,12 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Card		magnemite	81	True	True			magnemite Card	magnemite's Family	D	*	2*	027: SpecialAttacker																			
 0* None		magnemite	81	True	True				magnemite's Family	E	*	3*	000: None																			
 0* None		magneton	81	False	True				magneton's Family	F	*	3*	000: None																			
-0* None	Bullseye Bow	sirfetchd	83	True	True			Bullseye Bow	sirfetchd's Family	A	*	5*	093: AttackRangeInWeather							clear												
-3* Poncho		sirfetchd	83	True	True			sirfetchd Poncho	sirfetchd's Family	B	*	4*	041: TrapBuster																			
+0* None	Bullseye Bow	farfetchd	83	True	True			Bullseye Bow	farfetchd's Family	A	*	5*	093: AttackRangeInWeather							clear												
+3* Poncho		farfetchd	83	True	True			farfetchd Poncho	farfetchd's Family	B	*	4*	041: TrapBuster																			
 1* Card		farfetchd	83	True	True			farfetchd Card	farfetchd's Family	C	*	1*	084: HitAndRun																			
 2* Charm		farfetchd	83	True	True			farfetchd Charm	farfetchd's Family	D	*	2*	018: DoubleAttacker																			
 2* Medal		farfetchd	83	True	True			farfetchd Medal	farfetchd's Family	E	*	3*	069: GapProber																			
-2* Crest		sirfetchd	83	False	True			sirfetchd Crest	sirfetchd's Family	F	*	3*	000: None																			
+2* Crest		farfetchd	83	False	True			farfetchd Crest	farfetchd's Family	F	*	3*	000: None																			
 0* None	Fight Torc	dodrio	84	True	True			Fight Torc	dodrio's Family	A	*	5*	086: StatusOnCategoryUse		focus_energy			003: Status														
 3* Hat		dodrio	84	True	True			dodrio Hat	dodrio's Family	B	*	4*	047: Celebrate																			
 1* Claw		doduo	84	True	True			doduo Claw	doduo's Family	C	*	1*	018: DoubleAttacker																			
@@ -214,7 +214,7 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 3* Float		dewgong	86	True	True			dewgong Float	dewgong's Family	B	*	4*	054: DistanceDodge																			
 1* Dew		seel	86	True	True			seel Dew	seel's Family	C	*	1*	014: DeepBreather																			
 1* Fang		seel	86	True	True			seel Fang	seel's Family	D	*	2*	051: BarrageGuard																			
-0* None		seel	86	True	True				seel's Family	E	*	3*	000: None																			
+2* Seal		seel	86	True	True			seel Seal	seel's Family	E	*	3*	096: TypeBodyguard	ice																		
 0* None		dewgong	86	False	True				dewgong's Family	F	*	3*	000: None																			
 0* None	Slimy Bow	muk	88	True	True			Slimy Bow	muk's Family	A	*	5*	037: WarpPayback	ground																		
 3* Scarf		muk	88	True	True			muk Scarf	muk's Family	B	*	4*	068: TypedAttack																			
@@ -679,13 +679,13 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Horn		heracross	214	True	False			heracross Horn	heracross	D	*	2*	052: BetterOdds																			
 2* Guard		heracross	214	True	False			heracross Guard	heracross	E	*	3*	005: SuperCrit																			
 0* None		heracross	214	False	False				heracross	F	*	3*	000: None																			
-0* None	Ruin Armlet	weavile	215	True	True			Ruin Armlet	weavile's Family	A	*	5*	078: EndureType	fighting																		
-3* Scarf		weavile	215	True	True			weavile Scarf	weavile's Family	B	*	4*	022: PressurePlus																			
-1* Card		sneasel	215	True	True			sneasel Card	sneasel's Family	C	*	1*	094: PPSaver																			
-1* Claw		sneasel	215	True	True			sneasel Claw	sneasel's Family	D	*	2*	088: DoubleDash																			
-0* None	Dusk Jewel	sneasel	215	True	True			Dusk Jewel	sneasel's Family	E	*	3*	000: None																			
-0* None	Vile Tag	weavile	215	False	True			Vile Tag	weavile's Family	F	*	3*	000: None																			
-0* None	Hiber Scarf	ursaring	216	True	True			Hiber Scarf	ursaring's Family	A	*	5*	085: StatusOnCategoryHit		yawning			003: Status														
+0* None	Dire Armlet	sneasler	215	True	False	sneasel, sneasler		Dire Armlet	sneasel, sneasler	A	CDE	5*	078: EndureType	psychic																		
+0* None	Ruin Armlet	weavile	215	True	False	sneasel, weavile		Ruin Armlet	sneasel, weavile	B	CDE	4*	078: EndureType	fighting																		
+1* Card		sneasel	215	True	True			sneasel Card	sneasel's Family	C		1*	094: PPSaver																			
+1* Claw		sneasel	215	True	True			sneasel Claw	sneasel's Family	D		2*	088: DoubleDash																			
+0* None	Dusk Jewel	sneasel	215	True	True			Dusk Jewel	sneasel's Family	E	CD	3*	022: PressurePlus																			
+0* None	Vile Tag	sneasel	215	False	True			Vile Tag	sneasel's Family	F		3*	000: None																			
+0* None	Hiber Scarf	ursaluna	216	True	True			Hiber Scarf	ursaluna's Family	A	*	5*	085: StatusOnCategoryHit		yawning			003: Status														
 3* Bow		ursaring	216	True	True			ursaring Bow	ursaring's Family	B	*	4*	056: FastHealer																			
 1* Card		teddiursa	216	True	True			teddiursa Card	teddiursa's Family	C	*	1*	033: AcuteSniffer																			
 1* Claw		teddiursa	216	True	True			teddiursa Claw	teddiursa's Family	D	*	2*	015: PracticeSwinger																			
@@ -745,12 +745,12 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Card		phanpy	231	True	True			phanpy Card	phanpy's Family	D	*	2*	019: MasterHurler																			
 2* Tag		phanpy	231	True	True			phanpy Tag	phanpy's Family	E	*	3*	069: GapProber																			
 2* Crest		donphan	231	False	True			donphan Crest	donphan's Family	F	*	3*	000: None																			
-0* None	Delusion Bow	stantler	234	True	False			Delusion Bow	stantler	A	*	5*	085: StatusOnCategoryHit		flinch			003: Status														
-3* Crown		stantler	234	True	False			stantler Crown	stantler	B	*	4*	058: StatusMirror																			
+0* None	Delusion Bow	wyrdeer	234	True	False			Delusion Bow	wyrdeer	A	*	5*	085: StatusOnCategoryHit		flinch			003: Status														
+3* Crown		wyrdeer	234	True	False			wyrdeer Crown	wyrdeer	B	*	4*	058: StatusMirror																			
 1* Beam		stantler	234	True	False			stantler Beam	stantler	C	*	1*	084: HitAndRun																			
 1* Card		stantler	234	True	False			stantler Card	stantler	D	*	2*	018: DoubleAttacker																			
 2* Crest		stantler	234	True	False			stantler Crest	stantler	E	*	3*	069: GapProber																			
-0* None		stantler	234	False	False				stantler	F	*	3*	000: None																			
+0* None		wyrdeer	234	False	False				wyrdeer	F	*	3*	000: None																			
 0* None	Paint Scarf	smeargle	235	True	False			Paint Scarf	smeargle	A	*	5*	013: PPBoost						5													
 3* Hat		smeargle	235	True	False			smeargle Hat	smeargle	B	*	4*	041: TrapBuster																			
 1* Card		smeargle	235	True	False			smeargle Card	smeargle	C	*	1*	094: PPSaver																			
@@ -819,7 +819,7 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Fang		poochyena	261	True	True			poochyena Fang	poochyena's Family	D	*	2*	023: StatusOnAttack		exposed																	
 0* None		poochyena	261	True	True				poochyena's Family	E	*	3*	000: None																			
 0* None		mightyena	261	False	True				mightyena's Family	F	*	3*	000: None																			
-3* Ruff		linoone	263	True	True			linoone Ruff	linoone's Family	A	*	5*	012: GapFiller																			
+3* Ruff		obstagoon	263	True	True			obstagoon Ruff	obstagoon's Family	A	*	5*	012: GapFiller																			
 3* Scarf		linoone	263	True	True			linoone Scarf	linoone's Family	B	*	4*	038: LungeAttack																			
 1* Card		zigzagoon	263	True	True			zigzagoon Card	zigzagoon's Family	C	*	1*	084: HitAndRun																			
 1* Hair		zigzagoon	263	True	True			zigzagoon Hair	zigzagoon's Family	D	*	2*	088: DoubleDash																			
@@ -1472,113 +1472,131 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Hair		victini	494	True	False			victini Hair	victini	D	*	2*	083: Gratitude																			
 2* Charm		victini	494	True	False			victini Charm	victini	E	*	3*	046: RoyalVeil																			
 0* None		victini	494	False	False				victini	F	*	2-3*	000: None																			
-3* Blade		serperior	495	True	True			serperior Blade	serperior's Family	A	*	5*	101: ChanceStatOnTypeHit	grass	mod_accuracy				25													
+0* None	Regal Blade	serperior	495	True	True			Regal Blade	serperior's Family	A	*	5*	101: ChanceStatOnTypeHit	grass	mod_accuracy				25													
 2* Brooch		servine	495	True	True			servine Brooch	servine's Family	B	*	4*	038: LungeAttack																			
 1* Fang		snivy	495	True	True			snivy Fang	snivy's Family	C	*	1-2*	069: GapProber																			
 1* Leaf		snivy	495	True	True			snivy Leaf	snivy's Family	D	*	1-2*	104: WeaknessDodge	flying																		
 1* Shoot		snivy	495	True	True			snivy Shoot	snivy's Family	E	*	2-3*	084: HitAndRun																			
 0* None		servine	495	False	True				servine's Family	F	*	2-3*	000: None																			
-3* Belt		emboar	498	True	True			emboar Belt	emboar's Family	A	*	5*	078: EndureType	psychic																		
+0* None	Brawn Belt	emboar	498	True	True			Brawn Belt	emboar's Family	A	*	5*	078: EndureType	psychic																		
 2* Guard		pignite	498	True	True			pignite Guard	pignite's Family	B	*	4*	028: StatusImmune		flinch																	
 1* Hair		tepig	498	True	True			tepig Hair	tepig's Family	C	*	1-2*	050: Anchor																			
 1* Fang		tepig	498	True	True			tepig Fang	tepig's Family	D	*	1-2*	039: WideAttack																			
 2* Rock		tepig	498	True	True			tepig Rock	tepig's Family	E	*	2-3*	024: KnockbackOnAttack																			
 0* None		pignite	498	False	True				pignite's Family	F	*	2-3*	000: None																			
-3* Armor		samurott	501	True	True			samurott Armor	samurott's Family	A	*	5*	079: SpikeDropper					001: Physical														
+0* None	Shatter Armor	samurott	501	True	True			Shatter Armor	samurott's Family	A	*	5*	079: SpikeDropper					001: Physical														
 2* Crest		dewott	501	True	True			dewott Crest	dewott's Family	B	*	4*	047: Celebrate																			
 1* Dew		oshawott	501	True	True			oshawott Dew	oshawott's Family	C	*	1-2*	014: DeepBreather																			
 1* Fang		oshawott	501	True	True			oshawott Fang	oshawott's Family	D	*	1-2*	015: PracticeSwinger																			
 2* Medal		oshawott	501	True	True			oshawott Medal	oshawott's Family	E	*	2-3*	005: SuperCrit																			
 0* None		dewott	501	False	True				dewott's Family	F	*	2-3*	000: None																			
-3* Glasses		watchog	504	True	True			watchog Glasses	watchog's Family	A	*	5*	035: XRay																			
+0* None	Sentry Glasses	watchog	504	True	True			Sentry Glasses	watchog's Family	A	*	5*	035: XRay																			
 3* Belt		watchog	504	True	True			watchog Belt	watchog's Family	B	*	4*	073: CheekPouch																			
 1* Claw		patrat	504	True	True			patrat Claw	patrat's Family	C	*	1*	026: SureHitAttacker																			
 1* Beam		patrat	504	True	True			patrat Beam	patrat's Family	D	*	2*	023: StatusOnAttack		flinch				35													
 2* Guard		patrat	504	True	True			patrat Guard	patrat's Family	E	*	3*	028: StatusImmune		sleep																	
 0* None		watchog	504	False	True				watchog's Family	F	*	2-3*	000: None																			
-3* Coat		stoutland	506	True	True			stoutland Coat	stoutland's Family	A	*	5*	078: EndureType	fighting																		
+0* None	Loyal Mantle	stoutland	506	True	True			Loyal Mantle	stoutland's Family	A	*	5*	078: EndureType	fighting																		
 2* Heart		herdier	506	True	True			herdier Heart	herdier's Family	B	*	4*	095: CelebrateCure																			
 1* Tail		lillipup	506	True	True			lillipup Tail	lillipup's Family	C	*	1*	084: HitAndRun																			
 1* Fang		lillipup	506	True	True			lillipup Fang	lillipup's Family	D	*	2*	033: AcuteSniffer																			
 2* Tag		lillipup	506	True	True			lillipup Tag	lillipup's Family	E	*	3*	071: WeatherProtection																			
 0* None		herdier	506	False	True				herdier's Family	F	*	2-3*	000: None																			
-3* Choker		liepard	509	True	True			liepard Choker	liepard's Family	A	*	5*	101: ChanceStatOnTypeHit	dark	mod_attack				25													
+0* None	Fierce Choker	liepard	509	True	True			Fierce Choker	liepard's Family	A	*	5*	101: ChanceStatOnTypeHit	dark	mod_attack				25													
 2* Earring		liepard	509	True	True			liepard Earring	liepard's Family	B	*	4*	038: LungeAttack																			
 1* Fang		purrloin	509	True	True			purrloin Fang	purrloin's Family	C	*	1-2*	062: FastFriend																			
 1* Hair		purrloin	509	True	True			purrloin Hair	purrloin's Family	D	*	1-2*	084: HitAndRun																			
 1* Claw		purrloin	509	True	True			purrloin Claw	purrloin's Family	E	*	2-3*	005: SuperCrit																			
 0* None		liepard	509	False	True				liepard's Family	F	*	2-3*	000: None																			
+0* None		simisage	511	False	True				simisage's Family	A	*	5*	000: None																			
+0* None		simisage	511	False	True				simisage's Family	B	*	4*	000: None																			
+0* None		pansage	511	False	True				pansage's Family	C	*	1-2*	000: None																			
+0* None		pansage	511	False	True				pansage's Family	D	*	1-2*	000: None																			
+0* None		pansage	511	False	True				pansage's Family	E	*	2-3*	000: None																			
+0* None		simisage	511	False	True				simisage's Family	F	*	2-3*	000: None																			
 0* None		pansear	513	False	False				pansear	A	*	5*	000: None																			
 0* None		pansear	513	False	False				pansear	B	*	4*	000: None																			
 0* None		pansear	513	False	False				pansear	C	*	1-2*	000: None																			
 0* None		pansear	513	False	False				pansear	D	*	1-2*	000: None																			
 0* None		pansear	513	False	False				pansear	E	*	2-3*	000: None																			
 0* None		pansear	513	False	False				pansear	F	*	2-3*	000: None																			
+0* None		panpour	515	False	False				panpour	A	*	5*	000: None																			
+0* None		panpour	515	False	False				panpour	B	*	4*	000: None																			
+0* None		panpour	515	False	False				panpour	C	*	1-2*	000: None																			
+0* None		panpour	515	False	False				panpour	D	*	1-2*	000: None																			
+0* None		panpour	515	False	False				panpour	E	*	2-3*	000: None																			
+0* None		panpour	515	False	False				panpour	F	*	2-3*	000: None																			
 3* Veil		musharna	517	True	True			musharna Veil	musharna's Family	A	*	5*	099: SweetDreams																			
 0* None	Dream Mist	musharna	517	True	True			Dream Mist	musharna's Family	B	*	4*	010: AllTerrain																			
 1* Song		munna	517	True	True			munna Song	munna's Family	C	*	1-2*	014: DeepBreather																			
 1* Card		munna	517	True	True			munna Card	munna's Family	D	*	1-2*	030: SleepWalker																			
 2* Heart		munna	517	True	True			munna Heart	munna's Family	E	*	2-3*	057: SelfCurer																			
 0* None		musharna	517	False	True				musharna's Family	F	*	2-3*	000: None																			
-0* None		pidove	519	False	False				pidove	A	*	5*	000: None																			
-0* None		pidove	519	False	False				pidove	B	*	4*	000: None																			
-0* None		pidove	519	False	False				pidove	C	*	1-2*	000: None																			
-0* None		pidove	519	False	False				pidove	D	*	1-2*	000: None																			
-0* None		pidove	519	False	False				pidove	E	*	2-3*	000: None																			
+0* None		pidove	519	True	False				pidove	A	*	5*	000: None																			
+0* None		pidove	519	True	False				pidove	B	*	4*	000: None																			
+0* None		pidove	519	True	False				pidove	C	*	1-2*	000: None																			
+0* None		pidove	519	True	False				pidove	D	*	1-2*	000: None																			
+0* None		pidove	519	True	False				pidove	E	*	2-3*	000: None																			
 0* None		pidove	519	False	False				pidove	F	*	2-3*	000: None																			
-0* None		roggenrola	524	False	False				roggenrola	A	*	5*	000: None																			
-0* None		roggenrola	524	False	False				roggenrola	B	*	4*	000: None																			
-0* None		roggenrola	524	False	False				roggenrola	C	*	1-2*	000: None																			
-0* None		roggenrola	524	False	False				roggenrola	D	*	1-2*	000: None																			
-0* None		roggenrola	524	False	False				roggenrola	E	*	2-3*	000: None																			
-0* None		roggenrola	524	False	False				roggenrola	F	*	2-3*	000: None																			
-3* Scarf		swoobat	527	True	True			swoobat Scarf	swoobat's Family	A	*	5*	085: StatusOnCategoryHit		confuse			002: Magical														
+0* None		gigalith	524	True	False				gigalith	A	*	5*	000: None																			
+0* None		boldore	524	True	False				boldore	B	*	4*	000: None																			
+0* None		roggenrola	524	True	False				roggenrola	C	*	1-2*	000: None																			
+0* None		roggenrola	524	True	False				roggenrola	D	*	1-2*	000: None																			
+0* None		roggenrola	524	True	False				roggenrola	E	*	2-3*	000: None																			
+0* None		boldore	524	False	False				boldore	F	*	2-3*	000: None																			
+0* None	Dizzy Scarf	swoobat	527	True	True			Dizzy Scarf	swoobat's Family	A	*	5*	085: StatusOnCategoryHit		confuse			002: Magical														
 2* Seal		swoobat	527	True	True			swoobat Seal	swoobat's Family	B	*	4*	091: ProjectileAttack																			
 1* Song		woobat	527	True	True			woobat Song	woobat's Family	C	*	1-2*	027: SpecialAttacker																			
 1* Wing		woobat	527	True	True			woobat Wing	woobat's Family	D	*	1-2*	083: Gratitude																			
 2* Heart		woobat	527	True	True			woobat Heart	woobat's Family	E	*	2-3*	035: XRay																			
 2* Charm		swoobat	527	False	True			swoobat Charm	swoobat's Family	F	*	2-3*	005: SuperCrit																			
-0* None		excadrill	529	False	True				excadrill's Family	A	*	5*	000: None																			
-0* None		excadrill	529	False	True				excadrill's Family	B	*	4*	000: None																			
-0* None		drilbur	529	False	True				drilbur's Family	C	*	1-2*	000: None																			
-0* None		drilbur	529	False	True				drilbur's Family	D	*	1-2*	000: None																			
-0* None		drilbur	529	False	True				drilbur's Family	E	*	2-3*	000: None																			
+0* None	Mining Drill	excadrill	529	True	True			Mining Drill	excadrill's Family	A	*	5*	011: Wallbreaker																			
+2* Crest		excadrill	529	True	True			excadrill Crest	excadrill's Family	B	*	4*	041: TrapBuster																			
+1* Claw		drilbur	529	True	True			drilbur Claw	drilbur's Family	C	*	1-2*	084: HitAndRun																			
+1* Hair		drilbur	529	True	True			drilbur Hair	drilbur's Family	D	*	1-2*	051: BarrageGuard																			
+2* Guard		drilbur	529	True	True			drilbur Guard	drilbur's Family	E	*	2-3*	055: CloseDodge																			
 0* None		excadrill	529	False	True				excadrill's Family	F	*	2-3*	000: None																			
 3* Scarf		audino	531	True	False			audino Scarf	audino	A	*	5*	081: DeepBreatherPlus																			
-3* Tiara		audino	531	True	False			audino Tiara	audino	B	*	4*	046: RoyalVeil																			
+3* Tiara	Nurse Tiara	audino	531	True	False			audino Tiara	audino	B	*	4*	046: RoyalVeil																			
 1* Song		audino	531	True	False			audino Song	audino	C	*	1-2*	053: ClutchPerformer																			
 1* Card		audino	531	True	False			audino Card	audino	D	*	1-2*	062: FastFriend																			
 2* Guard		audino	531	True	False			audino Guard	audino	E	*	2-3*	056: FastHealer																			
 0* None		audino	531	False	False				audino	F	*	2-3*	000: None																			
-0* None		timburr	532	False	False				timburr	A	*	5*	000: None																			
-0* None		timburr	532	False	False				timburr	B	*	4*	000: None																			
-0* None		timburr	532	False	False				timburr	C	*	1-2*	000: None																			
-0* None		timburr	532	False	False				timburr	D	*	1-2*	000: None																			
-0* None		timburr	532	False	False				timburr	E	*	2-3*	000: None																			
-0* None		timburr	532	False	False				timburr	F	*	2-3*	000: None																			
-3* Armlet		seismitoad	535	True	True			seismitoad Armlet	seismitoad's Family	A	*	5*	085: StatusOnCategoryHit		embargo			001: Physical														
+0* None	Crush Belt	conkeldurr	532	True	False			Crush Belt	conkeldurr	A	*	5*	040: ExplosiveAttack																			
+2* Medal		gurdurr	532	True	False			gurdurr Medal	gurdurr	B	*	4*	041: TrapBuster																			
+1* Twig		timburr	532	True	False			timburr Twig	timburr	C	*	1-2*	015: PracticeSwinger																			
+1* Sweat		timburr	532	True	False			timburr Sweat	timburr	D	*	1-2*	014: DeepBreather																			
+2* Heart		timburr	532	True	False			timburr Heart	timburr	E	*	2-3*	028: StatusImmune		flinch																	
+0* None		gurdurr	532	False	False				gurdurr	F	*	2-3*	000: None																			
+0* None	Quake Armlet	seismitoad	535	True	True			Quake Armlet	seismitoad's Family	A	*	5*	085: StatusOnCategoryHit		embargo			001: Physical														
 2* Charm		palpitoad	535	True	True			palpitoad Charm	palpitoad's Family	B	*	4*	074: HealInWater																			
 1* Song		tympole	535	True	True			tympole Song	tympole's Family	C	*	1-2*	084: HitAndRun																			
 1* Foam		tympole	535	True	True			tympole Foam	tympole's Family	D	*	1-2*	059: StatMirror																			
 2* Guard		tympole	535	True	True			tympole Guard	tympole's Family	E	*	2-3*	042: ExplosionGuard																			
 0* None		palpitoad	535	False	True				palpitoad's Family	F	*	2-3*	000: None																			
-3* Mantle		leavanny	540	True	True			leavanny Mantle	leavanny's Family	A	*	5*	078: EndureType	fire																		
+0* None		sawk	539	False	False				sawk	A	*	5*	000: None																			
+0* None		sawk	539	False	False				sawk	B	*	4*	000: None																			
+0* None		sawk	539	False	False				sawk	C	*	1-2*	000: None																			
+0* None		sawk	539	False	False				sawk	D	*	1-2*	000: None																			
+0* None		sawk	539	False	False				sawk	E	*	2-3*	000: None																			
+0* None		sawk	539	False	False				sawk	F	*	2-3*	000: None																			
+0* None	Woven Mantle	leavanny	540	True	True			Woven Mantle	leavanny's Family	A	*	5*	078: EndureType	fire																		
 3* Shield		swadloon	540	True	True			swadloon Shield	swadloon's Family	B	*	4*	086: StatusOnCategoryUse		quick_guard			003: Status														
 1* Leaf		sewaddle	540	True	True			sewaddle Leaf	sewaddle's Family	C	*	1-2*	029: StatDropImmune			001: Attack																
 1* Dew		sewaddle	540	True	True			sewaddle Dew	sewaddle's Family	D	*	1-2*	006: NVECrit																			
 2* Aroma		sewaddle	540	True	True			sewaddle Aroma	sewaddle's Family	E	*	2-3*	088: DoubleDash																			
 2* Guard		swadloon	540	False	True			swadloon Guard	swadloon's Family	F	*	2-3*	055: CloseDodge																			
-0* None		scolipede	543	False	True				scolipede's Family	A	*	5*	000: None																			
-0* None		whirlipede	543	False	True				whirlipede's Family	B	*	4*	000: None																			
-0* None		venipede	543	False	True				venipede's Family	C	*	1-2*	000: None																			
-0* None		venipede	543	False	True				venipede's Family	D	*	1-2*	000: None																			
-0* None		venipede	543	False	True				venipede's Family	E	*	2-3*	000: None																			
+0* None	Venom Spike	scolipede	543	True	True			Venom Spike	scolipede's Family	A	*	5*	100: ChanceStatusOnTypeHit	bug	poison				35													
+2* Dust		whirlipede	543	True	True			whirlipede Dust	whirlipede's Family	B	*	4*	041: TrapBuster																			
+1* Horn		venipede	543	True	True			venipede Horn	venipede's Family	C	*	1-2*	103: TypeBecomesCategory	poison				001: Physical														
+1* Claw		venipede	543	True	True			venipede Claw	venipede's Family	D	*	1-2*	060: ErraticAttacker																			
+2* Guard		venipede	543	True	True			venipede Guard	venipede's Family	E	*	2-3*	096: TypeBodyguard	fighting																		
 0* None		whirlipede	543	False	True				whirlipede's Family	F	*	2-3*	000: None																			
-0* None		cottonee	546	False	False				cottonee	A	*	5*	000: None																			
-0* None		cottonee	546	False	False				cottonee	B	*	4*	000: None																			
-0* None		cottonee	546	False	False				cottonee	C	*	1-2*	000: None																			
-0* None		cottonee	546	False	False				cottonee	D	*	1-2*	000: None																			
-0* None		cottonee	546	False	False				cottonee	E	*	2-3*	000: None																			
+0* None		cottonee	546	True	False				cottonee	A	*	5*	000: None																			
+0* None		cottonee	546	True	False				cottonee	B	*	4*	000: None																			
+0* None		cottonee	546	True	False				cottonee	C	*	1-2*	000: None																			
+0* None		cottonee	546	True	False				cottonee	D	*	1-2*	000: None																			
+0* None		cottonee	546	True	False				cottonee	E	*	2-3*	000: None																			
 0* None		cottonee	546	False	False				cottonee	F	*	2-3*	000: None																			
 0* None	Flower Crown	lilligant	548	True	True			Flower Crown	lilligant's Family	A	*	5*	089: StatusSplash																			
 2* Crest		lilligant	548	True	True			lilligant Crest	lilligant's Family	B	*	4*	046: RoyalVeil																			
@@ -1586,11 +1604,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Leaf		petilil	548	True	True			petilil Leaf	petilil's Family	D	*	2*	104: WeaknessDodge	flying																		
 1* Seed		petilil	548	True	True			petilil Seed	petilil's Family	E	*	3*	023: StatusOnAttack		leech_seed																	
 0* None		lilligant	548	False	True				lilligant's Family	F	*	2-3*	000: None																			
-0* None		basculegion	550	False	True				basculegion's Family	A	*	5*	000: None																			
-0* None		basculegion	550	False	True				basculegion's Family	B	*	4*	000: None																			
-0* None		basculin	550	False	True				basculin's Family	C	*	1-2*	000: None																			
-0* None		basculin	550	False	True				basculin's Family	D	*	1-2*	000: None																			
-0* None		basculin	550	False	True				basculin's Family	E	*	2-3*	000: None																			
+0* None		basculegion	550	True	True				basculegion's Family	A	*	5*	000: None																			
+0* None		basculegion	550	True	True				basculegion's Family	B	*	4*	000: None																			
+0* None		basculin	550	True	True				basculin's Family	C	*	1-2*	000: None																			
+0* None		basculin	550	True	True				basculin's Family	D	*	1-2*	000: None																			
+0* None		basculin	550	True	True				basculin's Family	E	*	2-3*	000: None																			
 0* None		basculegion	550	False	True				basculegion's Family	F	*	2-3*	000: None																			
 3* Glasses		krookodile	551	True	True			krookodile Glasses	krookodile's Family	A	*	5*	035: XRay																			
 3* Cape		krokorok	551	True	True			krokorok Cape	krokorok's Family	B	*	4*	080: NoStatusInWeather							sandstorm												
@@ -1598,47 +1616,53 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Tail		sandile	551	True	True			sandile Tail	sandile's Family	D	*	2*	033: AcuteSniffer																			
 2* Jaw		sandile	551	True	True			sandile Jaw	sandile's Family	E	*	3*	049: ExcessiveForce																			
 0* None		krokorok	551	False	True				krokorok's Family	F	*	2-3*	000: None																			
-0* None		darmanitan	554	False	True				darmanitan's Family	A	*	5*	000: None																			
-0* None		darmanitan	554	False	True				darmanitan's Family	B	*	4*	000: None																			
-0* None		darumaka	554	False	True				darumaka's Family	C	*	1-2*	000: None																			
-0* None		darumaka	554	False	True				darumaka's Family	D	*	1-2*	000: None																			
-0* None		darumaka	554	False	True				darumaka's Family	E	*	2-3*	000: None																			
+0* None		darmanitan	554	True	True				darmanitan's Family	A	*	5*	000: None																			
+0* None		darmanitan	554	True	True				darmanitan's Family	B	*	4*	000: None																			
+0* None		darumaka	554	True	True				darumaka's Family	C	*	1-2*	000: None																			
+0* None		darumaka	554	True	True				darumaka's Family	D	*	1-2*	000: None																			
+0* None		darumaka	554	True	True				darumaka's Family	E	*	2-3*	000: None																			
 0* None		darmanitan	554	False	True				darmanitan's Family	F	*	2-3*	000: None																			
-3* Poncho		maractus	556	True	False			maractus Poncho	maractus	A	*	5*	080: NoStatusInWeather							sandstorm												
+0* None	Dancing Poncho	maractus	556	True	False			Dancing Poncho	maractus	A	*	5*	080: NoStatusInWeather							sandstorm												
 3* Mask		maractus	556	True	False			maractus Mask	maractus	B	*	4*	071: WeatherProtection																			
 1* Seed		maractus	556	True	False			maractus Seed	maractus	C	*	1-2*	039: WideAttack																			
 1* Thorn		maractus	556	True	False			maractus Thorn	maractus	D	*	1-2*	006: NVECrit																			
 0* None		maractus	556	True	False				maractus	E	*	2-3*	000: None																			
 0* None		maractus	556	False	False				maractus	F	*	2-3*	000: None																			
+0* None		dwebble	557	False	False				dwebble	A	*	5*	000: None																			
+0* None		dwebble	557	False	False				dwebble	B	*	4*	000: None																			
+0* None		dwebble	557	False	False				dwebble	C	*	1-2*	000: None																			
+0* None		dwebble	557	False	False				dwebble	D	*	1-2*	000: None																			
+0* None		dwebble	557	False	False				dwebble	E	*	2-3*	000: None																			
+0* None		dwebble	557	False	False				dwebble	F	*	2-3*	000: None																			
 3* Poncho		scrafty	559	True	True			scrafty Poncho	scrafty's Family	A	*	5*	067: SecondSTAB	poison																		
 2* Crest		scrafty	559	True	True			scrafty Crest	scrafty's Family	B	*	4*	049: ExcessiveForce	none																		
 1* Tail		scraggy	559	True	True			scraggy Tail	scraggy's Family	C	*	1-2*	055: CloseDodge																			
 1* Fang		scraggy	559	True	True			scraggy Fang	scraggy's Family	D	*	1-2*	051: BarrageGuard																			
 2* Guard		scraggy	559	True	True			scraggy Guard	scraggy's Family	E	*	2-3*	096: TypeBodyguard	dark																		
 0* None		scrafty	559	False	True				scrafty's Family	F	*	2-3*	000: None																			
-0* None		sigilyph	561	False	False				sigilyph	A	*	5*	000: None																			
-0* None		sigilyph	561	False	False				sigilyph	B	*	4*	000: None																			
-0* None		sigilyph	561	False	False				sigilyph	C	*	1-2*	000: None																			
-0* None		sigilyph	561	False	False				sigilyph	D	*	1-2*	000: None																			
-0* None		sigilyph	561	False	False				sigilyph	E	*	2-3*	000: None																			
+0* None	Relic Specs	sigilyph	561	True	False			Relic Specs	sigilyph	A	*	5*	035: XRay																			
+0* None	Relic Curse	sigilyph	561	True	False			Relic Curse	sigilyph	B	*	4*	072: RemoveAbilityAttack																			
+1* Card		sigilyph	561	True	False			sigilyph Card	sigilyph	C	*	1-2*	027: SpecialAttacker																			
+1* Wing		sigilyph	561	True	False			sigilyph Wing	sigilyph	D	*	1-2*	051: BarrageGuard																			
+0* None	Relic Shield	sigilyph	561	True	False			Relic Shield	sigilyph	E	*	2-3*	058: StatusMirror																			
 0* None		sigilyph	561	False	False				sigilyph	F	*	2-3*	000: None																			
-3* Mask		cofagrigus	562	True	True			cofagrigus Mask	cofagrigus's Family	A	*	5*	004: TypeBulldozer	ghost			normal															
-2* Seal		cofagrigus	562	True	True			cofagrigus Seal	cofagrigus's Family	B	*	4*	010: AllTerrain																			
-1* Song		yamask	562	True	True			yamask Song	yamask's Family	C	*	2*	016: MisfortuneMirror																			
-1* Card		yamask	562	True	True			yamask Card	yamask's Family	D	*	1*	014: DeepBreather																			
-2* Shard		yamask	562	True	True			yamask Shard	yamask's Family	E	*	3*	048: Absorption																			
-0* None		cofagrigus	562	False	True				cofagrigus's Family	F	*	2-3*	000: None																			
-3* Armlet		archeops	566	True	True			archeops Armlet	archeops's Family	A	*	5*	067: SecondSTAB	dragon																		
+0* None	Pharaoh Sigil	runerigus	562	True	False	yamask, runerigus		Pharaoh Sigil	yamask, runerigus	A	EF	5*	004: TypeBulldozer	ground			flying															
+3* Mask		cofagrigus	562	True	False	yamask, cofagrigus		cofagrigus Mask	yamask, cofagrigus	B	EF	4*	004: TypeBulldozer	ghost			normal															
+1* Song		yamask	562	True	True			yamask Song	yamask's Family	C		2*	016: MisfortuneMirror																			
+1* Card		yamask	562	True	True			yamask Card	yamask's Family	D		1*	014: DeepBreather																			
+2* Shard		yamask	562	True	True			yamask Shard	yamask's Family	E	CD	3*	048: Absorption																			
+2* Dust		yamask	562	True	True			yamask Dust	yamask's Family	F	CD	2-3*	010: AllTerrain																			
+0* None	Feather Collar	archeops	566	True	True			Feather Collar	archeops's Family	A	*	5*	067: SecondSTAB	dragon																		
 2* Crest		archeops	566	True	True			archeops Crest	archeops's Family	B	*	4*	097: StatOnCategoryUse		mod_speed			001: Physical	25													
 1* Claw		archen	566	True	True			archen Claw	archen's Family	C	*	1*	006: NVECrit																			
 1* Wing		archen	566	True	True			archen Wing	archen's Family	D	*	2*	022: PressurePlus																			
 2* Rock		archen	566	True	True			archen Rock	archen's Family	E	*	3*	049: ExcessiveForce																			
 0* None		archeops	566	False	True				archeops's Family	F	*	2-3*	000: None																			
-0* None		garbodor	568	False	True				garbodor's Family	A	*	5*	000: None																			
-0* None		garbodor	568	False	True				garbodor's Family	B	*	4*	000: None																			
-0* None		trubbish	568	False	True				trubbish's Family	C	*	1-2*	000: None																			
-0* None		trubbish	568	False	True				trubbish's Family	D	*	1-2*	000: None																			
-0* None		trubbish	568	False	True				trubbish's Family	E	*	2-3*	000: None																			
+3* Helmet		garbodor	568	True	True			garbodor Helmet	garbodor's Family	A	*	5*	012: GapFiller																			
+2* Dust		garbodor	568	True	True			garbodor Dust	garbodor's Family	B	*	4*	023: StatusOnAttack		poison																	
+1* Mud		trubbish	568	True	True			trubbish Mud	trubbish's Family	C	*	1-2*	061: ErraticDefender																			
+1* Claw		trubbish	568	True	True			trubbish Claw	trubbish's Family	D	*	1-2*	022: PressurePlus																			
+2* Aroma		trubbish	568	True	True			trubbish Aroma	trubbish's Family	E	*	2-3*	016: MisfortuneMirror																			
 0* None		garbodor	568	False	True				garbodor's Family	F	*	2-3*	000: None																			
 3* Collar		zoroark	570	True	True			zoroark Collar	zoroark's Family	A	*	5*	007: Nontraitor																			
 3* Ruff		zoroark	570	True	True			zoroark Ruff	zoroark's Family	B	*	3-4*	054: DistanceDodge																			
@@ -1646,85 +1670,115 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 3* Cape		zorua	570	True	True			zorua Cape	zorua's Family	D	*	4*	071: WeatherProtection																			
 2* Heart		zorua	570	True	True			zorua Heart	zorua's Family	E	*	2-3*	083: Gratitude																			
 1* Claw		zoroark	570	False	True			zoroark Claw	zoroark's Family	F	*	3*	102: ChanceStatusOnCategoryHit		confuse			001: Physical	25													
-0* None		cinccino	572	False	True				cinccino's Family	A	*	5*	000: None																			
-0* None		cinccino	572	False	True				cinccino's Family	B	*	4*	000: None																			
-0* None		minccino	572	False	True				minccino's Family	C	*	1-2*	000: None																			
-0* None		minccino	572	False	True				minccino's Family	D	*	1-2*	000: None																			
-0* None		minccino	572	False	True				minccino's Family	E	*	2-3*	000: None																			
+0* None	Sweep Scarf	cinccino	572	True	True			Sweep Scarf	cinccino's Family	A	*	5*	007: Nontraitor																			
+2* Charm		cinccino	572	True	True			cinccino Charm	cinccino's Family	B	*	4*	055: CloseDodge																			
+1* Hair		minccino	572	True	True			minccino Hair	minccino's Family	C	*	1-2*	084: HitAndRun																			
+1* Tail		minccino	572	True	True			minccino Tail	minccino's Family	D	*	1-2*	039: WideAttack																			
+2* Ring		minccino	572	True	True			minccino Ring	minccino's Family	E	*	2-3*	041: TrapBuster																			
 0* None		cinccino	572	False	True				cinccino's Family	F	*	2-3*	000: None																			
-3* Apron		gothitelle	574	True	True			gothitelle Apron	gothitelle's Family	A	*	5*	082: WeaknessReduce	dark																		
+0* None	Astral Dress	gothitelle	574	True	True			Astral Dress	gothitelle's Family	A	*	5*	082: WeaknessReduce	dark																		
 2* Brooch		gothorita	574	True	True			gothorita Brooch	gothorita's Family	B	*	4*	097: StatOnCategoryUse		mod_evasion			002: Magical	25													
 1* Hair		gothita	574	True	True			gothita Hair	gothita's Family	C	*	1*	027: SpecialAttacker																			
 3* Bow		gothita	574	True	True			gothita Bow	gothita's Family	D	*	1-2*	016: MisfortuneMirror																			
 2* Ring		gothita	574	True	True			gothita Ring	gothita's Family	E	*	2-3*	029: StatDropImmune			004: MDef																
 0* None		gothorita	574	False	True				gothorita's Family	F	*	2-3*	000: None																			
-3* Glasses		reuniclus	577	True	True			reuniclus Glasses	reuniclus's Family	A	*	5*	101: ChanceStatOnTypeHit	psychic	mod_special_defense				25													
+0* None	Nucleus Band	reuniclus	577	True	True			Nucleus Band	reuniclus's Family	A	*	5*	101: ChanceStatOnTypeHit	psychic	mod_special_defense				25													
 2* Jewel		duosion	577	True	True			duosion Jewel	duosion's Family	B	*	4*	085: StatusOnCategoryHit		immobilized			003: Status														
 1* Dew		solosis	577	True	True			solosis Dew	solosis's Family	C	*	1-2*	008: WaterTerrain																			
 1* Beam		solosis	577	True	True			solosis Beam	solosis's Family	D	*	1-2*	059: StatMirror																			
 2* Seal		solosis	577	True	True			solosis Seal	solosis's Family	E	*	2-3*	009: LavaTerrain																			
 0* None		duosion	577	False	True				duosion's Family	F	*	2-3*	000: None																			
-3* Veil		vanilluxe	582	True	True			vanilluxe Veil	vanilluxe's Family	A	*	5*	093: AttackRangeInWeather							hail												
+0* None		swanna	580	False	True				swanna's Family	A	*	5*	000: None																			
+0* None		swanna	580	False	True				swanna's Family	B	*	4*	000: None																			
+0* None		ducklett	580	False	True				ducklett's Family	C	*	1-2*	000: None																			
+0* None		ducklett	580	False	True				ducklett's Family	D	*	1-2*	000: None																			
+0* None		ducklett	580	False	True				ducklett's Family	E	*	2-3*	000: None																			
+0* None		swanna	580	False	True				swanna's Family	F	*	2-3*	000: None																			
+3* Hat		vanilluxe	582	True	True			vanilluxe Hat	vanilluxe's Family	A	*	5*	093: AttackRangeInWeather							hail												
 2* Shard		vanillish	582	True	True			vanillish Shard	vanillish's Family	B	*	4*	010: AllTerrain																			
 1* Gasp		vanillite	582	True	True			vanillite Gasp	vanillite's Family	C	*	1*	015: PracticeSwinger																			
 1* Dew		vanillite	582	True	True			vanillite Dew	vanillite's Family	D	*	2*	104: WeaknessDodge	fire																		
 2* Ore		vanillite	582	True	True			vanillite Ore	vanillite's Family	E	*	3*	069: GapProber																			
 0* None		vanillish	582	False	True				vanillish's Family	F	*	2-3*	000: None																			
-3* Veil		sawsbuck	585	True	True			sawsbuck Veil	sawsbuck's Family	A	*	5*	082: WeaknessReduce	ice																		
+0* None	Season Veil	sawsbuck	585	True	True			Season Veil	sawsbuck's Family	A	*	5*	082: WeaknessReduce	ice																		
 2* Aroma		sawsbuck	585	True	True			sawsbuck Aroma	sawsbuck's Family	B	*	4*	095: CelebrateCure																			
 1* Branch		deerling	585	True	True			deerling Branch	deerling's Family	C	*	1*	103: TypeBecomesCategory	grass				001: Physical														
 1* Hair		deerling	585	True	True			deerling Hair	deerling's Family	D	*	2*	051: BarrageGuard																			
 2* Guard		deerling	585	True	True			deerling Guard	deerling's Family	E	*	3*	071: WeatherProtection																			
 0* None		sawsbuck	585	False	True				sawsbuck's Family	F	*	2-3*	000: None																			
-3* Cape		emolga	587	True	False			emolga Cape	emolga	A	*	5*	100: ChanceStatusOnTypeHit	flying	paralyze				35													
+0* None	Static Cape	emolga	587	True	False			Static Cape	emolga	A	*	5*	100: ChanceStatusOnTypeHit	flying	paralyze				35													
 2* Dust		emolga	587	True	False			emolga Dust	emolga	B	*	4*	054: DistanceDodge																			
 1* Card		emolga	587	True	False			emolga Card	emolga	C	*	1*	061: ErraticDefender																			
 1* Fang		emolga	587	True	False			emolga Fang	emolga	D	*	1-2*	018: DoubleAttacker																			
 0* None		emolga	587	True	False				emolga	E	*	2-3*	000: None																			
 0* None		emolga	587	False	False				emolga	F	*	2-3*	000: None																			
-0* None		foongus	590	False	False				foongus	A	*	5*	000: None																			
-0* None		foongus	590	False	False				foongus	B	*	4*	000: None																			
-0* None		foongus	590	False	False				foongus	C	*	1-2*	000: None																			
-0* None		foongus	590	False	False				foongus	D	*	1-2*	000: None																			
-0* None		foongus	590	False	False				foongus	E	*	2-3*	000: None																			
+0* None		escavalier	588	False	True				escavalier's Family	A	*	5*	000: None																			
+0* None		escavalier	588	False	True				escavalier's Family	B	*	4*	000: None																			
+0* None		karrablast	588	False	True				karrablast's Family	C	*	1-2*	000: None																			
+0* None		karrablast	588	False	True				karrablast's Family	D	*	1-2*	000: None																			
+0* None		karrablast	588	False	True				karrablast's Family	E	*	2-3*	000: None																			
+0* None		escavalier	588	False	True				escavalier's Family	F	*	2-3*	000: None																			
+0* None		foongus	590	True	False				foongus	A	*	5*	000: None																			
+0* None		foongus	590	True	False				foongus	B	*	4*	000: None																			
+0* None		foongus	590	True	False				foongus	C	*	1-2*	000: None																			
+0* None		foongus	590	True	False				foongus	D	*	1-2*	000: None																			
+0* None		foongus	590	True	False				foongus	E	*	2-3*	000: None																			
 0* None		foongus	590	False	False				foongus	F	*	2-3*	000: None																			
-3* Armor		ferrothorn	597	True	True			ferrothorn Armor	ferrothorn's Family	A	*	5*	078: EndureType	fire																		
+0* None		alomomola	594	False	False				alomomola	A	*	5*	000: None																			
+0* None		alomomola	594	False	False				alomomola	B	*	4*	000: None																			
+0* None		alomomola	594	False	False				alomomola	C	*	1-2*	000: None																			
+0* None		alomomola	594	False	False				alomomola	D	*	1-2*	000: None																			
+0* None		alomomola	594	False	False				alomomola	E	*	2-3*	000: None																			
+0* None		alomomola	594	False	False				alomomola	F	*	2-3*	000: None																			
+0* None	Spike Armor	ferrothorn	597	True	True			Spike Armor	ferrothorn's Family	A	*	5*	078: EndureType	fire																		
 3* Shield		ferrothorn	597	True	True			ferrothorn Shield	ferrothorn's Family	B	*	4*	096: TypeBodyguard	poison																		
 1* Thorn		ferroseed	597	True	True			ferroseed Thorn	ferroseed's Family	C	*	1*	015: PracticeSwinger																			
 1* Card		ferroseed	597	True	True			ferroseed Card	ferroseed's Family	D	*	2*	051: BarrageGuard																			
 2* Ore		ferroseed	597	True	True			ferroseed Ore	ferroseed's Family	E	*	3*	017: CounterBasher																			
 0* None		ferrothorn	597	False	True				ferrothorn's Family	F	*	2-3*	000: None																			
-0* None		beheeyem	605	False	True				beheeyem's Family	A	*	5*	000: None																			
-0* None		beheeyem	605	False	True				beheeyem's Family	B	*	4*	000: None																			
-0* None		elgyem	605	False	True				elgyem's Family	C	*	1-2*	000: None																			
-0* None		elgyem	605	False	True				elgyem's Family	D	*	1-2*	000: None																			
-0* None		elgyem	605	False	True				elgyem's Family	E	*	2-3*	000: None																			
+0* None		klinklang	599	False	True				klinklang's Family	A	*	5*	000: None																			
+0* None		klang	599	False	True				klang's Family	B	*	4*	000: None																			
+0* None		klink	599	False	True				klink's Family	C	*	1-2*	000: None																			
+0* None		klink	599	False	True				klink's Family	D	*	1-2*	000: None																			
+0* None		klink	599	False	True				klink's Family	E	*	2-3*	000: None																			
+0* None		klang	599	False	True				klang's Family	F	*	2-3*	000: None																			
+0* None		eelektross	602	False	True				eelektross's Family	A	*	5*	000: None																			
+0* None		eelektrik	602	False	True				eelektrik's Family	B	*	4*	000: None																			
+0* None		tynamo	602	False	True				tynamo's Family	C	*	1-2*	000: None																			
+0* None		tynamo	602	False	True				tynamo's Family	D	*	1-2*	000: None																			
+0* None		tynamo	602	False	True				tynamo's Family	E	*	2-3*	000: None																			
+0* None		eelektrik	602	False	True				eelektrik's Family	F	*	2-3*	000: None																			
+0* None		beheeyem	605	True	True				beheeyem's Family	A	*	5*	000: None																			
+0* None		beheeyem	605	True	True				beheeyem's Family	B	*	4*	000: None																			
+0* None		elgyem	605	True	True				elgyem's Family	C	*	1-2*	000: None																			
+0* None		elgyem	605	True	True				elgyem's Family	D	*	1-2*	000: None																			
+0* None		elgyem	605	True	True				elgyem's Family	E	*	2-3*	000: None																			
 0* None		beheeyem	605	False	True				beheeyem's Family	F	*	2-3*	000: None																			
-3* Torc		chandelure	607	True	True			chandelure Torc	chandelure's Family	A	*	5*	007: Nontraitor																			
+0* None	Soul Torc	chandelure	607	True	True			Soul Torc	chandelure's Family	A	*	5*	007: Nontraitor																			
 2* Tag		lampent	607	True	True			lampent Tag	lampent's Family	B	*	4*	010: AllTerrain																			
 1* Dew		litwick	607	True	True			litwick Dew	litwick's Family	C	*	1*	027: SpecialAttacker																			
 1* Card		litwick	607	True	True			litwick Card	litwick's Family	D	*	2*	016: MisfortuneMirror																			
 2* Crest		litwick	607	True	True			litwick Crest	litwick's Family	E	*	3*	048: Absorption																			
 0* None		lampent	607	False	True				lampent's Family	F	*	2-3*	000: None																			
-3* Bangle		haxorus	610	True	True			haxorus Bangle	haxorus's Family	A	*	5*	067: SecondSTAB	dark																		
+0* None	Violent Blade	haxorus	610	True	True			Violent Blade	haxorus's Family	A	*	5*	067: SecondSTAB	dark																		
 2* Jaw		fraxure	610	True	True			fraxure Jaw	fraxure's Family	B	*	4*	086: StatusOnCategoryUse		focus_energy			003: Status														
 1* Fang		axew	610	True	True			axew Fang	axew's Family	C	*	1-2*	018: DoubleAttacker																			
 1* Horn		axew	610	True	True			axew Horn	axew's Family	D	*	1-2*	015: PracticeSwinger																			
 2* Rock		axew	610	True	True			axew Rock	axew's Family	E	*	2-3*	052: BetterOdds																			
 0* None		fraxure	610	False	True				fraxure's Family	F	*	2-3*	000: None																			
-0* None		beartic	613	False	True				beartic's Family	A	*	5*	000: None																			
-0* None		beartic	613	False	True				beartic's Family	B	*	4*	000: None																			
-0* None		cubchoo	613	False	True				cubchoo's Family	C	*	1-2*	000: None																			
-0* None		cubchoo	613	False	True				cubchoo's Family	D	*	1-2*	000: None																			
-0* None		cubchoo	613	False	True				cubchoo's Family	E	*	2-3*	000: None																			
+0* None		beartic	613	True	True				beartic's Family	A	*	5*	000: None																			
+0* None		beartic	613	True	True				beartic's Family	B	*	4*	000: None																			
+0* None		cubchoo	613	True	True				cubchoo's Family	C	*	1-2*	000: None																			
+0* None		cubchoo	613	True	True				cubchoo's Family	D	*	1-2*	000: None																			
+0* None		cubchoo	613	True	True				cubchoo's Family	E	*	2-3*	000: None																			
 0* None		beartic	613	False	True				beartic's Family	F	*	2-3*	000: None																			
-0* None		cryogonal	615	False	False				cryogonal	A	*	5*	000: None																			
-0* None		cryogonal	615	False	False				cryogonal	B	*	4*	000: None																			
-0* None		cryogonal	615	False	False				cryogonal	C	*	1-2*	000: None																			
-0* None		cryogonal	615	False	False				cryogonal	D	*	1-2*	000: None																			
-0* None		cryogonal	615	False	False				cryogonal	E	*	2-3*	000: None																			
+0* None		cryogonal	615	True	False				cryogonal	A	*	5*	000: None																			
+0* None		cryogonal	615	True	False				cryogonal	B	*	4*	000: None																			
+0* None		cryogonal	615	True	False				cryogonal	C	*	1-2*	000: None																			
+0* None		cryogonal	615	True	False				cryogonal	D	*	1-2*	000: None																			
+0* None		cryogonal	615	True	False				cryogonal	E	*	2-3*	000: None																			
 0* None		cryogonal	615	False	False				cryogonal	F	*	2-3*	000: None																			
-3* Sash		mienshao	619	True	True			mienshao Sash	mienshao's Family	A	*	5*	004: TypeBulldozer	fighting			ghost															
+0* None	Martial Sash	mienshao	619	True	True			Martial Sash	mienshao's Family	A	*	5*	004: TypeBulldozer	fighting			ghost															
 2* Seal		mienshao	619	True	True			mienshao Seal	mienshao's Family	B	*	4*	047: Celebrate																			
 1* Claw		mienfoo	619	True	True			mienfoo Claw	mienfoo's Family	C	*	1*	018: DoubleAttacker																			
 1* Sweat		mienfoo	619	True	True			mienfoo Sweat	mienfoo's Family	D	*	2*	104: WeaknessDodge	flying																		
@@ -1736,35 +1790,41 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Sweat		druddigon	621	True	False			druddigon Sweat	druddigon	D	*	1-2*	014: DeepBreather																			
 1* Claw		druddigon	621	True	False			druddigon Claw	druddigon	E	*	2-3*	039: WideAttack																			
 0* None		druddigon	621	False	False				druddigon	F	*	2-3*	000: None																			
-0* None		golurk	622	False	True				golurk's Family	A	*	5*	000: None																			
-0* None		golurk	622	False	True				golurk's Family	B	*	4*	000: None																			
-0* None		golett	622	False	True				golett's Family	C	*	1-2*	000: None																			
-0* None		golett	622	False	True				golett's Family	D	*	1-2*	000: None																			
-0* None		golett	622	False	True				golett's Family	E	*	2-3*	000: None																			
+0* None	Power Fist	golurk	622	True	True			Power Fist	golurk's Family	A	*	5*	040: ExplosiveAttack																			
+2* Guard		golurk	622	True	True			golurk Guard	golurk's Family	B	*	4*	096: TypeBodyguard	fighting																		
+1* Beam		golett	622	True	True			golett Beam	golett's Family	C	*	1-2*	015: PracticeSwinger																			
+1* Mud		golett	622	True	True			golett Mud	golett's Family	D	*	1-2*	051: BarrageGuard																			
+2* Ore		golett	622	True	True			golett Ore	golett's Family	E	*	2-3*	041: TrapBuster																			
 0* None		golurk	622	False	True				golurk's Family	F	*	2-3*	000: None																			
-3* Crown		kingambit	624	True	True			kingambit Crown	kingambit's Family	A	*	5*	078: EndureType	fighting																		
+0* None	Leader's Crest	kingambit	624	True	True			Leader's Crest	kingambit's Family	A	*	5*	078: EndureType	fighting																		
 3* Cape		bisharp	624	True	True			bisharp Cape	bisharp's Family	B	*	4*	047: Celebrate																			
 1* Claw		pawniard	624	True	True			pawniard Claw	pawniard's Family	C	*	1*	026: SureHitAttacker																			
 1* Thorn		pawniard	624	True	True			pawniard Thorn	pawniard's Family	D	*	2*	060: ErraticAttacker																			
 2* Shard		pawniard	624	True	True			pawniard Shard	pawniard's Family	E	*	3*	005: SuperCrit																			
 0* None		bisharp	624	False	True				bisharp's Family	F	*	2-3*	000: None																			
-0* None		braviary	627	False	True				braviary's Family	A	*	5*	000: None																			
-0* None		braviary	627	False	True				braviary's Family	B	*	4*	000: None																			
-0* None		rufflet	627	False	True				rufflet's Family	C	*	1-2*	000: None																			
-0* None		rufflet	627	False	True				rufflet's Family	D	*	1-2*	000: None																			
-0* None		rufflet	627	False	True				rufflet's Family	E	*	2-3*	000: None																			
+0* None		braviary	627	True	True				braviary's Family	A	*	5*	000: None																			
+0* None		braviary	627	True	True				braviary's Family	B	*	4*	000: None																			
+0* None		rufflet	627	True	True				rufflet's Family	C	*	1-2*	000: None																			
+0* None		rufflet	627	True	True				rufflet's Family	D	*	1-2*	000: None																			
+0* None		rufflet	627	True	True				rufflet's Family	E	*	2-3*	000: None																			
 0* None		braviary	627	False	True				braviary's Family	F	*	2-3*	000: None																			
-0* None		heatmor	631	False	False				heatmor	A	*	5*	000: None																			
-0* None		heatmor	631	False	False				heatmor	B	*	4*	000: None																			
-0* None		heatmor	631	False	False				heatmor	C	*	1-2*	000: None																			
-0* None		heatmor	631	False	False				heatmor	D	*	1-2*	000: None																			
-0* None		heatmor	631	False	False				heatmor	E	*	2-3*	000: None																			
+0* None		mandibuzz	629	False	True				mandibuzz's Family	A	*	5*	000: None																			
+0* None		mandibuzz	629	False	True				mandibuzz's Family	B	*	4*	000: None																			
+0* None		vullaby	629	False	True				vullaby's Family	C	*	1-2*	000: None																			
+0* None		vullaby	629	False	True				vullaby's Family	D	*	1-2*	000: None																			
+0* None		vullaby	629	False	True				vullaby's Family	E	*	2-3*	000: None																			
+0* None		mandibuzz	629	False	True				mandibuzz's Family	F	*	2-3*	000: None																			
+3* Sash		heatmor	631	True	False			heatmor Sash	heatmor	A	*	5*	101: ChanceStatOnTypeHit	fire	mod_special_defense				35													
+2* Tag		heatmor	631	True	False			heatmor Tag	heatmor	B	*	4*	005: SuperCrit																			
+1* Card		heatmor	631	True	False			heatmor Card	heatmor	C	*	1-2*	033: AcuteSniffer																			
+1* Fang		heatmor	631	True	False			heatmor Fang	heatmor	D	*	1-2*	015: PracticeSwinger					002: Magical														
+0* None		heatmor	631	True	False				heatmor	E	*	2-3*	000: None																			
 0* None		heatmor	631	False	False				heatmor	F	*	2-3*	000: None																			
-0* None		durant	632	False	False				durant	A	*	5*	000: None																			
-0* None		durant	632	False	False				durant	B	*	4*	000: None																			
-0* None		durant	632	False	False				durant	C	*	1-2*	000: None																			
-0* None		durant	632	False	False				durant	D	*	1-2*	000: None																			
-0* None		durant	632	False	False				durant	E	*	2-3*	000: None																			
+0* None	Insect Armor	durant	632	True	False			Insect Armor	durant	A	*	5*	082: WeaknessReduce	fire																		
+2* Jaw		durant	632	True	False			durant Jaw	durant	B	*	4*	005: SuperCrit																			
+1* Fang		durant	632	True	False			durant Fang	durant	C	*	1-2*	050: Anchor																			
+1* Card		durant	632	True	False			durant Card	durant	D	*	1-2*	058: StatusMirror																			
+0* None		durant	632	True	False				durant	E	*	2-3*	000: None																			
 0* None		durant	632	False	False				durant	F	*	2-3*	000: None																			
 3* Collar		hydreigon	633	True	True			hydreigon Collar	hydreigon's Family	A	*	5*	078: EndureType	fairy																		
 2* Crest		zweilous	633	True	True			zweilous Crest	zweilous's Family	B	*	4*	073: CheekPouch																			
@@ -1778,24 +1838,22 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Horn		larvesta	636	True	True			larvesta Horn	larvesta's Family	D	*	2*	104: WeaknessDodge	rock																		
 1* Wing		larvesta	636	True	True			larvesta Wing	larvesta's Family	E	*	3*	010: AllTerrain																			
 0* None		volcarona	636	False	False				volcarona	F	*	2-3*	000: None																			
-0* None		cobalion	638	False	False				cobalion	A	*	5*	000: None																			
-0* None		cobalion	638	False	False				cobalion	B	*	4*	000: None																			
-0* None		cobalion	638	False	False				cobalion	C	*	1-2*	000: None																			
-0* None		cobalion	638	False	False				cobalion	D	*	1-2*	000: None																			
-0* None		cobalion	638	False	False				cobalion	E	*	2-3*	000: None																			
-0* None		cobalion	638	False	False				cobalion	F	*	2-3*	000: None																			
-0* None		terrakion	639	False	False				terrakion	A	*	5*	000: None																			
-0* None		terrakion	639	False	False				terrakion	B	*	4*	000: None																			
-0* None		terrakion	639	False	False				terrakion	C	*	1-2*	000: None																			
-0* None		terrakion	639	False	False				terrakion	D	*	1-2*	000: None																			
-0* None		terrakion	639	False	False				terrakion	E	*	2-3*	000: None																			
-0* None		terrakion	639	False	False				terrakion	F	*	2-3*	000: None																			
-0* None		virizion	640	False	False				virizion	A	*	5*	000: None																			
-0* None		virizion	640	False	False				virizion	B	*	4*	000: None																			
-0* None		virizion	640	False	False				virizion	C	*	1-2*	000: None																			
-0* None		virizion	640	False	False				virizion	D	*	1-2*	000: None																			
-0* None		virizion	640	False	False				virizion	E	*	2-3*	000: None																			
-0* None		virizion	640	False	False				virizion	F	*	2-3*	000: None																			
+0* None		keldeo	638	False	False		swords_of_justice		keldeo	A		5*	000: None																			
+0* None		keldeo	638	False	False		swords_of_justice		keldeo	B		5*	000: None																			
+0* None		keldeo	638	False	False		swords_of_justice		keldeo	C		5*	000: None																			
+0* None		keldeo	638	False	False		swords_of_justice		keldeo	D		5*	000: None																			
+0* None		cobalion	638	False	False		swords_of_justice		cobalion	E		5*	000: None																			
+0* None		cobalion	638	False	False		swords_of_justice		cobalion	F		5*	000: None																			
+0* None		cobalion	638	False	False		swords_of_justice		cobalion	G		5*	000: None																			
+0* None		cobalion	638	False	False		swords_of_justice		cobalion	H		5*	000: None																			
+0* None		terrakion	638	False	False		swords_of_justice		terrakion	I		5*	000: None																			
+0* None		terrakion	638	False	False		swords_of_justice		terrakion	J		5*	000: None																			
+0* None		terrakion	638	False	False		swords_of_justice		terrakion	K		5*	000: None																			
+0* None		terrakion	638	False	False		swords_of_justice		terrakion	L		5*	000: None																			
+0* None		virizion	638	False	False		swords_of_justice		virizion	M		5*	000: None																			
+0* None		virizion	638	False	False		swords_of_justice		virizion	N		5*	000: None																			
+0* None		virizion	638	False	False		swords_of_justice		virizion	O		5*	000: None																			
+0* None		virizion	638	False	False		swords_of_justice		virizion	P		5*	000: None																			
 0* None		tornadus	641	True	False		forces_of_nature		tornadus	A	BI	5*	000: None																			
 0* None		tornadus	641	True	False		forces_of_nature		tornadus	B		4*	000: None																			
 0* None		thundurus	641	True	False		forces_of_nature		thundurus	C	DI	5*	000: None																			
@@ -1826,12 +1884,6 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Tail		kyurem	646	True	False			kyurem Tail	kyurem	D	*	2*	060: ErraticAttacker																			
 2* Shard		kyurem	646	True	False			kyurem Shard	kyurem	E	*	3*	048: Absorption																			
 0* None		kyurem	646	False	False				kyurem	F	*	3*	000: None																			
-0* None		keldeo	647	False	False				keldeo	A	*	5*	000: None																			
-0* None		keldeo	647	False	False				keldeo	B	*	4*	000: None																			
-0* None		keldeo	647	False	False				keldeo	C	*	1-2*	000: None																			
-0* None		keldeo	647	False	False				keldeo	D	*	1-2*	000: None																			
-0* None		keldeo	647	False	False				keldeo	E	*	2-3*	000: None																			
-0* None		keldeo	647	False	False				keldeo	F	*	2-3*	000: None																			
 3* Dress		meloetta	648	True	False			meloetta Dress	meloetta	A	*	5*	047: Celebrate																			
 3* Tiara		meloetta	648	True	False			meloetta Tiara	meloetta	B	*	4*	095: CelebrateCure																			
 1* Card		meloetta	648	True	False			meloetta Card	meloetta	C	*	1*	026: SureHitAttacker																			
@@ -1844,67 +1896,73 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Beam		genesect	649	True	False			genesect Beam	genesect	D	*	1-2*	014: DeepBreather																			
 0* None		genesect	649	True	False				genesect	E	*	2-3*	000: None																			
 0* None		genesect	649	False	False				genesect	F	*	2-3*	000: None																			
-0* None		chespin	650	False	False				chespin	A	*	5*	000: None																			
-0* None		chespin	650	False	False				chespin	B	*	4*	000: None																			
-0* None		chespin	650	False	False				chespin	C	*	1-2*	000: None																			
-0* None		chespin	650	False	False				chespin	D	*	1-2*	000: None																			
-0* None		chespin	650	False	False				chespin	E	*	2-3*	000: None																			
-0* None		chespin	650	False	False				chespin	F	*	2-3*	000: None																			
+3* Shield		chesnaught	650	True	True			chesnaught Shield	chesnaught's Family	A	*	5*	078: EndureType	flying																		
+0* None	Guardian Shell	quilladin	650	True	True			Guardian Shell	quilladin's Family	B	*	4*	096: TypeBodyguard	ground																		
+1* Leaf		chespin	650	True	True			chespin Leaf	chespin's Family	C	*	1-2*	051: BarrageGuard																			
+1* Root		chespin	650	True	True			chespin Root	chespin's Family	D	*	1-2*	050: Anchor																			
+2* Rock		chespin	650	True	True			chespin Rock	chespin's Family	E	*	2-3*	042: ExplosionGuard																			
+0* None		quilladin	650	False	True				quilladin's Family	F	*	2-3*	000: None																			
 3* Hat		delphox	653	True	True			delphox Hat	delphox's Family	A	*	5*	044: WandSpread																			
 1* Branch		braixen	653	True	True			braixen Branch	braixen's Family	B	*	4*	091: ProjectileAttack																			
-1* Tail		fennekin	653	True	True			fennekin Tail	fennekin's Family	C	*	1-2*	027: SpecialAttacker																			
+0* None	Magical Robe	fennekin	653	True	True			Magical Robe	fennekin's Family	C	*	1-2*	027: SpecialAttacker																			
 1* Fang		fennekin	653	True	True			fennekin Fang	fennekin's Family	D	*	1-2*	029: StatDropImmune			003: MAtk																
 2* Brooch		fennekin	653	True	True			fennekin Brooch	fennekin's Family	E	*	2-3*	069: GapProber																			
 0* None		braixen	653	False	True				braixen's Family	F	*	2-3*	000: None																			
-0* None		greninja	656	False	True				greninja's Family	A	*	5*	000: None																			
-0* None		frogadier	656	False	True				frogadier's Family	B	*	4*	000: None																			
-0* None		froakie	656	False	True				froakie's Family	C	*	1-2*	000: None																			
-0* None		froakie	656	False	True				froakie's Family	D	*	1-2*	000: None																			
-0* None		froakie	656	False	True				froakie's Family	E	*	2-3*	000: None																			
+3* Scarf		greninja	656	True	True			greninja Scarf	greninja's Family	A	*	5*	035: XRay																			
+0* None	Ambush Pebble	frogadier	656	True	True			Ambush Pebble	frogadier's Family	B	*	4*	070: PassThroughAttacker																			
+1* Card		froakie	656	True	True			froakie Card	froakie's Family	C	*	1-2*	084: HitAndRun																			
+1* Dew		froakie	656	True	True			froakie Dew	froakie's Family	D	*	1-2*	060: ErraticAttacker																			
+1* Foam		froakie	656	True	True			froakie Foam	froakie's Family	E	*	2-3*	023: StatusOnAttack		blinker																	
 0* None		frogadier	656	False	True				frogadier's Family	F	*	2-3*	000: None																			
-0* None		bunnelby	659	False	False				bunnelby	A	*	5*	000: None																			
-0* None		bunnelby	659	False	False				bunnelby	B	*	4*	000: None																			
-0* None		bunnelby	659	False	False				bunnelby	C	*	1-2*	000: None																			
-0* None		bunnelby	659	False	False				bunnelby	D	*	1-2*	000: None																			
-0* None		bunnelby	659	False	False				bunnelby	E	*	2-3*	000: None																			
-0* None		bunnelby	659	False	False				bunnelby	F	*	2-3*	000: None																			
-0* None		talonflame	661	False	True				talonflame's Family	A	*	5*	000: None																			
-0* None		fletchinder	661	False	True				fletchinder's Family	B	*	4*	000: None																			
-0* None		fletchling	661	False	True				fletchling's Family	C	*	1-2*	000: None																			
-0* None		fletchling	661	False	True				fletchling's Family	D	*	1-2*	000: None																			
-0* None		fletchling	661	False	True				fletchling's Family	E	*	2-3*	000: None																			
+0* None		diggersby	659	True	False				diggersby	A	*	5*	000: None																			
+0* None		diggersby	659	True	False				diggersby	B	*	4*	000: None																			
+0* None		bunnelby	659	True	False				bunnelby	C	*	1-2*	000: None																			
+0* None		bunnelby	659	True	False				bunnelby	D	*	1-2*	000: None																			
+0* None		bunnelby	659	True	False				bunnelby	E	*	2-3*	000: None																			
+0* None		diggersby	659	False	False				diggersby	F	*	2-3*	000: None																			
+0* None		talonflame	661	True	True				talonflame's Family	A	*	5*	000: None																			
+0* None		fletchinder	661	True	True				fletchinder's Family	B	*	4*	000: None																			
+0* None		fletchling	661	True	True				fletchling's Family	C	*	1-2*	000: None																			
+0* None		fletchling	661	True	True				fletchling's Family	D	*	1-2*	000: None																			
+0* None		fletchling	661	True	True				fletchling's Family	E	*	2-3*	000: None																			
 0* None		fletchinder	661	False	True				fletchinder's Family	F	*	2-3*	000: None																			
-0* None		litleo	667	False	False				litleo	A	*	5*	000: None																			
-0* None		litleo	667	False	False				litleo	B	*	4*	000: None																			
-0* None		litleo	667	False	False				litleo	C	*	1-2*	000: None																			
-0* None		litleo	667	False	False				litleo	D	*	1-2*	000: None																			
-0* None		litleo	667	False	False				litleo	E	*	2-3*	000: None																			
+0* None		vivillon	664	False	True				vivillon's Family	A	*	5*	000: None																			
+0* None		spewpa	664	False	True				spewpa's Family	B	*	4*	000: None																			
+0* None		scatterbug	664	False	True				scatterbug's Family	C	*	1-2*	000: None																			
+0* None		scatterbug	664	False	True				scatterbug's Family	D	*	1-2*	000: None																			
+0* None		scatterbug	664	False	True				scatterbug's Family	E	*	2-3*	000: None																			
+0* None		spewpa	664	False	True				spewpa's Family	F	*	2-3*	000: None																			
+0* None		litleo	667	True	False				litleo	A	*	5*	000: None																			
+0* None		litleo	667	True	False				litleo	B	*	4*	000: None																			
+0* None		litleo	667	True	False				litleo	C	*	1-2*	000: None																			
+0* None		litleo	667	True	False				litleo	D	*	1-2*	000: None																			
+0* None		litleo	667	True	False				litleo	E	*	2-3*	000: None																			
 0* None		litleo	667	False	False				litleo	F	*	2-3*	000: None																			
-3* Bow		florges	669	True	True			florges Bow	florges's Family	A	*	5*	082: WeaknessReduce	poison																		
+0* None	Purity Bow	florges	669	True	True			Purity Bow	florges's Family	A	*	5*	082: WeaknessReduce	poison																		
 2* Dust		floette	669	True	True			floette Dust	floette's Family	B	*	4*	044: WandSpread																			
 1* Dew		flabebe	669	True	True			flabebe Dew	flabebe's Family	C	*	1*	014: DeepBreather																			
 1* Card		flabebe	669	True	True			flabebe Card	flabebe's Family	D	*	2*	050: Anchor																			
 2* Aroma		flabebe	669	True	True			flabebe Aroma	flabebe's Family	E	*	3*	057: SelfCurer																			
 0* None		floette	669	False	True				floette's Family	F	*	2-3*	000: None																			
-0* None		skiddo	672	False	False				skiddo	A	*	5*	000: None																			
-0* None		skiddo	672	False	False				skiddo	B	*	4*	000: None																			
-0* None		skiddo	672	False	False				skiddo	C	*	1-2*	000: None																			
-0* None		skiddo	672	False	False				skiddo	D	*	1-2*	000: None																			
-0* None		skiddo	672	False	False				skiddo	E	*	2-3*	000: None																			
-0* None		skiddo	672	False	False				skiddo	F	*	2-3*	000: None																			
-0* None		pangoro	674	False	True				pangoro's Family	A	*	5*	000: None																			
-0* None		pangoro	674	False	True				pangoro's Family	B	*	4*	000: None																			
-0* None		pancham	674	False	True				pancham's Family	C	*	1-2*	000: None																			
-0* None		pancham	674	False	True				pancham's Family	D	*	1-2*	000: None																			
-0* None		pancham	674	False	True				pancham's Family	E	*	2-3*	000: None																			
+0* None		gogoat	672	True	False				gogoat	A	*	5*	000: None																			
+0* None		gogoat	672	True	False				gogoat	B	*	4*	000: None																			
+0* None		skiddo	672	True	False				skiddo	C	*	1-2*	000: None																			
+0* None		skiddo	672	True	False				skiddo	D	*	1-2*	000: None																			
+0* None		skiddo	672	True	False				skiddo	E	*	2-3*	000: None																			
+0* None		gogoat	672	False	False				gogoat	F	*	2-3*	000: None																			
+0* None		pangoro	674	True	True				pangoro's Family	A	*	5*	000: None																			
+0* None		pangoro	674	True	True				pangoro's Family	B	*	4*	000: None																			
+0* None		pancham	674	True	True				pancham's Family	C	*	1-2*	000: None																			
+0* None		pancham	674	True	True				pancham's Family	D	*	1-2*	000: None																			
+0* None		pancham	674	True	True				pancham's Family	E	*	2-3*	000: None																			
 0* None		pangoro	674	False	True				pangoro's Family	F	*	2-3*	000: None																			
-3* Collar		furfrou	676	True	False			furfrou Collar	furfrou	A	*	5*	101: ChanceStatOnTypeHit	normal	mod_attack				25													
+0* None	Chic Collar	furfrou	676	True	False			Chic Collar	furfrou	A	*	5*	101: ChanceStatOnTypeHit	normal	mod_attack				25													
 2* Guard		furfrou	676	True	False			furfrou Guard	furfrou	B	*	4*	096: TypeBodyguard	ghost																		
 1* Fang		furfrou	676	True	False			furfrou Fang	furfrou	C	*	1-2*	050: Anchor																			
 1* Hair		furfrou	676	True	False			furfrou Hair	furfrou	D	*	1-2*	051: BarrageGuard																			
 0* None		furfrou	676	True	False				furfrou	E	*	2-3*	000: None																			
 0* None		furfrou	676	False	False				furfrou	F	*	2-3*	000: None																			
-3* Scope		meowstic	677	True	True			meowstic Scope	meowstic's Family	A	*	5*	004: TypeBulldozer	psychic			dark															
+0* None	Dual Scope	meowstic	677	True	True			Dual Scope	meowstic's Family	A	*	5*	004: TypeBulldozer	psychic			dark															
 2* Ring		meowstic	677	True	True			meowstic Ring	meowstic's Family	B	*	4*	091: ProjectileAttack																			
 1* Hair		espurr	677	True	True			espurr Hair	espurr's Family	C	*	1*	060: ErraticAttacker																			
 1* Tail		espurr	677	True	True			espurr Tail	espurr's Family	D	*	2*	027: SpecialAttacker																			
@@ -1912,65 +1970,77 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 0* None		meowstic	677	False	True				meowstic's Family	F	*	2-3*	000: None																			
 3* Mantle		aegislash	679	True	True			aegislash Mantle	aegislash's Family	A	*	5*	067: SecondSTAB	normal																		
 3* Sash		doublade	679	True	True			doublade Sash	doublade's Family	B	*	4*	086: StatusOnCategoryUse		retaliate			003: Status														
-1* Card		honedge	679	True	True			honedge Card	honedge's Family	C	*	1*	015: PracticeSwinger																			
+0* None	Sharpening Stone	honedge	679	True	True			Sharpening Stone	honedge's Family	C	*	1*	015: PracticeSwinger																			
 1* Beam		honedge	679	True	True			honedge Beam	honedge's Family	D	*	2*	061: ErraticDefender																			
 0* None		honedge	679	True	True				honedge's Family	E	*	2-3*	000: None																			
 0* None		doublade	679	False	True				doublade's Family	F	*	2-3*	000: None																			
-0* None		spritzee	682	False	False				spritzee	A	*	5*	000: None																			
-0* None		spritzee	682	False	False				spritzee	B	*	4*	000: None																			
-0* None		spritzee	682	False	False				spritzee	C	*	1-2*	000: None																			
-0* None		spritzee	682	False	False				spritzee	D	*	1-2*	000: None																			
-0* None		spritzee	682	False	False				spritzee	E	*	2-3*	000: None																			
-0* None		spritzee	682	False	False				spritzee	F	*	2-3*	000: None																			
-0* None		slurpuff	684	False	True				slurpuff's Family	A	*	5*	000: None																			
-0* None		slurpuff	684	False	True				slurpuff's Family	B	*	4*	000: None																			
-0* None		swirlix	684	False	True				swirlix's Family	C	*	1-2*	000: None																			
-0* None		swirlix	684	False	True				swirlix's Family	D	*	1-2*	000: None																			
-0* None		swirlix	684	False	True				swirlix's Family	E	*	2-3*	000: None																			
+0* None		aromatisse	682	True	False				aromatisse	A	*	5*	000: None																			
+0* None		aromatisse	682	True	False				aromatisse	B	*	4*	000: None																			
+0* None		spritzee	682	True	False				spritzee	C	*	1-2*	000: None																			
+0* None		spritzee	682	True	False				spritzee	D	*	1-2*	000: None																			
+0* None		spritzee	682	True	False				spritzee	E	*	2-3*	000: None																			
+0* None		aromatisse	682	False	False				aromatisse	F	*	2-3*	000: None																			
+0* None		slurpuff	684	True	True				slurpuff's Family	A	*	5*	000: None																			
+0* None		slurpuff	684	True	True				slurpuff's Family	B	*	4*	000: None																			
+0* None		swirlix	684	True	True				swirlix's Family	C	*	1-2*	000: None																			
+0* None		swirlix	684	True	True				swirlix's Family	D	*	1-2*	000: None																			
+0* None		swirlix	684	True	True				swirlix's Family	E	*	2-3*	000: None																			
 0* None		slurpuff	684	False	True				slurpuff's Family	F	*	2-3*	000: None																			
-0* None		malamar	686	False	True				malamar's Family	A	*	5*	000: None																			
-0* None		malamar	686	False	True				malamar's Family	B	*	4*	000: None																			
-0* None		inkay	686	False	True				inkay's Family	C	*	1-2*	000: None																			
-0* None		inkay	686	False	True				inkay's Family	D	*	1-2*	000: None																			
-0* None		inkay	686	False	True				inkay's Family	E	*	2-3*	000: None																			
+0* None		malamar	686	True	True				malamar's Family	A	*	5*	000: None																			
+0* None		malamar	686	True	True				malamar's Family	B	*	4*	000: None																			
+0* None		inkay	686	True	True				inkay's Family	C	*	1-2*	000: None																			
+0* None		inkay	686	True	True				inkay's Family	D	*	1-2*	000: None																			
+0* None		inkay	686	True	True				inkay's Family	E	*	2-3*	000: None																			
 0* None		malamar	686	False	True				malamar's Family	F	*	2-3*	000: None																			
 3* Armor		barbaracle	688	True	True			barbaracle Armor	barbaracle's Family	A	*	5*	036: WeaknessPayback	grass	immobilized																	
-2* Rock		barbaracle	688	True	True			barbaracle Rock	barbaracle's Family	B	*	4*	095: CelebrateCure																			
+0* None	Stubborn Rock	barbaracle	688	True	True			Stubborn Rock	barbaracle's Family	B	*	4*	095: CelebrateCure																			
 1* Card		binacle	688	True	True			binacle Card	binacle's Family	C	*	1*	050: Anchor																			
 1* Claw		binacle	688	True	True			binacle Claw	binacle's Family	D	*	2*	018: DoubleAttacker																			
 2* Guard		binacle	688	True	True			binacle Guard	binacle's Family	E	*	3*	054: DistanceDodge																			
 0* None		barbaracle	688	False	True				barbaracle's Family	F	*	2-3*	000: None																			
-3* Specs		clawitzer	692	True	True			clawitzer Specs	clawitzer's Family	A	*	5*	070: PassThroughAttacker																			
+0* None		dragalge	690	False	True				dragalge's Family	A	*	5*	000: None																			
+0* None		dragalge	690	False	True				dragalge's Family	B	*	4*	000: None																			
+0* None		skrelp	690	False	True				skrelp's Family	C	*	1-2*	000: None																			
+0* None		skrelp	690	False	True				skrelp's Family	D	*	1-2*	000: None																			
+0* None		skrelp	690	False	True				skrelp's Family	E	*	2-3*	000: None																			
+0* None		dragalge	690	False	True				dragalge's Family	F	*	2-3*	000: None																			
+0* None	Precision Specs	clawitzer	692	True	True			Precision Specs	clawitzer's Family	A	*	5*	070: PassThroughAttacker																			
 3* Scope		clawitzer	692	True	True			clawitzer Scope	clawitzer's Family	B	*	4*	093: AttackRangeInWeather							rain												
 1* Dew		clauncher	692	True	True			clauncher Dew	clauncher's Family	C	*	1*	014: DeepBreather																			
 1* Card		clauncher	692	True	True			clauncher Card	clauncher's Family	D	*	2*	052: BetterOdds																			
 2* Charm		clauncher	692	True	True			clauncher Charm	clauncher's Family	E	*	3*	005: SuperCrit																			
 0* None		clawitzer	692	False	True				clawitzer's Family	F	*	2-3*	000: None																			
 3* Band		heliolisk	694	True	True			heliolisk Band	heliolisk's Family	A	*	5*	007: Nontraitor																			
-2* Crest		heliolisk	694	True	True			heliolisk Crest	heliolisk's Family	B	*	4*	093: AttackRangeInWeather							sunny												
+0* None	Photovolt Collar	heliolisk	694	True	True			Photovolt Collar	heliolisk's Family	B	*	4*	093: AttackRangeInWeather							sunny												
 1* Claw		helioptile	694	True	True			helioptile Claw	helioptile's Family	C	*	1*	027: SpecialAttacker																			
 1* Tail		helioptile	694	True	True			helioptile Tail	helioptile's Family	D	*	2*	104: WeaknessDodge	fighting																		
 2* Ring		helioptile	694	True	True			helioptile Ring	helioptile's Family	E	*	3*	080: NoStatusInWeather							rain												
 0* None		heliolisk	694	False	True				heliolisk's Family	F	*	2-3*	000: None																			
-0* None		tyrantrum	696	False	True				tyrantrum's Family	A	*	5*	000: None																			
-0* None		tyrantrum	696	False	True				tyrantrum's Family	B	*	4*	000: None																			
-0* None		tyrunt	696	False	True				tyrunt's Family	C	*	1-2*	000: None																			
-0* None		tyrunt	696	False	True				tyrunt's Family	D	*	1-2*	000: None																			
-0* None		tyrunt	696	False	True				tyrunt's Family	E	*	2-3*	000: None																			
+0* None		tyrantrum	696	True	True				tyrantrum's Family	A	*	5*	000: None																			
+0* None		tyrantrum	696	True	True				tyrantrum's Family	B	*	4*	000: None																			
+0* None		tyrunt	696	True	True				tyrunt's Family	C	*	1-2*	000: None																			
+0* None		tyrunt	696	True	True				tyrunt's Family	D	*	1-2*	000: None																			
+0* None		tyrunt	696	True	True				tyrunt's Family	E	*	2-3*	000: None																			
 0* None		tyrantrum	696	False	True				tyrantrum's Family	F	*	2-3*	000: None																			
-3* Bangle		aurorus	698	True	True			aurorus Bangle	aurorus's Family	A	*	5*	078: EndureType	fighting																		
+0* None	Permafrost Bangle	aurorus	698	True	True			Permafrost Bangle	aurorus's Family	A	*	5*	078: EndureType	fighting																		
 3* Collar		aurorus	698	True	True			aurorus Collar	aurorus's Family	B	*	4*	034: MapSurveyor																			
 1* Tail		amaura	698	True	True			amaura Tail	amaura's Family	C	*	1*	015: PracticeSwinger																			
 1* Card		amaura	698	True	True			amaura Card	amaura's Family	D	*	2*	051: BarrageGuard																			
 2* Rock		amaura	698	True	True			amaura Rock	amaura's Family	E	*	3*	096: TypeBodyguard	ice																		
 0* None		aurorus	698	False	True				aurorus's Family	F	*	4*	000: None																			
-0* None		hawlucha	701	False	False				hawlucha	A	*	5*	000: None																			
-0* None		hawlucha	701	False	False				hawlucha	B	*	4*	000: None																			
-0* None		hawlucha	701	False	False				hawlucha	C	*	1-2*	000: None																			
-0* None		hawlucha	701	False	False				hawlucha	D	*	1-2*	000: None																			
-0* None		hawlucha	701	False	False				hawlucha	E	*	2-3*	000: None																			
+0* None		hawlucha	701	True	False				hawlucha	A	*	5*	000: None																			
+0* None		hawlucha	701	True	False				hawlucha	B	*	4*	000: None																			
+0* None		hawlucha	701	True	False				hawlucha	C	*	1-2*	000: None																			
+0* None		hawlucha	701	True	False				hawlucha	D	*	1-2*	000: None																			
+0* None		hawlucha	701	True	False				hawlucha	E	*	2-3*	000: None																			
 0* None		hawlucha	701	False	False				hawlucha	F	*	2-3*	000: None																			
-3* Ruff		carbink	703	True	False			carbink Ruff	carbink	A	*	5*	096: TypeBodyguard	dragon																		
+0* None		dedenne	702	False	False				dedenne	A	*	5*	000: None																			
+0* None		dedenne	702	False	False				dedenne	B	*	4*	000: None																			
+0* None		dedenne	702	False	False				dedenne	C	*	1-2*	000: None																			
+0* None		dedenne	702	False	False				dedenne	D	*	1-2*	000: None																			
+0* None		dedenne	702	False	False				dedenne	E	*	2-3*	000: None																			
+0* None		dedenne	702	False	False				dedenne	F	*	2-3*	000: None																			
+0* None	Shimmering Ruff	carbink	703	True	False			Shimmering Ruff	carbink	A	*	5*	096: TypeBodyguard	dragon																		
 2* Jewel		carbink	703	True	False			carbink Jewel	carbink	B	*	4*	010: AllTerrain																			
 1* Beam		carbink	703	True	False			carbink Beam	carbink	C	*	1-2*	050: Anchor																			
 1* Card		carbink	703	True	False			carbink Card	carbink	D	*	1-2*	083: Gratitude																			
@@ -1980,10 +2050,10 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 2* Tag		sliggoo	704	True	True			sliggoo Tag	sliggoo's Family	B	*	4*	074: HealInWater																			
 1* Drool		goomy	704	True	True			goomy Drool	goomy's Family	C	*	1*	062: FastFriend																			
 1* Dew		goomy	704	True	True			goomy Dew	goomy's Family	D	*	2*	059: StatMirror																			
-2* Crest		goomy	704	True	True			goomy Crest	goomy's Family	E	*	3*	055: CloseDodge																			
+0* None	Squishy Crest	goomy	704	True	True			Squishy Crest	goomy's Family	E	*	3*	055: CloseDodge																			
 0* None		sliggoo	704	False	True				sliggoo's Family	F	*	2-3*	000: None																			
 2* Key		klefki	707	True	False			klefki Key	klefki	A	*	5*	082: WeaknessReduce	ground																		
-3* Tie		klefki	707	True	False			klefki Tie	klefki	B	*	4*	010: AllTerrain																			
+0* None	Mischief Tie	klefki	707	True	False			Mischief Tie	klefki	B	*	4*	010: AllTerrain																			
 1* Horn		klefki	707	True	False			klefki Horn	klefki	C	*	1*	014: DeepBreather																			
 1* Card		klefki	707	True	False			klefki Card	klefki	D	*	2*	053: ClutchPerformer																			
 0* None		klefki	707	True	False				klefki	E	*	2-3*	000: None																			
@@ -1991,12 +2061,12 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 3* Mask		trevenant	708	True	True			trevenant Mask	trevenant's Family	A	*	5*	098: StatusOnTypeHit	ghost	immobilized																	
 2* Seal		trevenant	708	True	True			trevenant Seal	trevenant's Family	B	*	4*	081: DeepBreatherPlus																			
 1* Root		phantump	708	True	True			phantump Root	phantump's Family	C	*	1*	050: Anchor																			
-1* Branch		phantump	708	True	True			phantump Branch	phantump's Family	D	*	2*	016: MisfortuneMirror																			
+0* None	Cursed Branch	phantump	708	True	True			Cursed Branch	phantump's Family	D	*	2*	016: MisfortuneMirror																			
 2* Charm		phantump	708	True	True			phantump Charm	phantump's Family	E	*	3*	048: Absorption																			
 0* None		trevenant	708	False	True				trevenant's Family	F	*	2-3*	000: None																			
 3* Mask		gourgeist	710	True	True			gourgeist Mask	gourgeist's Family	A	*	5*	098: StatusOnTypeHit	ghost	flinch																	
 2* Crest		gourgeist	710	True	True			gourgeist Crest	gourgeist's Family	B	*	4*	097: StatOnCategoryUse		mod_evasion			003: Status	25													
-1* Leaf		pumpkaboo	710	True	True			pumpkaboo Leaf	pumpkaboo's Family	C	*	1*	015: PracticeSwinger																			
+0* None	Treat Bag	pumpkaboo	710	True	True			Treat Bag	pumpkaboo's Family	C	*	1*	015: PracticeSwinger																			
 1* Root		pumpkaboo	710	True	True			pumpkaboo Root	pumpkaboo's Family	D	*	2*	051: BarrageGuard																			
 2* Guard		pumpkaboo	710	True	True			pumpkaboo Guard	pumpkaboo's Family	E	*	2-3*	017: CounterBasher																			
 0* None		gourgeist	710	False	True				gourgeist's Family	F	*	2-3*	000: None																			
@@ -2004,7 +2074,7 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 2* Jewel		noivern	714	True	True			noivern Jewel	noivern's Family	B	*	4*	091: ProjectileAttack																			
 1* Song		noibat	714	True	True			noibat Song	noibat's Family	C	*	1*	027: SpecialAttacker																			
 1* Wing		noibat	714	True	True			noibat Wing	noibat's Family	D	*	2*	060: ErraticAttacker																			
-2* Earring		noibat	714	True	True			noibat Earring	noibat's Family	E	*	3*	069: GapProber																			
+0* None	Amped Earring	noibat	714	True	True			Amped Earring	noibat's Family	E	*	3*	069: GapProber																			
 0* None		noivern	714	False	True				noivern's Family	F	*	2-3*	000: None																			
 0* None	Life Crown	xerneas	716	True	False			Life Crown	xerneas	A	*	5*	020: AllyReviver																			
 2* Jewel		xerneas	716	True	False			xerneas Jewel	xerneas	B	*	4*	046: RoyalVeil																			
@@ -2018,25 +2088,25 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Wing		yveltal	717	True	False			yveltal Wing	yveltal	D	*	2*	048: Absorption																			
 2* Guard		yveltal	717	True	False			yveltal Guard	yveltal	E	*	3*	094: PPSaver																			
 0* None		yveltal	717	False	False				yveltal	F	*	2-3*	000: None																			
-3* Collar		zygarde	718	True	False			zygarde Collar	zygarde	A	*	5*	004: TypeBulldozer	dragon			fairy															
-3* Robe		zygarde	718	True	False			zygarde Robe	zygarde	B	*	5*	004: TypeBulldozer	ground			flying															
+0* None	Crown of Balance	zygarde	718	True	False			Crown of Balance	zygarde	A	*	5*	004: TypeBulldozer	dragon			fairy															
+0* None	Robe of Balance	zygarde	718	True	False			Robe of Balance	zygarde	B	*	5*	004: TypeBulldozer	ground			flying															
 1* Mud		zygarde	718	True	False			zygarde Mud	zygarde	C	*	1-2*	084: HitAndRun																			
 1* Tail		zygarde	718	True	False			zygarde Tail	zygarde	D	*	1-2*	094: PPSaver																			
 2* Seal		zygarde	718	True	False			zygarde Seal	zygarde	E	*	2-3*	071: WeatherProtection																			
 0* None		zygarde	718	True	False				zygarde	F	*	2-3*	000: None																			
-3* Tiara		diancie	719	True	False			diancie Tiara	diancie	A	*	5*	036: WeaknessPayback	steel	flinch																	
+0* None	Royal Pink Tiara	diancie	719	True	False			Royal Pink Tiara	diancie	A	*	5*	036: WeaknessPayback	steel	flinch																	
 3* Ruff		diancie	719	True	False			diancie Ruff	diancie	B	*	4*	096: TypeBodyguard	dragon																		
 1* Beam		diancie	719	True	False			diancie Beam	diancie	C	*	1-2*	050: Anchor																			
 1* Card		diancie	719	True	False			diancie Card	diancie	D	*	1-2*	083: Gratitude																			
 2* Jewel		diancie	719	True	False			diancie Jewel	diancie	E	*	2-3*	010: AllTerrain																			
 0* None		diancie	719	False	False				diancie	F	*	2-3*	000: None																			
-3* Torc		hoopa	720	True	False			hoopa Torc	hoopa	A	*	5*	037: WarpPayback	dark																		
+0* None	Hyper Torc	hoopa	720	True	False			Hyper Torc	hoopa	A	*	5*	037: WarpPayback	dark																		
 2* Ring		hoopa	720	True	False			hoopa Ring	hoopa	B	*	4*	010: AllTerrain																			
 1* Hair		hoopa	720	True	False			hoopa Hair	hoopa	C	*	1*	016: MisfortuneMirror																			
 1* Card		hoopa	720	True	False			hoopa Card	hoopa	D	*	2*	069: GapProber																			
 0* None		hoopa	720	True	False				hoopa	E	*	2-3*	000: None																			
 0* None		hoopa	720	False	False				hoopa	F	*	2-3*	000: None																			
-3* Helmet		volcanion	721	True	False			volcanion Helmet	volcanion	A	*	5*	100: ChanceStatusOnTypeHit	water	burn				35													
+0* None	Boiling Helmet	volcanion	721	True	False			Boiling Helmet	volcanion	A	*	5*	100: ChanceStatusOnTypeHit	water	burn				35													
 2* Ring		volcanion	721	True	False			volcanion Ring	volcanion	B	*	4*	074: HealInWater																			
 1* Claw		volcanion	721	True	False			volcanion Claw	volcanion	C	*	1*	015: PracticeSwinger																			
 2* Tag		volcanion	721	True	False			volcanion Tag	volcanion	D	*	2*	042: ExplosionGuard																			
@@ -2048,11 +2118,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Wing		rowlet	722	True	True			rowlet Wing	rowlet's Family	D	*	1-2*	026: SureHitAttacker																			
 2* Brooch		rowlet	722	True	True			rowlet Brooch	rowlet's Family	E	*	2-3*	069: GapProber																			
 0* None		dartrix	722	False	True				dartrix's Family	F	*	2-3*	000: None																			
-0* None		incineroar	725	False	True				incineroar's Family	A	*	5*	000: None																			
-0* None		torracat	725	False	True				torracat's Family	B	*	4*	000: None																			
-0* None		litten	725	False	True				litten's Family	C	*	1-2*	000: None																			
-0* None		litten	725	False	True				litten's Family	D	*	1-2*	000: None																			
-0* None		litten	725	False	True				litten's Family	E	*	2-3*	000: None																			
+0* None		incineroar	725	True	True				incineroar's Family	A	*	5*	000: None																			
+0* None		torracat	725	True	True				torracat's Family	B	*	4*	000: None																			
+0* None		litten	725	True	True				litten's Family	C	*	1-2*	000: None																			
+0* None		litten	725	True	True				litten's Family	D	*	1-2*	000: None																			
+0* None		litten	725	True	True				litten's Family	E	*	2-3*	000: None																			
 0* None		torracat	725	False	True				torracat's Family	F	*	2-3*	000: None																			
 1* Song		primarina	728	True	True			primarina Song	primarina's Family	A	*	5*	086: StatusOnCategoryUse		aqua_ring			003: Status														
 3* Float		brionne	728	True	True			brionne Float	brionne's Family	B	*	4*	070: PassThroughAttacker																			
@@ -2060,18 +2130,36 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Gasp		popplio	728	True	True			popplio Gasp	popplio's Family	D	*	1-2*	014: DeepBreather																			
 2* Charm		popplio	728	True	True			popplio Charm	popplio's Family	E	*	2-3*	053: ClutchPerformer																			
 0* None		brionne	728	False	True				brionne's Family	F	*	2-3*	000: None																			
-0* None		vikavolt	736	False	True				vikavolt's Family	A	*	5*	000: None																			
-0* None		charjabug	736	False	True				charjabug's Family	B	*	4*	000: None																			
-0* None		grubbin	736	False	True				grubbin's Family	C	*	1-2*	000: None																			
-0* None		grubbin	736	False	True				grubbin's Family	D	*	1-2*	000: None																			
-0* None		grubbin	736	False	True				grubbin's Family	E	*	2-3*	000: None																			
+0* None		pikipek	731	False	False				pikipek	A	*	5*	000: None																			
+0* None		pikipek	731	False	False				pikipek	B	*	4*	000: None																			
+0* None		pikipek	731	False	False				pikipek	C	*	1-2*	000: None																			
+0* None		pikipek	731	False	False				pikipek	D	*	1-2*	000: None																			
+0* None		pikipek	731	False	False				pikipek	E	*	2-3*	000: None																			
+0* None		pikipek	731	False	False				pikipek	F	*	2-3*	000: None																			
+0* None		yungoos	734	False	False				yungoos	A	*	5*	000: None																			
+0* None		yungoos	734	False	False				yungoos	B	*	4*	000: None																			
+0* None		yungoos	734	False	False				yungoos	C	*	1-2*	000: None																			
+0* None		yungoos	734	False	False				yungoos	D	*	1-2*	000: None																			
+0* None		yungoos	734	False	False				yungoos	E	*	2-3*	000: None																			
+0* None		yungoos	734	False	False				yungoos	F	*	2-3*	000: None																			
+0* None		vikavolt	736	True	True				vikavolt's Family	A	*	5*	000: None																			
+0* None		charjabug	736	True	True				charjabug's Family	B	*	4*	000: None																			
+0* None		grubbin	736	True	True				grubbin's Family	C	*	1-2*	000: None																			
+0* None		grubbin	736	True	True				grubbin's Family	D	*	1-2*	000: None																			
+0* None		grubbin	736	True	True				grubbin's Family	E	*	2-3*	000: None																			
 0* None		charjabug	736	False	True				charjabug's Family	F	*	2-3*	000: None																			
-0* None		crabominable	739	False	True				crabominable's Family	A	*	5*	000: None																			
-0* None		crabominable	739	False	True				crabominable's Family	B	*	4*	000: None																			
-0* None		crabrawler	739	False	True				crabrawler's Family	C	*	1-2*	000: None																			
-0* None		crabrawler	739	False	True				crabrawler's Family	D	*	1-2*	000: None																			
-0* None		crabrawler	739	False	True				crabrawler's Family	E	*	2-3*	000: None																			
+0* None		crabominable	739	True	True				crabominable's Family	A	*	5*	000: None																			
+0* None		crabominable	739	True	True				crabominable's Family	B	*	4*	000: None																			
+0* None		crabrawler	739	True	True				crabrawler's Family	C	*	1-2*	000: None																			
+0* None		crabrawler	739	True	True				crabrawler's Family	D	*	1-2*	000: None																			
+0* None		crabrawler	739	True	True				crabrawler's Family	E	*	2-3*	000: None																			
 0* None		crabominable	739	False	True				crabominable's Family	F	*	2-3*	000: None																			
+0* None		oricorio	741	False	False				oricorio	A	*	5*	000: None																			
+0* None		oricorio	741	False	False				oricorio	B	*	4*	000: None																			
+0* None		oricorio	741	False	False				oricorio	C	*	1-2*	000: None																			
+0* None		oricorio	741	False	False				oricorio	D	*	1-2*	000: None																			
+0* None		oricorio	741	False	False				oricorio	E	*	2-3*	000: None																			
+0* None		oricorio	741	False	False				oricorio	F	*	2-3*	000: None																			
 3* Tie		ribombee	742	True	True			ribombee Tie	ribombee's Family	A	*	5*	087: MapStatusOnCategoryUse					003: Status		misty_terrain												
 2* Heart		ribombee	742	True	True			ribombee Heart	ribombee's Family	B	*	4*	091: ProjectileAttack																			
 1* Card		cutiefly	742	True	True			cutiefly Card	cutiefly's Family	C	*	1*	027: SpecialAttacker																			
@@ -2084,24 +2172,24 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Fang		rockruff	744	True	True			rockruff Fang	rockruff's Family	D	*	2*	033: AcuteSniffer																			
 2* Jaw		rockruff	744	True	True			rockruff Jaw	rockruff's Family	E	*	3*	005: SuperCrit																			
 0* None		lycanroc	744	False	True				lycanroc's Family	F	*	2-3*	000: None																			
-0* None		wishiwashi	746	False	False				wishiwashi	A	*	5*	000: None																			
-0* None		wishiwashi	746	False	False				wishiwashi	B	*	4*	000: None																			
-0* None		wishiwashi	746	False	False				wishiwashi	C	*	1-2*	000: None																			
-0* None		wishiwashi	746	False	False				wishiwashi	D	*	1-2*	000: None																			
-0* None		wishiwashi	746	False	False				wishiwashi	E	*	2-3*	000: None																			
+0* None		wishiwashi	746	True	False				wishiwashi	A	*	5*	000: None																			
+0* None		wishiwashi	746	True	False				wishiwashi	B	*	4*	000: None																			
+0* None		wishiwashi	746	True	False				wishiwashi	C	*	1-2*	000: None																			
+0* None		wishiwashi	746	True	False				wishiwashi	D	*	1-2*	000: None																			
+0* None		wishiwashi	746	True	False				wishiwashi	E	*	2-3*	000: None																			
 0* None		wishiwashi	746	False	False				wishiwashi	F	*	2-3*	000: None																			
-0* None		mareanie	747	False	False				mareanie	A	*	5*	000: None																			
-0* None		mareanie	747	False	False				mareanie	B	*	4*	000: None																			
-0* None		mareanie	747	False	False				mareanie	C	*	1-2*	000: None																			
-0* None		mareanie	747	False	False				mareanie	D	*	1-2*	000: None																			
-0* None		mareanie	747	False	False				mareanie	E	*	2-3*	000: None																			
-0* None		mareanie	747	False	False				mareanie	F	*	2-3*	000: None																			
-0* None		mudbray	749	False	False				mudbray	A	*	5*	000: None																			
-0* None		mudbray	749	False	False				mudbray	B	*	4*	000: None																			
-0* None		mudbray	749	False	False				mudbray	C	*	1-2*	000: None																			
-0* None		mudbray	749	False	False				mudbray	D	*	1-2*	000: None																			
-0* None		mudbray	749	False	False				mudbray	E	*	2-3*	000: None																			
-0* None		mudbray	749	False	False				mudbray	F	*	2-3*	000: None																			
+0* None		toxapex	747	True	False				toxapex	A	*	5*	000: None																			
+0* None		toxapex	747	True	False				toxapex	B	*	4*	000: None																			
+0* None		mareanie	747	True	False				mareanie	C	*	1-2*	000: None																			
+0* None		mareanie	747	True	False				mareanie	D	*	1-2*	000: None																			
+0* None		mareanie	747	True	False				mareanie	E	*	2-3*	000: None																			
+0* None		toxapex	747	False	False				toxapex	F	*	2-3*	000: None																			
+0* None		mudsdale	749	True	False				mudsdale	A	*	5*	000: None																			
+0* None		mudsdale	749	True	False				mudsdale	B	*	4*	000: None																			
+0* None		mudbray	749	True	False				mudbray	C	*	1-2*	000: None																			
+0* None		mudbray	749	True	False				mudbray	D	*	1-2*	000: None																			
+0* None		mudbray	749	True	False				mudbray	E	*	2-3*	000: None																			
+0* None		mudsdale	749	False	False				mudsdale	F	*	2-3*	000: None																			
 3* Hat		araquanid	751	True	True			araquanid Hat	araquanid's Family	A	*	5*	007: Nontraitor																			
 3* Float		araquanid	751	True	True			araquanid Float	araquanid's Family	B	*	4*	074: HealInWater																			
 1* Dew		dewpider	751	True	True			dewpider Dew	dewpider's Family	C	*	1*	014: DeepBreather																			
@@ -2114,11 +2202,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Leaf		fomantis	753	True	True			fomantis Leaf	fomantis's Family	D	*	2*	030: SleepWalker																			
 2* Charm		fomantis	753	True	True			fomantis Charm	fomantis's Family	E	*	3*	031: ChargeWalker																			
 0* None		lurantis	753	False	True				lurantis's Family	F	*	2-3*	000: None																			
-0* None		morelull	755	False	False				morelull	A	*	5*	000: None																			
-0* None		morelull	755	False	False				morelull	B	*	4*	000: None																			
-0* None		morelull	755	False	False				morelull	C	*	1-2*	000: None																			
-0* None		morelull	755	False	False				morelull	D	*	1-2*	000: None																			
-0* None		morelull	755	False	False				morelull	E	*	2-3*	000: None																			
+0* None		morelull	755	True	False				morelull	A	*	5*	000: None																			
+0* None		morelull	755	True	False				morelull	B	*	4*	000: None																			
+0* None		morelull	755	True	False				morelull	C	*	1-2*	000: None																			
+0* None		morelull	755	True	False				morelull	D	*	1-2*	000: None																			
+0* None		morelull	755	True	False				morelull	E	*	2-3*	000: None																			
 0* None		morelull	755	False	False				morelull	F	*	2-3*	000: None																			
 3* Sash		salazzle	757	True	True			salazzle Sash	salazzle's Family	A	*	5*	100: ChanceStatusOnTypeHit	fire	poison				35													
 2* Earring		salazzle	757	True	True			salazzle Earring	salazzle's Family	B	*	4*	047: Celebrate																			
@@ -2126,11 +2214,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Fang		salandit	757	True	True			salandit Fang	salandit's Family	D	*	2*	023: StatusOnAttack		poison																	
 2* Aroma		salandit	757	True	True			salandit Aroma	salandit's Family	E	*	2-3*	085: StatusOnCategoryHit		burn			002: Magical														
 0* None		salazzle	757	False	True				salazzle's Family	F	*	2-3*	000: None																			
-0* None		bewear	759	False	True				bewear's Family	A	*	5*	000: None																			
-0* None		bewear	759	False	True				bewear's Family	B	*	4*	000: None																			
-0* None		stufful	759	False	True				stufful's Family	C	*	1-2*	000: None																			
-0* None		stufful	759	False	True				stufful's Family	D	*	1-2*	000: None																			
-0* None		stufful	759	False	True				stufful's Family	E	*	2-3*	000: None																			
+0* None		bewear	759	True	True				bewear's Family	A	*	5*	000: None																			
+0* None		bewear	759	True	True				bewear's Family	B	*	4*	000: None																			
+0* None		stufful	759	True	True				stufful's Family	C	*	1-2*	000: None																			
+0* None		stufful	759	True	True				stufful's Family	D	*	1-2*	000: None																			
+0* None		stufful	759	True	True				stufful's Family	E	*	2-3*	000: None																			
 0* None		bewear	759	False	True				bewear's Family	F	*	2-3*	000: None																			
 3* Tiara		tsareena	761	True	True			tsareena Tiara	tsareena's Family	A	*	5*	082: WeaknessReduce	flying																		
 2* Jewel		steenee	761	True	True			steenee Jewel	steenee's Family	B	*	4*	047: Celebrate																			
@@ -2144,11 +2232,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Seed		comfey	764	True	False			comfey Seed	comfey	D	*	2*	083: Gratitude																			
 2* Brooch		comfey	764	True	False			comfey Brooch	comfey	E	*	3*	089: StatusSplash																			
 0* None		comfey	764	False	False				comfey	F	*	2-3*	000: None																			
-0* None		passimian	766	False	False				passimian	A	*	5*	000: None																			
-0* None		passimian	766	False	False				passimian	B	*	4*	000: None																			
-0* None		passimian	766	False	False				passimian	C	*	1-2*	000: None																			
-0* None		passimian	766	False	False				passimian	D	*	1-2*	000: None																			
-0* None		passimian	766	False	False				passimian	E	*	2-3*	000: None																			
+0* None		passimian	766	True	False				passimian	A	*	5*	000: None																			
+0* None		passimian	766	True	False				passimian	B	*	4*	000: None																			
+0* None		passimian	766	True	False				passimian	C	*	1-2*	000: None																			
+0* None		passimian	766	True	False				passimian	D	*	1-2*	000: None																			
+0* None		passimian	766	True	False				passimian	E	*	2-3*	000: None																			
 0* None		passimian	766	False	False				passimian	F	*	2-3*	000: None																			
 3* Blade		golisopod	767	True	True			golisopod Blade	golisopod's Family	A	*	5*	011: Wallbreaker																			
 2* Crest		golisopod	767	True	True			golisopod Crest	golisopod's Family	B	*	4*	047: Celebrate																			
@@ -2162,11 +2250,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Song		sandygast	769	True	True			sandygast Song	sandygast's Family	D	*	2*	016: MisfortuneMirror																			
 2* Pebble		sandygast	769	True	True			sandygast Pebble	sandygast's Family	E	*	3*	048: Absorption																			
 0* None		palossand	769	False	True				palossand's Family	F	*	2-3*	000: None																			
-0* None		pyukumuku	771	False	False				pyukumuku	A	*	5*	000: None																			
-0* None		pyukumuku	771	False	False				pyukumuku	B	*	4*	000: None																			
-0* None		pyukumuku	771	False	False				pyukumuku	C	*	1-2*	000: None																			
-0* None		pyukumuku	771	False	False				pyukumuku	D	*	1-2*	000: None																			
-0* None		pyukumuku	771	False	False				pyukumuku	E	*	2-3*	000: None																			
+3* Helmet		pyukumuku	771	True	False			pyukumuku Helmet	pyukumuku	A	*	5*	079: SpikeDropper					002: Magical														
+2* Aroma		pyukumuku	771	True	False			pyukumuku Aroma	pyukumuku	B	*	4*	057: SelfCurer																			
+1* Card		pyukumuku	771	True	False			pyukumuku Card	pyukumuku	C	*	1-2*	061: ErraticDefender																			
+1* Thorn		pyukumuku	771	True	False			pyukumuku Thorn	pyukumuku	D	*	1-2*	016: MisfortuneMirror																			
+0* None		pyukumuku	771	True	False				pyukumuku	E	*	2-3*	000: None																			
 0* None		pyukumuku	771	False	False				pyukumuku	F	*	2-3*	000: None																			
 3* Blade		silvally	772	True	True			silvally Blade	silvally's Family	A	*	5*	007: Nontraitor																			
 2* Crest		silvally	772	True	True			silvally Crest	silvally's Family	B	*	4*	068: TypedAttack																			
@@ -2180,6 +2268,12 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Beam		minior	774	True	False			minior Beam	minior	D	*	1-2*	016: MisfortuneMirror																			
 0* None		minior	774	True	False				minior	E	*	2-3*	000: None																			
 0* None		minior	774	False	False				minior	F	*	2-3*	000: None																			
+0* None		komala	775	False	False				komala	A	*	5*	000: None																			
+0* None		komala	775	False	False				komala	B	*	4*	000: None																			
+0* None		komala	775	False	False				komala	C	*	1-2*	000: None																			
+0* None		komala	775	False	False				komala	D	*	1-2*	000: None																			
+0* None		komala	775	False	False				komala	E	*	2-3*	000: None																			
+0* None		komala	775	False	False				komala	F	*	2-3*	000: None																			
 3* Torc		turtonator	776	True	False			turtonator Torc	turtonator	A	*	5*	040: ExplosiveAttack																			
 2* Jewel		turtonator	776	True	False			turtonator Jewel	turtonator	B	*	4*	049: ExcessiveForce																			
 1* Fang		turtonator	776	True	False			turtonator Fang	turtonator	C	*	1-2*	051: BarrageGuard																			
@@ -2222,83 +2316,75 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Horn		jangmo_o	782	True	True			jangmo_o Horn	jangmo_o's Family	D	*	2*	104: WeaknessDodge	fairy																		
 2* Guard		jangmo_o	782	True	True			jangmo_o Guard	jangmo_o's Family	E	*	3*	017: CounterBasher																			
 0* None		hakamo_o	782	False	True				hakamo_o's Family	F	*	2-3*	000: None																			
-0* None		tapu_koko	785	True	False				tapu_koko	A	*	5*	000: None																			
-0* None		tapu_koko	785	True	False				tapu_koko	B	*	4*	000: None																			
-0* None		tapu_koko	785	True	False				tapu_koko	C	*	1-2*	000: None																			
-0* None		tapu_koko	785	True	False				tapu_koko	D	*	1-2*	000: None																			
-0* None		tapu_koko	785	True	False				tapu_koko	E	*	2-3*	000: None																			
-0* None		tapu_koko	785	False	False				tapu_koko	F	*	2-3*	000: None																			
-0* None		tapu_lele	786	True	False				tapu_lele	A	*	5*	000: None																			
-0* None		tapu_lele	786	True	False				tapu_lele	B	*	4*	000: None																			
-0* None		tapu_lele	786	True	False				tapu_lele	C	*	1-2*	000: None																			
-0* None		tapu_lele	786	True	False				tapu_lele	D	*	1-2*	000: None																			
-0* None		tapu_lele	786	True	False				tapu_lele	E	*	2-3*	000: None																			
-0* None		tapu_lele	786	False	False				tapu_lele	F	*	2-3*	000: None																			
-0* None		tapu_bulu	787	True	False				tapu_bulu	A	*	5*	000: None																			
-0* None		tapu_bulu	787	True	False				tapu_bulu	B	*	4*	000: None																			
-0* None		tapu_bulu	787	True	False				tapu_bulu	C	*	1-2*	000: None																			
-0* None		tapu_bulu	787	True	False				tapu_bulu	D	*	1-2*	000: None																			
-0* None		tapu_bulu	787	True	False				tapu_bulu	E	*	2-3*	000: None																			
-0* None		tapu_bulu	787	False	False				tapu_bulu	F	*	2-3*	000: None																			
-0* None		tapu_fini	788	True	False				tapu_fini	A	*	5*	000: None																			
-0* None		tapu_fini	788	True	False				tapu_fini	B	*	4*	000: None																			
-0* None		tapu_fini	788	True	False				tapu_fini	C	*	1-2*	000: None																			
-0* None		tapu_fini	788	True	False				tapu_fini	D	*	1-2*	000: None																			
-0* None		tapu_fini	788	True	False				tapu_fini	E	*	2-3*	000: None																			
-0* None		tapu_fini	788	False	False				tapu_fini	F	*	2-3*	000: None																			
+0* None		tapu_koko	785	False	False		guardian_dieties		tapu_koko	A		5*	000: None																			
+0* None		tapu_koko	785	False	False		guardian_dieties		tapu_koko	B		5*	000: None																			
+0* None		tapu_koko	785	False	False		guardian_dieties		tapu_koko	C		5*	000: None																			
+0* None		tapu_koko	785	False	False		guardian_dieties		tapu_koko	D		5*	000: None																			
+0* None		tapu_lele	785	False	False		guardian_dieties		tapu_lele	E		5*	000: None																			
+0* None		tapu_lele	785	False	False		guardian_dieties		tapu_lele	F		5*	000: None																			
+0* None		tapu_lele	785	False	False		guardian_dieties		tapu_lele	G		5*	000: None																			
+0* None		tapu_lele	785	False	False		guardian_dieties		tapu_lele	H		5*	000: None																			
+0* None		tapu_bulu	785	False	False		guardian_dieties		tapu_bulu	I		5*	000: None																			
+0* None		tapu_bulu	785	False	False		guardian_dieties		tapu_bulu	J		5*	000: None																			
+0* None		tapu_bulu	785	False	False		guardian_dieties		tapu_bulu	K		5*	000: None																			
+0* None		tapu_bulu	785	False	False		guardian_dieties		tapu_bulu	L		5*	000: None																			
+0* None		tapu_fini	785	False	False		guardian_dieties		tapu_fini	M		5*	000: None																			
+0* None		tapu_fini	785	False	False		guardian_dieties		tapu_fini	N		5*	000: None																			
+0* None		tapu_fini	785	False	False		guardian_dieties		tapu_fini	O		5*	000: None																			
+0* None		tapu_fini	785	False	False		guardian_dieties		tapu_fini	P		5*	000: None																			
 0* None	Solar Crown	solgaleo	789	True	False			Solar Crown	solgaleo	A	@	5*	067: SecondSTAB	fire																		
 0* None	Lunar Mantle	lunala	789	True	False			Lunar Mantle	lunala	B	@	5*	067: SecondSTAB	fairy																		
-0* None	Cosmic Dust	cosmog	789	True	False			Cosmic Dust	cosmog	C	@	1*	013: PPBoost						3													
-0* None	Cosmic Ring	cosmog	789	True	False			Cosmic Ring	cosmog	D	@	2*	058: StatusMirror																			
-0* None	Cosmic Shell	cosmoem	789	True	False			Cosmic Shell	cosmoem	E	@	4*	080: NoStatusInWeather							clear												
+0* None	Cosmic Dust	cosmog	789	True	True			Cosmic Dust	cosmog's Family	C	@	1*	013: PPBoost						3													
+0* None	Cosmic Ring	cosmog	789	True	True			Cosmic Ring	cosmog's Family	D	@	2*	058: StatusMirror																			
+0* None	Cosmic Shell	cosmoem	789	True	True			Cosmic Shell	cosmoem's Family	E	@	4*	080: NoStatusInWeather							clear												
 0* None		cosmoem	789	False	False				cosmoem	F	@	2-3*	000: None																			
 0* None	Ultra Hat	nihilego	793	True	False			Ultra Hat	nihilego	A	*	5*	098: StatusOnTypeHit	psychic	poison																	
 2* Dust		nihilego	793	True	False			nihilego Dust	nihilego	B	*	4*	010: AllTerrain																			
 1* Dew		nihilego	793	True	False			nihilego Dew	nihilego	C	*	1-2*	104: WeaknessDodge	ground																		
 1* Thorn		nihilego	793	True	False			nihilego Thorn	nihilego	D	*	1-2*	058: StatusMirror																			
-0* None		nihilego	793	True	False				nihilego	E	*	2-3*	000: None																			
+0* None		nihilego	793	False	False				nihilego	E	*	2-3*	000: None																			
 0* None		nihilego	793	False	False				nihilego	F	*	2-3*	000: None																			
 0* None	Ultra Band	buzzwole	794	True	False			Ultra Band	buzzwole	A	*	5*	011: Wallbreaker																			
 2* Medal		buzzwole	794	True	False			buzzwole Medal	buzzwole	B	*	4*	048: Absorption																			
 1* Horn		buzzwole	794	True	False			buzzwole Horn	buzzwole	C	*	1-2*	104: WeaknessDodge	flying																		
 1* Wing		buzzwole	794	True	False			buzzwole Wing	buzzwole	D	*	1-2*	049: ExcessiveForce																			
-0* None		buzzwole	794	True	False				buzzwole	E	*	2-3*	000: None																			
+0* None		buzzwole	794	False	False				buzzwole	E	*	2-3*	000: None																			
 0* None		buzzwole	794	False	False				buzzwole	F	*	2-3*	000: None																			
 0* None	Ultra Veil	pheromosa	795	True	False			Ultra Veil	pheromosa	A	*	5*	100: ChanceStatusOnTypeHit	fighting	in_love				35													
 2* Dust		pheromosa	795	True	False			pheromosa Dust	pheromosa	B	*	4*	095: CelebrateCure																			
 1* Claw		pheromosa	795	True	False			pheromosa Claw	pheromosa	C	*	1-2*	104: WeaknessDodge	flying																		
 1* Card		pheromosa	795	True	False			pheromosa Card	pheromosa	D	*	1-2*	018: DoubleAttacker																			
-0* None		pheromosa	795	True	False				pheromosa	E	*	2-3*	000: None																			
+0* None		pheromosa	795	False	False				pheromosa	E	*	2-3*	000: None																			
 0* None		pheromosa	795	False	False				pheromosa	F	*	2-3*	000: None																			
 0* None	Ultra Wire	xurkitree	796	True	False			Ultra Wire	xurkitree	A	*	5*	087: MapStatusOnCategoryUse					002: Magical		electric_terrain												
 2* Ring		xurkitree	796	True	False			xurkitree Ring	xurkitree	B	*	4*	070: PassThroughAttacker																			
 1* Card		xurkitree	796	True	False			xurkitree Card	xurkitree	C	*	1-2*	027: SpecialAttacker																			
 1* Branch		xurkitree	796	True	False			xurkitree Branch	xurkitree	D	*	1-2*	069: GapProber																			
-0* None		xurkitree	796	True	False				xurkitree	E	*	2-3*	000: None																			
+0* None		xurkitree	796	False	False				xurkitree	E	*	2-3*	000: None																			
 0* None		xurkitree	796	False	False				xurkitree	F	*	2-3*	000: None																			
 0* None	Ultra Shoot	celesteela	797	True	False			Ultra Shoot	celesteela	A	*	5*	067: SecondSTAB	grass																		
 2* Seal		celesteela	797	True	False			celesteela Seal	celesteela	B	*	4*	041: TrapBuster																			
 1* Root		celesteela	797	True	False			celesteela Root	celesteela	C	*	1-2*	050: Anchor																			
 1* Wing		celesteela	797	True	False			celesteela Wing	celesteela	D	*	1-2*	049: ExcessiveForce																			
-0* None		celesteela	797	True	False				celesteela	E	*	2-3*	000: None																			
+0* None		celesteela	797	False	False				celesteela	E	*	2-3*	000: None																			
 0* None		celesteela	797	False	False				celesteela	F	*	2-3*	000: None																			
 0* None	Ultra Blade	kartana	798	True	False			Ultra Blade	kartana	A	*	5*	067: SecondSTAB	fighting																		
 2* Tag		kartana	798	True	False			kartana Tag	kartana	B	*	4*	047: Celebrate																			
 1* Card		kartana	798	True	False			kartana Card	kartana	C	*	1-2*	018: DoubleAttacker																			
 1* Shoot		kartana	798	True	False			kartana Shoot	kartana	D	*	1-2*	005: SuperCrit																			
-0* None		kartana	798	True	False				kartana	E	*	2-3*	000: None																			
+0* None		kartana	798	False	False				kartana	E	*	2-3*	000: None																			
 0* None		kartana	798	False	False				kartana	F	*	2-3*	000: None																			
 0* None	Ultra Armor	guzzlord	799	True	False			Ultra Armor	guzzlord	A	*	5*	078: EndureType	fairy																		
 2* Jaw		guzzlord	799	True	False			guzzlord Jaw	guzzlord	B	*	4*	073: CheekPouch																			
 1* Horn		guzzlord	799	True	False			guzzlord Horn	guzzlord	C	*	1-2*	051: BarrageGuard																			
 1* Drool		guzzlord	799	True	False			guzzlord Drool	guzzlord	D	*	1-2*	048: Absorption																			
-0* None		guzzlord	799	True	False				guzzlord	E	*	2-3*	000: None																			
+0* None		guzzlord	799	False	False				guzzlord	E	*	2-3*	000: None																			
 0* None		guzzlord	799	False	False				guzzlord	F	*	2-3*	000: None																			
 0* None	Ultra Prism	necrozma	800	True	False			Ultra Prism	necrozma	A	*	5*	098: StatusOnTypeHit	psychic	blinker																	
 2* Ore		necrozma	800	True	False			necrozma Ore	necrozma	B	*	4*	047: Celebrate																			
 1* Horn		necrozma	800	True	False			necrozma Horn	necrozma	C	*	1*	013: PPBoost						2													
 1* Claw		necrozma	800	True	False			necrozma Claw	necrozma	D	*	2*	048: Absorption																			
-0* None		necrozma	800	True	False				necrozma	E	*	2-3*	000: None																			
+0* None		necrozma	800	False	False				necrozma	E	*	2-3*	000: None																			
 0* None		necrozma	800	False	False				necrozma	F	*	2-3*	000: None																			
 0* None	Clockwork Dress	magearna	801	True	False			Clockwork Dress	magearna	A	*	5*	007: Nontraitor																			
 2* Heart		magearna	801	True	False			magearna Heart	magearna	B	*	4*	046: RoyalVeil																			
@@ -2316,19 +2402,19 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Wing		naganadel	803	True	True			naganadel Wing	naganadel's Family	B	*	4*	047: Celebrate																			
 1* Thorn		poipole	803	True	True			poipole Thorn	poipole's Family	C	*	1-2*	018: DoubleAttacker																			
 1* Tail		poipole	803	True	True			poipole Tail	poipole's Family	D	*	1-2*	038: LungeAttack																			
-0* None		poipole	803	True	True				poipole's Family	E	*	2-3*	000: None																			
+0* None		poipole	803	False	True				poipole's Family	E	*	2-3*	000: None																			
 0* None		naganadel	803	False	True				naganadel's Family	F	*	2-3*	000: None																			
 0* None	Ultra Shield	stakataka	805	True	False			Ultra Shield	stakataka	A	*	5*	078: EndureType	fighting																		
 2* Rock		stakataka	805	True	False			stakataka Rock	stakataka	B	*	4*	081: DeepBreatherPlus																			
 2* Pebble		stakataka	805	True	False			stakataka Pebble	stakataka	C	*	1-2*	015: PracticeSwinger																			
 2* Shard		stakataka	805	True	False			stakataka Shard	stakataka	D	*	1-2*	054: DistanceDodge																			
-0* None		stakataka	805	True	False				stakataka	E	*	2-3*	000: None																			
+0* None		stakataka	805	False	False				stakataka	E	*	2-3*	000: None																			
 0* None		stakataka	805	False	False				stakataka	F	*	2-3*	000: None																			
 0* None	Ultra Balloon	blacephalon	806	True	False			Ultra Balloon	blacephalon	A	*	5*	040: ExplosiveAttack																			
 2* Brooch		blacephalon	806	True	False			blacephalon Brooch	blacephalon	B	*	4*	047: Celebrate																			
 1* Shoot		blacephalon	806	True	False			blacephalon Shoot	blacephalon	C	*	1-2*	060: ErraticAttacker																			
 1* Card		blacephalon	806	True	False			blacephalon Card	blacephalon	D	*	1-2*	042: ExplosionGuard																			
-0* None		blacephalon	806	True	False				blacephalon	E	*	2-3*	000: None																			
+0* None		blacephalon	806	False	False				blacephalon	E	*	2-3*	000: None																			
 0* None		blacephalon	806	False	False				blacephalon	F	*	2-3*	000: None																			
 3* Belt		zeraora	807	True	False			zeraora Belt	zeraora	A	*	5*	067: SecondSTAB	fighting																		
 2* Earring		zeraora	807	True	False			zeraora Earring	zeraora	B	*	4*	080: NoStatusInWeather							electric_terrain												
@@ -2336,18 +2422,18 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Tail		zeraora	807	True	False			zeraora Tail	zeraora	D	*	2*	055: CloseDodge																			
 0* None		zeraora	807	True	False				zeraora	E	*	2-3*	000: None																			
 0* None		zeraora	807	False	False				zeraora	F	*	2-3*	000: None																			
-3* Mantle		melmetal	808	False	True			melmetal Mantle	melmetal's Family	A	*	5*	101: ChanceStatOnTypeHit	electric	mod_defense				50													
-3* Band		melmetal	808	False	True			melmetal Band	melmetal's Family	B	*	4*	068: TypedAttack																			
-1* Card		meltan	808	False	True			meltan Card	meltan's Family	C	*	1-2*	062: FastFriend																			
-1* Tail		meltan	808	False	True			meltan Tail	meltan's Family	D	*	1-2*	015: PracticeSwinger																			
-2* Guard		meltan	808	False	True			meltan Guard	meltan's Family	E	*	2-3*	054: DistanceDodge																			
+3* Mantle		melmetal	808	True	True			melmetal Mantle	melmetal's Family	A	*	5*	101: ChanceStatOnTypeHit	electric	mod_defense				50													
+3* Band		melmetal	808	True	True			melmetal Band	melmetal's Family	B	*	4*	068: TypedAttack																			
+1* Card		meltan	808	True	True			meltan Card	meltan's Family	C	*	1-2*	062: FastFriend																			
+1* Tail		meltan	808	True	True			meltan Tail	meltan's Family	D	*	1-2*	015: PracticeSwinger																			
+2* Guard		meltan	808	True	True			meltan Guard	meltan's Family	E	*	2-3*	054: DistanceDodge																			
 0* None		melmetal	808	False	True				melmetal's Family	F	*	2-3*	000: None																			
-0* None		grookey	810	False	False				grookey	A	*	5*	000: None																			
-0* None		grookey	810	False	False				grookey	B	*	4*	000: None																			
-0* None		grookey	810	False	False				grookey	C	*	1-2*	000: None																			
-0* None		grookey	810	False	False				grookey	D	*	1-2*	000: None																			
-0* None		grookey	810	False	False				grookey	E	*	2-3*	000: None																			
-0* None		grookey	810	False	False				grookey	F	*	2-3*	000: None																			
+0* None		rillaboom	810	True	False				rillaboom	A	*	5*	000: None																			
+0* None		thwackey	810	True	False				thwackey	B	*	4*	000: None																			
+0* None		grookey	810	True	False				grookey	C	*	1-2*	000: None																			
+0* None		grookey	810	True	False				grookey	D	*	1-2*	000: None																			
+0* None		grookey	810	True	False				grookey	E	*	2-3*	000: None																			
+0* None		thwackey	810	False	False				thwackey	F	*	2-3*	000: None																			
 3* Cape		cinderace	813	True	True			cinderace Cape	cinderace's Family	A	*	5*	067: SecondSTAB	fighting																		
 2* Medal		raboot	813	True	True			raboot Medal	raboot's Family	B	*	4*	047: Celebrate																			
 1* Sweat		scorbunny	813	True	True			scorbunny Sweat	scorbunny's Family	C	*	1*	094: PPSaver																			
@@ -2360,30 +2446,60 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Tail		sobble	816	True	True			sobble Tail	sobble's Family	D	*	2*	053: ClutchPerformer																			
 2* Medal		sobble	816	True	True			sobble Medal	sobble's Family	E	*	3*	005: SuperCrit																			
 0* None		drizzile	816	False	True				drizzile's Family	F	*	2-3*	000: None																			
-0* None		corviknight	821	False	True				corviknight's Family	A	*	5*	000: None																			
-0* None		corvisquire	821	False	True				corvisquire's Family	B	*	4*	000: None																			
-0* None		rookidee	821	False	True				rookidee's Family	C	*	1-2*	000: None																			
-0* None		rookidee	821	False	True				rookidee's Family	D	*	1-2*	000: None																			
-0* None		rookidee	821	False	True				rookidee's Family	E	*	2-3*	000: None																			
+0* None		greedent	819	False	True				greedent's Family	A	*	5*	000: None																			
+0* None		greedent	819	False	True				greedent's Family	B	*	4*	000: None																			
+0* None		skwovet	819	False	True				skwovet's Family	C	*	1-2*	000: None																			
+0* None		skwovet	819	False	True				skwovet's Family	D	*	1-2*	000: None																			
+0* None		skwovet	819	False	True				skwovet's Family	E	*	2-3*	000: None																			
+0* None		greedent	819	False	True				greedent's Family	F	*	2-3*	000: None																			
+0* None		corviknight	821	True	True				corviknight's Family	A	*	5*	000: None																			
+0* None		corvisquire	821	True	True				corvisquire's Family	B	*	4*	000: None																			
+0* None		rookidee	821	True	True				rookidee's Family	C	*	1-2*	000: None																			
+0* None		rookidee	821	True	True				rookidee's Family	D	*	1-2*	000: None																			
+0* None		rookidee	821	True	True				rookidee's Family	E	*	2-3*	000: None																			
 0* None		corvisquire	821	False	True				corvisquire's Family	F	*	2-3*	000: None																			
+0* None		orbeetle	824	False	True				orbeetle's Family	A	*	5*	000: None																			
+0* None		dottler	824	False	True				dottler's Family	B	*	4*	000: None																			
+0* None		blipbug	824	False	True				blipbug's Family	C	*	1-2*	000: None																			
+0* None		blipbug	824	False	True				blipbug's Family	D	*	1-2*	000: None																			
+0* None		blipbug	824	False	True				blipbug's Family	E	*	2-3*	000: None																			
+0* None		dottler	824	False	True				dottler's Family	F	*	2-3*	000: None																			
 3* Mask		thievul	827	True	True			thievul Mask	thievul's Family	A	*	5*	078: EndureType	fighting																		
 2* Seal		thievul	827	True	True			thievul Seal	thievul's Family	B	*	4*	068: TypedAttack																			
 1* Hair		nickit	827	True	True			nickit Hair	nickit's Family	C	*	1*	103: TypeBecomesCategory	dark				002: Magical														
 1* Tail		nickit	827	True	True			nickit Tail	nickit's Family	D	*	2*	053: ClutchPerformer																			
 2* Coin		nickit	827	True	True			nickit Coin	nickit's Family	E	*	3*	063: CoinWatcher																			
 0* None		thievul	827	False	True				thievul's Family	F	*	2-3*	000: None																			
-0* None		wooloo	831	False	False				wooloo	A	*	5*	000: None																			
-0* None		wooloo	831	False	False				wooloo	B	*	4*	000: None																			
-0* None		wooloo	831	False	False				wooloo	C	*	1-2*	000: None																			
-0* None		wooloo	831	False	False				wooloo	D	*	1-2*	000: None																			
-0* None		wooloo	831	False	False				wooloo	E	*	2-3*	000: None																			
-0* None		wooloo	831	False	False				wooloo	F	*	2-3*	000: None																			
-0* None		yamper	835	False	False				yamper	A	*	5*	000: None																			
-0* None		yamper	835	False	False				yamper	B	*	4*	000: None																			
-0* None		yamper	835	False	False				yamper	C	*	1-2*	000: None																			
-0* None		yamper	835	False	False				yamper	D	*	1-2*	000: None																			
-0* None		yamper	835	False	False				yamper	E	*	2-3*	000: None																			
-0* None		yamper	835	False	False				yamper	F	*	2-3*	000: None																			
+0* None		eldegoss	829	False	True				eldegoss's Family	A	*	5*	000: None																			
+0* None		eldegoss	829	False	True				eldegoss's Family	B	*	4*	000: None																			
+0* None		gossifleur	829	False	True				gossifleur's Family	C	*	1-2*	000: None																			
+0* None		gossifleur	829	False	True				gossifleur's Family	D	*	1-2*	000: None																			
+0* None		gossifleur	829	False	True				gossifleur's Family	E	*	2-3*	000: None																			
+0* None		eldegoss	829	False	True				eldegoss's Family	F	*	2-3*	000: None																			
+0* None		dubwool	831	True	False				dubwool	A	*	5*	000: None																			
+0* None		dubwool	831	True	False				dubwool	B	*	4*	000: None																			
+0* None		wooloo	831	True	False				wooloo	C	*	1-2*	000: None																			
+0* None		wooloo	831	True	False				wooloo	D	*	1-2*	000: None																			
+0* None		wooloo	831	True	False				wooloo	E	*	2-3*	000: None																			
+0* None		dubwool	831	False	False				dubwool	F	*	2-3*	000: None																			
+0* None		drednaw	833	False	True				drednaw's Family	A	*	5*	000: None																			
+0* None		drednaw	833	False	True				drednaw's Family	B	*	4*	000: None																			
+0* None		chewtle	833	False	True				chewtle's Family	C	*	1-2*	000: None																			
+0* None		chewtle	833	False	True				chewtle's Family	D	*	1-2*	000: None																			
+0* None		chewtle	833	False	True				chewtle's Family	E	*	2-3*	000: None																			
+0* None		drednaw	833	False	True				drednaw's Family	F	*	2-3*	000: None																			
+0* None		boltund	835	True	False				boltund	A	*	5*	000: None																			
+0* None		boltund	835	True	False				boltund	B	*	4*	000: None																			
+0* None		yamper	835	True	False				yamper	C	*	1-2*	000: None																			
+0* None		yamper	835	True	False				yamper	D	*	1-2*	000: None																			
+0* None		yamper	835	True	False				yamper	E	*	2-3*	000: None																			
+0* None		boltund	835	False	False				boltund	F	*	2-3*	000: None																			
+0* None		rolycoly	837	False	False				rolycoly	A	*	5*	000: None																			
+0* None		rolycoly	837	False	False				rolycoly	B	*	4*	000: None																			
+0* None		rolycoly	837	False	False				rolycoly	C	*	1-2*	000: None																			
+0* None		rolycoly	837	False	False				rolycoly	D	*	1-2*	000: None																			
+0* None		rolycoly	837	False	False				rolycoly	E	*	2-3*	000: None																			
+0* None		rolycoly	837	False	False				rolycoly	F	*	2-3*	000: None																			
 3* Helmet		appletun	840	True	False		applin	appletun Helmet	appletun	A	BE	5*	096: TypeBodyguard	water																		
 2* Guard		appletun	840	True	False	applin, appletun	applin	appletun Guard	applin, appletun	B	FG	4*	048: Absorption																			
 3* Glasses		flapple	840	True	False		applin	flapple Glasses	flapple	C	DE	5*	047: Celebrate																			
@@ -2391,11 +2507,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 2* Seal		applin	840	True	True		applin	applin Seal	applin's Family	E		3*	010: AllTerrain																			
 1* Dew		applin	840	True	True		applin	applin Dew	applin's Family	F		1*	014: DeepBreather																			
 1* Drool		applin	840	True	True		applin	applin Drool	applin's Family	G		2*	015: PracticeSwinger																			
-0* None		sandaconda	843	False	True				sandaconda's Family	A	*	5*	000: None																			
-0* None		sandaconda	843	False	True				sandaconda's Family	B	*	4*	000: None																			
-0* None		silicobra	843	False	True				silicobra's Family	C	*	1-2*	000: None																			
-0* None		silicobra	843	False	True				silicobra's Family	D	*	1-2*	000: None																			
-0* None		silicobra	843	False	True				silicobra's Family	E	*	2-3*	000: None																			
+0* None		sandaconda	843	True	True				sandaconda's Family	A	*	5*	000: None																			
+0* None		sandaconda	843	True	True				sandaconda's Family	B	*	4*	000: None																			
+0* None		silicobra	843	True	True				silicobra's Family	C	*	1-2*	000: None																			
+0* None		silicobra	843	True	True				silicobra's Family	D	*	1-2*	000: None																			
+0* None		silicobra	843	True	True				silicobra's Family	E	*	2-3*	000: None																			
 0* None		sandaconda	843	False	True				sandaconda's Family	F	*	2-3*	000: None																			
 3* Poncho		cramorant	845	True	False			cramorant Poncho	cramorant	A	*	5*	100: ChanceStatusOnTypeHit	water	poison				25													
 3* Band		cramorant	845	True	False			cramorant Band	cramorant	B	*	4*	091: ProjectileAttack																			
@@ -2403,35 +2519,35 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Wing		cramorant	845	True	False			cramorant Wing	cramorant	D	*	2*	048: Absorption																			
 0* None		cramorant	845	True	False				cramorant	E	*	2-3*	000: None																			
 0* None		cramorant	845	False	False				cramorant	F	*	2-3*	000: None																			
-0* None		arrokuda	846	False	False				arrokuda	A	*	5*	000: None																			
-0* None		arrokuda	846	False	False				arrokuda	B	*	4*	000: None																			
-0* None		arrokuda	846	False	False				arrokuda	C	*	1-2*	000: None																			
-0* None		arrokuda	846	False	False				arrokuda	D	*	1-2*	000: None																			
-0* None		arrokuda	846	False	False				arrokuda	E	*	2-3*	000: None																			
-0* None		arrokuda	846	False	False				arrokuda	F	*	2-3*	000: None																			
+0* None		barraskewda	846	True	False				barraskewda	A	*	5*	000: None																			
+0* None		barraskewda	846	True	False				barraskewda	B	*	4*	000: None																			
+0* None		arrokuda	846	True	False				arrokuda	C	*	1-2*	000: None																			
+0* None		arrokuda	846	True	False				arrokuda	D	*	1-2*	000: None																			
+0* None		arrokuda	846	True	False				arrokuda	E	*	2-3*	000: None																			
+0* None		barraskewda	846	False	False				barraskewda	F	*	2-3*	000: None																			
 3* Mask		toxtricity	848	True	True			toxtricity Mask	toxtricity's Family	A	*	5*	007: Nontraitor																			
 2* Brooch		toxtricity	848	True	True			toxtricity Brooch	toxtricity's Family	B	*	4*	086: StatusOnCategoryUse		sleepless			002: Magical														
 1* Card		toxel	848	True	True			toxel Card	toxel's Family	C	*	1*	015: PracticeSwinger																			
 1* Claw		toxel	848	True	True			toxel Claw	toxel's Family	D	*	2*	060: ErraticAttacker																			
 2* Guard		toxel	848	True	True			toxel Guard	toxel's Family	E	*	3*	104: WeaknessDodge	ground																		
 0* None		toxtricity	848	False	True				toxtricity's Family	F	*	2-3*	000: None																			
-0* None		centiskorch	850	False	True				centiskorch's Family	A	*	5*	000: None																			
-0* None		centiskorch	850	False	True				centiskorch's Family	B	*	4*	000: None																			
-0* None		sizzlipede	850	False	True				sizzlipede's Family	C	*	1-2*	000: None																			
-0* None		sizzlipede	850	False	True				sizzlipede's Family	D	*	1-2*	000: None																			
-0* None		sizzlipede	850	False	True				sizzlipede's Family	E	*	2-3*	000: None																			
+0* None		centiskorch	850	True	True				centiskorch's Family	A	*	5*	000: None																			
+0* None		centiskorch	850	True	True				centiskorch's Family	B	*	4*	000: None																			
+0* None		sizzlipede	850	True	True				sizzlipede's Family	C	*	1-2*	000: None																			
+0* None		sizzlipede	850	True	True				sizzlipede's Family	D	*	1-2*	000: None																			
+0* None		sizzlipede	850	True	True				sizzlipede's Family	E	*	2-3*	000: None																			
 0* None		centiskorch	850	False	True				centiskorch's Family	F	*	2-3*	000: None																			
-0* None		clobbopus	852	False	False				clobbopus	A	*	5*	000: None																			
-0* None		clobbopus	852	False	False				clobbopus	B	*	4*	000: None																			
-0* None		clobbopus	852	False	False				clobbopus	C	*	1-2*	000: None																			
-0* None		clobbopus	852	False	False				clobbopus	D	*	1-2*	000: None																			
-0* None		clobbopus	852	False	False				clobbopus	E	*	2-3*	000: None																			
-0* None		clobbopus	852	False	False				clobbopus	F	*	2-3*	000: None																			
-0* None		polteageist	854	False	True				polteageist's Family	A	*	5*	000: None																			
-0* None		polteageist	854	False	True				polteageist's Family	B	*	4*	000: None																			
-0* None		sinistea	854	False	True				sinistea's Family	C	*	1-2*	000: None																			
-0* None		sinistea	854	False	True				sinistea's Family	D	*	1-2*	000: None																			
-0* None		sinistea	854	False	True				sinistea's Family	E	*	2-3*	000: None																			
+0* None		grapploct	852	True	False				grapploct	A	*	5*	000: None																			
+0* None		grapploct	852	True	False				grapploct	B	*	4*	000: None																			
+0* None		clobbopus	852	True	False				clobbopus	C	*	1-2*	000: None																			
+0* None		clobbopus	852	True	False				clobbopus	D	*	1-2*	000: None																			
+0* None		clobbopus	852	True	False				clobbopus	E	*	2-3*	000: None																			
+0* None		grapploct	852	False	False				grapploct	F	*	2-3*	000: None																			
+0* None		polteageist	854	True	True				polteageist's Family	A	*	5*	000: None																			
+0* None		polteageist	854	True	True				polteageist's Family	B	*	4*	000: None																			
+0* None		sinistea	854	True	True				sinistea's Family	C	*	1-2*	000: None																			
+0* None		sinistea	854	True	True				sinistea's Family	D	*	1-2*	000: None																			
+0* None		sinistea	854	True	True				sinistea's Family	E	*	2-3*	000: None																			
 0* None		polteageist	854	False	True				polteageist's Family	F	*	2-3*	000: None																			
 3* Dress		hatterene	856	True	True			hatterene Dress	hatterene's Family	A	*	5*	067: SecondSTAB	ghost																		
 2* Heart		hattrem	856	True	True			hattrem Heart	hattrem's Family	B	*	4*	095: CelebrateCure																			
@@ -2445,17 +2561,29 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Gasp		impidimp	859	True	True			impidimp Gasp	impidimp's Family	D	*	1-2*	015: PracticeSwinger																			
 2* Ring		impidimp	859	True	True			impidimp Ring	impidimp's Family	E	*	2-3*	054: DistanceDodge																			
 0* None		morgrem	859	False	True				morgrem's Family	F	*	2-3*	000: None																			
+0* None		alcremie	868	False	True				alcremie's Family	A	*	5*	000: None																			
+0* None		alcremie	868	False	True				alcremie's Family	B	*	4*	000: None																			
+0* None		milcery	868	False	True				milcery's Family	C	*	1-2*	000: None																			
+0* None		milcery	868	False	True				milcery's Family	D	*	1-2*	000: None																			
+0* None		milcery	868	False	True				milcery's Family	E	*	2-3*	000: None																			
+0* None		alcremie	868	False	True				alcremie's Family	F	*	2-3*	000: None																			
+0* None		pincurchin	871	False	False				pincurchin	A	*	5*	000: None																			
+0* None		pincurchin	871	False	False				pincurchin	B	*	4*	000: None																			
+0* None		pincurchin	871	False	False				pincurchin	C	*	1-2*	000: None																			
+0* None		pincurchin	871	False	False				pincurchin	D	*	1-2*	000: None																			
+0* None		pincurchin	871	False	False				pincurchin	E	*	2-3*	000: None																			
+0* None		pincurchin	871	False	False				pincurchin	F	*	2-3*	000: None																			
 3* Scarf		frosmoth	872	True	True			frosmoth Scarf	frosmoth's Family	A	*	5*	078: EndureType	fire																		
 2* Dust		frosmoth	872	True	True			frosmoth Dust	frosmoth's Family	B	*	4*	010: AllTerrain																			
 1* Card		snom	872	True	True			snom Card	snom's Family	C	*	1*	027: SpecialAttacker																			
 1* Thorn		snom	872	True	True			snom Thorn	snom's Family	D	*	2*	052: BetterOdds																			
 2* Jewel		snom	872	True	True			snom Jewel	snom's Family	E	*	3*	057: SelfCurer																			
 0* None		frosmoth	872	False	True				frosmoth's Family	F	*	2-3*	000: None																			
-0* None		stonjourner	874	False	False				stonjourner	A	*	5*	000: None																			
-0* None		stonjourner	874	False	False				stonjourner	B	*	4*	000: None																			
-0* None		stonjourner	874	False	False				stonjourner	C	*	1-2*	000: None																			
-0* None		stonjourner	874	False	False				stonjourner	D	*	1-2*	000: None																			
-0* None		stonjourner	874	False	False				stonjourner	E	*	2-3*	000: None																			
+0* None		stonjourner	874	True	False				stonjourner	A	*	5*	000: None																			
+0* None		stonjourner	874	True	False				stonjourner	B	*	4*	000: None																			
+0* None		stonjourner	874	True	False				stonjourner	C	*	1-2*	000: None																			
+0* None		stonjourner	874	True	False				stonjourner	D	*	1-2*	000: None																			
+0* None		stonjourner	874	True	False				stonjourner	E	*	2-3*	000: None																			
 0* None		stonjourner	874	False	False				stonjourner	F	*	2-3*	000: None																			
 3* Tie		eiscue	875	True	False			eiscue Tie	eiscue	A	*	5*	067: SecondSTAB	water																		
 2* Ore		eiscue	875	True	False			eiscue Ore	eiscue	B	*	4*	054: DistanceDodge																			
@@ -2469,29 +2597,35 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Hair		indeedee	876	True	False			indeedee Hair	indeedee	D	*	2*	083: Gratitude																			
 0* None		indeedee	876	True	False				indeedee	E	*	2-3*	000: None																			
 0* None		indeedee	876	False	False				indeedee	F	*	2-3*	000: None																			
-3* Bangle		morpeko	877	False	False			morpeko Bangle	morpeko	A	*	5*	100: ChanceStatusOnTypeHit	dark	paralyze				50													
-2* Jaw		morpeko	877	False	False			morpeko Jaw	morpeko	B	*	4*	073: CheekPouch																			
-1* Tooth		morpeko	877	False	False			morpeko Tooth	morpeko	C	*	1-2*	060: ErraticAttacker																			
-1* Hair		morpeko	877	False	False			morpeko Hair	morpeko	D	*	1-2*	033: AcuteSniffer																			
-0* None		morpeko	877	False	False				morpeko	E	*	2-3*	000: None																			
+3* Bangle		morpeko	877	True	False			morpeko Bangle	morpeko	A	*	5*	100: ChanceStatusOnTypeHit	dark	paralyze				50													
+2* Jaw		morpeko	877	True	False			morpeko Jaw	morpeko	B	*	4*	073: CheekPouch																			
+1* Tooth		morpeko	877	True	False			morpeko Tooth	morpeko	C	*	1-2*	060: ErraticAttacker																			
+1* Hair		morpeko	877	True	False			morpeko Hair	morpeko	D	*	1-2*	033: AcuteSniffer																			
+0* None		morpeko	877	True	False				morpeko	E	*	2-3*	000: None																			
 0* None		morpeko	877	False	False				morpeko	F	*	2-3*	000: None																			
-0* None		arctozolt	881	False	False				arctozolt	A	*	5*	000: None																			
-0* None		arctozolt	881	False	False				arctozolt	B	*	4*	000: None																			
-0* None		arctozolt	881	False	False				arctozolt	C	*	1-2*	000: None																			
-0* None		arctozolt	881	False	False				arctozolt	D	*	1-2*	000: None																			
-0* None		arctozolt	881	False	False				arctozolt	E	*	2-3*	000: None																			
-0* None		arctozolt	881	False	False				arctozolt	F	*	2-3*	000: None																			
-0* None		dracovish	882	False	False				dracovish	A	*	5*	000: None																			
-0* None		dracovish	882	False	False				dracovish	B	*	4*	000: None																			
-0* None		dracovish	882	False	False				dracovish	C	*	1-2*	000: None																			
-0* None		dracovish	882	False	False				dracovish	D	*	1-2*	000: None																			
-0* None		dracovish	882	False	False				dracovish	E	*	2-3*	000: None																			
-0* None		dracovish	882	False	False				dracovish	F	*	2-3*	000: None																			
-0* None		duraludon	884	False	False				duraludon	A	*	5*	000: None																			
-0* None		duraludon	884	False	False				duraludon	B	*	4*	000: None																			
-0* None		duraludon	884	False	False				duraludon	C	*	1-2*	000: None																			
-0* None		duraludon	884	False	False				duraludon	D	*	1-2*	000: None																			
-0* None		duraludon	884	False	False				duraludon	E	*	2-3*	000: None																			
+0* None		cufant	878	False	False				cufant	A	*	5*	000: None																			
+0* None		cufant	878	False	False				cufant	B	*	4*	000: None																			
+0* None		cufant	878	False	False				cufant	C	*	1-2*	000: None																			
+0* None		cufant	878	False	False				cufant	D	*	1-2*	000: None																			
+0* None		cufant	878	False	False				cufant	E	*	2-3*	000: None																			
+0* None		cufant	878	False	False				cufant	F	*	2-3*	000: None																			
+0* None	Careless Cape	dracozolt	880	False	False	dracozolt, arctozolt, dracovish, arctovish	galar_fossils	Careless Cape	dracozolt, arctozolt, dracovish, arctovish	A	DG	5*	047: Celebrate																			
+0* None	Draco Thorn	dracozolt	880	False	False	dracozolt, dracovish	galar_fossils	Draco Thorn	dracozolt, dracovish	B		1-2*	052: BetterOdds																			
+0* None		dracozolt	880	False	False		galar_fossils		dracozolt	C		5*	000: None																			
+0* None	Zolt Fang	arctozolt	880	False	False	dracozolt, arctozolt	galar_fossils	Zolt Fang	dracozolt, arctozolt	D	BJ	4*	068: TypedAttack																			
+0* None		arctozolt	880	False	False		galar_fossils		arctozolt	E		5*	000: None																			
+0* None		arctozolt	880	False	False		galar_fossils		arctozolt	F		5*	000: None																			
+0* None	Vish Crest	dracovish	880	False	False	dracovish, arctovish	galar_fossils	Vish Crest	dracovish, arctovish	G	BJ	4*	074: HealInWater																			
+0* None		dracovish	880	False	False		galar_fossils		dracovish	H		5*	000: None																			
+0* None		dracovish	880	False	False		galar_fossils		dracovish	I		5*	000: None																			
+0* None	Arcto Foam	arctovish	880	False	False	arctozolt, arctovish	galar_fossils	Arcto Foam	arctozolt, arctovish	J		1-2*	014: DeepBreather																			
+0* None		arctovish	880	False	False		galar_fossils		arctovish	K		5*	000: None																			
+0* None		arctovish	880	False	False		galar_fossils		arctovish	L		5*	000: None																			
+0* None		duraludon	884	True	False				duraludon	A	*	5*	000: None																			
+0* None		duraludon	884	True	False				duraludon	B	*	4*	000: None																			
+0* None		duraludon	884	True	False				duraludon	C	*	1-2*	000: None																			
+0* None		duraludon	884	True	False				duraludon	D	*	1-2*	000: None																			
+0* None		duraludon	884	True	False				duraludon	E	*	2-3*	000: None																			
 0* None		duraludon	884	False	False				duraludon	F	*	2-3*	000: None																			
 3* Specs		dragapult	885	True	True			dragapult Specs	dragapult's Family	A	*	5*	007: Nontraitor																			
 2* Tag		drakloak	885	True	True			drakloak Tag	drakloak's Family	B	*	4*	091: ProjectileAttack																			
@@ -2505,17 +2639,23 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 0* None		zacian	888	False	False				zacian	D	*	1-2*	000: None																			
 0* None		zacian	888	False	False				zacian	E	*	2-3*	000: None																			
 0* None		zacian	888	False	False				zacian	F	*	2-3*	000: None																			
+0* None		zamazenta	889	False	False				zamazenta	A	*	5*	000: None																			
+0* None		zamazenta	889	False	False				zamazenta	B	*	4*	000: None																			
+0* None		zamazenta	889	False	False				zamazenta	C	*	1-2*	000: None																			
+0* None		zamazenta	889	False	False				zamazenta	D	*	1-2*	000: None																			
+0* None		zamazenta	889	False	False				zamazenta	E	*	2-3*	000: None																			
+0* None		zamazenta	889	False	False				zamazenta	F	*	2-3*	000: None																			
 0* None	Eternamax Core	eternatus	890	True	False			Eternamax Core	eternatus	A	*	5*	067: SecondSTAB	dragon																		
 2* Heart		eternatus	890	True	False			eternatus Heart	eternatus	B	*	4*	010: AllTerrain																			
 1* Tail		eternatus	890	True	False			eternatus Tail	eternatus	C	*	1*	039: WideAttack																			
 1* Thorn		eternatus	890	True	False			eternatus Thorn	eternatus	D	*	2*	048: Absorption																			
 0* None		eternatus	890	True	False				eternatus	E	*	2-3*	000: None																			
 0* None		eternatus	890	False	False				eternatus	F	*	2-3*	000: None																			
-0* None		urshifu	891	False	True				urshifu's Family	A	*	5*	000: None																			
-0* None		urshifu	891	False	True				urshifu's Family	B	*	4*	000: None																			
-0* None		kubfu	891	False	True				kubfu's Family	C	*	1-2*	000: None																			
-0* None		kubfu	891	False	True				kubfu's Family	D	*	1-2*	000: None																			
-0* None		kubfu	891	False	True				kubfu's Family	E	*	2-3*	000: None																			
+0* None		urshifu	891	True	True				urshifu's Family	A	*	5*	000: None																			
+0* None		urshifu	891	True	True				urshifu's Family	B	*	4*	000: None																			
+0* None		kubfu	891	True	True				kubfu's Family	C	*	1-2*	000: None																			
+0* None		kubfu	891	True	True				kubfu's Family	D	*	1-2*	000: None																			
+0* None		kubfu	891	True	True				kubfu's Family	E	*	2-3*	000: None																			
 0* None		urshifu	891	False	True				urshifu's Family	F	*	2-3*	000: None																			
 0* None	Electric Sash	regieleki	894	True	False			Electric Sash	regieleki	A	*	5*	036: WeaknessPayback	ground	paralyze																	
 2* Shard		regieleki	894	True	False			regieleki Shard	regieleki	B	*	4*	047: Celebrate																			
@@ -2529,36 +2669,48 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 2* Tag		regidrago	895	True	False			regidrago Tag	regidrago	D	*	1-2*	022: PressurePlus																			
 0* None		regidrago	895	True	False				regidrago	E	*	2-3*	000: None																			
 0* None		regidrago	895	False	False				regidrago	F	*	2-3*	000: None																			
+0* None		glastrier	896	False	False				glastrier	A	*	5*	000: None																			
+0* None		glastrier	896	False	False				glastrier	B	*	4*	000: None																			
+0* None		glastrier	896	False	False				glastrier	C	*	1-2*	000: None																			
+0* None		glastrier	896	False	False				glastrier	D	*	1-2*	000: None																			
+0* None		glastrier	896	False	False				glastrier	E	*	2-3*	000: None																			
+0* None		glastrier	896	False	False				glastrier	F	*	2-3*	000: None																			
 0* None		spectrier	897	False	False				spectrier	A	*	5*	000: None																			
 0* None		spectrier	897	False	False				spectrier	B	*	4*	000: None																			
 0* None		spectrier	897	False	False				spectrier	C	*	1-2*	000: None																			
 0* None		spectrier	897	False	False				spectrier	D	*	1-2*	000: None																			
 0* None		spectrier	897	False	False				spectrier	E	*	2-3*	000: None																			
 0* None		spectrier	897	False	False				spectrier	F	*	2-3*	000: None																			
-0* None		sprigatito	906	False	False				sprigatito	A	*	5*	000: None																			
-0* None		sprigatito	906	False	False				sprigatito	B	*	4*	000: None																			
-0* None		sprigatito	906	False	False				sprigatito	C	*	1-2*	000: None																			
-0* None		sprigatito	906	False	False				sprigatito	D	*	1-2*	000: None																			
-0* None		sprigatito	906	False	False				sprigatito	E	*	2-3*	000: None																			
-0* None		sprigatito	906	False	False				sprigatito	F	*	2-3*	000: None																			
-0* None		skeledirge	909	False	True				skeledirge's Family	A	*	5*	000: None																			
-0* None		crocalor	909	False	True				crocalor's Family	B	*	4*	000: None																			
-0* None		fuecoco	909	False	True				fuecoco's Family	C	*	1-2*	000: None																			
-0* None		fuecoco	909	False	True				fuecoco's Family	D	*	1-2*	000: None																			
-0* None		fuecoco	909	False	True				fuecoco's Family	E	*	2-3*	000: None																			
+0* None		calyrex	898	False	False				calyrex	A	*	5*	000: None																			
+0* None		calyrex	898	False	False				calyrex	B	*	4*	000: None																			
+0* None		calyrex	898	False	False				calyrex	C	*	1-2*	000: None																			
+0* None		calyrex	898	False	False				calyrex	D	*	1-2*	000: None																			
+0* None		calyrex	898	False	False				calyrex	E	*	2-3*	000: None																			
+0* None		calyrex	898	False	False				calyrex	F	*	2-3*	000: None																			
+0* None		meowscarada	906	True	True				meowscarada's Family	A	*	5*	000: None																			
+0* None		floragato	906	True	True				floragato's Family	B	*	4*	000: None																			
+0* None		sprigatito	906	True	True				sprigatito's Family	C	*	1-2*	000: None																			
+0* None		sprigatito	906	True	True				sprigatito's Family	D	*	1-2*	000: None																			
+0* None		sprigatito	906	True	True				sprigatito's Family	E	*	2-3*	000: None																			
+0* None		floragato	906	False	False				floragato	F	*	2-3*	000: None																			
+0* None		skeledirge	909	True	True				skeledirge's Family	A	*	5*	000: None																			
+0* None		crocalor	909	True	True				crocalor's Family	B	*	4*	000: None																			
+0* None		fuecoco	909	True	True				fuecoco's Family	C	*	1-2*	000: None																			
+0* None		fuecoco	909	True	True				fuecoco's Family	D	*	1-2*	000: None																			
+0* None		fuecoco	909	True	True				fuecoco's Family	E	*	2-3*	000: None																			
 0* None		crocalor	909	False	True				crocalor's Family	F	*	2-3*	000: None																			
-0* None		quaxly	912	False	False				quaxly	A	*	5*	000: None																			
-0* None		quaxly	912	False	False				quaxly	B	*	4*	000: None																			
-0* None		quaxly	912	False	False				quaxly	C	*	1-2*	000: None																			
-0* None		quaxly	912	False	False				quaxly	D	*	1-2*	000: None																			
-0* None		quaxly	912	False	False				quaxly	E	*	2-3*	000: None																			
-0* None		quaxly	912	False	False				quaxly	F	*	2-3*	000: None																			
-0* None		lechonk	915	False	False				lechonk	A	*	5*	000: None																			
-0* None		lechonk	915	False	False				lechonk	B	*	4*	000: None																			
-0* None		lechonk	915	False	False				lechonk	C	*	1-2*	000: None																			
-0* None		lechonk	915	False	False				lechonk	D	*	1-2*	000: None																			
-0* None		lechonk	915	False	False				lechonk	E	*	2-3*	000: None																			
-0* None		lechonk	915	False	False				lechonk	F	*	2-3*	000: None																			
+0* None		quaquaval	912	True	False				quaquaval	A	*	5*	000: None																			
+0* None		quaxwell	912	True	False				quaxwell	B	*	4*	000: None																			
+0* None		quaxly	912	True	False				quaxly	C	*	1-2*	000: None																			
+0* None		quaxly	912	True	False				quaxly	D	*	1-2*	000: None																			
+0* None		quaxly	912	True	False				quaxly	E	*	2-3*	000: None																			
+0* None		quaxwell	912	False	False				quaxwell	F	*	2-3*	000: None																			
+0* None		oinkologne	915	True	False				oinkologne	A	*	5*	000: None																			
+0* None		oinkologne	915	True	False				oinkologne	B	*	4*	000: None																			
+0* None		lechonk	915	True	False				lechonk	C	*	1-2*	000: None																			
+0* None		lechonk	915	True	False				lechonk	D	*	1-2*	000: None																			
+0* None		lechonk	915	True	False				lechonk	E	*	2-3*	000: None																			
+0* None		oinkologne	915	False	False				oinkologne	F	*	2-3*	000: None																			
 3* Helmet		lokix	919	True	True			lokix Helmet	lokix's Family	A	*	5*	007: Nontraitor																			
 2* Ring		lokix	919	True	True			lokix Ring	lokix's Family	B	*	4*	047: Celebrate																			
 1* Card		nymble	919	True	True			nymble Card	nymble's Family	C	*	1*	014: DeepBreather																			
@@ -2577,65 +2729,95 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Fang		tandemaus	924	True	True			tandemaus Fang	tandemaus's Family	D	*	2*	018: DoubleAttacker																			
 2* Guard		tandemaus	924	True	True			tandemaus Guard	tandemaus's Family	E	*	3*	054: DistanceDodge																			
 0* None		maushold	924	False	True				maushold's Family	F	*	2-3*	000: None																			
-0* None		dachsbun	926	False	True				dachsbun's Family	A	*	5*	000: None																			
-0* None		dachsbun	926	False	True				dachsbun's Family	B	*	4*	000: None																			
-0* None		fidough	926	False	True				fidough's Family	C	*	1-2*	000: None																			
-0* None		fidough	926	False	True				fidough's Family	D	*	1-2*	000: None																			
-0* None		fidough	926	False	True				fidough's Family	E	*	2-3*	000: None																			
+0* None		dachsbun	926	True	True				dachsbun's Family	A	*	5*	000: None																			
+0* None		dachsbun	926	True	True				dachsbun's Family	B	*	4*	000: None																			
+0* None		fidough	926	True	True				fidough's Family	C	*	1-2*	000: None																			
+0* None		fidough	926	True	True				fidough's Family	D	*	1-2*	000: None																			
+0* None		fidough	926	True	True				fidough's Family	E	*	2-3*	000: None																			
 0* None		dachsbun	926	False	True				dachsbun's Family	F	*	2-3*	000: None																			
-0* None		smoliv	928	False	False				smoliv	A	*	5*	000: None																			
-0* None		smoliv	928	False	False				smoliv	B	*	4*	000: None																			
-0* None		smoliv	928	False	False				smoliv	C	*	1-2*	000: None																			
-0* None		smoliv	928	False	False				smoliv	D	*	1-2*	000: None																			
-0* None		smoliv	928	False	False				smoliv	E	*	2-3*	000: None																			
+0* None		smoliv	928	True	False				smoliv	A	*	5*	000: None																			
+0* None		smoliv	928	True	False				smoliv	B	*	4*	000: None																			
+0* None		smoliv	928	True	False				smoliv	C	*	1-2*	000: None																			
+0* None		smoliv	928	True	False				smoliv	D	*	1-2*	000: None																			
+0* None		smoliv	928	True	False				smoliv	E	*	2-3*	000: None																			
 0* None		smoliv	928	False	False				smoliv	F	*	2-3*	000: None																			
-0* None		ceruledge	935	False	False				ceruledge	A	@	5*	000: None																			
-0* None		armarouge	935	False	False				armarouge	B	@	5*	000: None																			
-0* None		charcadet	935	False	False				charcadet	C	@	1-2*	000: None																			
-0* None		charcadet	935	False	False				charcadet	D	@	1-2*	000: None																			
-0* None		charcadet	935	False	False				charcadet	E	@	3-4*	000: None																			
+0* None		garganacl	932	False	True				garganacl's Family	A	*	5*	000: None																			
+0* None		naclstack	932	False	True				naclstack's Family	B	*	4*	000: None																			
+0* None		nacli	932	False	True				nacli's Family	C	*	1-2*	000: None																			
+0* None		nacli	932	False	True				nacli's Family	D	*	1-2*	000: None																			
+0* None		nacli	932	False	True				nacli's Family	E	*	2-3*	000: None																			
+0* None		naclstack	932	False	True				naclstack's Family	F	*	2-3*	000: None																			
+0* None		ceruledge	935	True	False				ceruledge	A	@	5*	000: None																			
+0* None		armarouge	935	True	False				armarouge	B	@	5*	000: None																			
+0* None		charcadet	935	True	False				charcadet	C	@	1-2*	000: None																			
+0* None		charcadet	935	True	False				charcadet	D	@	1-2*	000: None																			
+0* None		charcadet	935	True	False				charcadet	E	@	3-4*	000: None																			
 0* None		charcadet	935	False	False				charcadet	F	@	3-4*	000: None																			
-0* None		bellibolt	938	False	True				bellibolt's Family	A	*	5*	000: None																			
-0* None		bellibolt	938	False	True				bellibolt's Family	B	*	4*	000: None																			
-0* None		tadbulb	938	False	True				tadbulb's Family	C	*	1-2*	000: None																			
-0* None		tadbulb	938	False	True				tadbulb's Family	D	*	1-2*	000: None																			
-0* None		tadbulb	938	False	True				tadbulb's Family	E	*	2-3*	000: None																			
+0* None		bellibolt	938	True	True				bellibolt's Family	A	*	5*	000: None																			
+0* None		bellibolt	938	True	True				bellibolt's Family	B	*	4*	000: None																			
+0* None		tadbulb	938	True	True				tadbulb's Family	C	*	1-2*	000: None																			
+0* None		tadbulb	938	True	True				tadbulb's Family	D	*	1-2*	000: None																			
+0* None		tadbulb	938	True	True				tadbulb's Family	E	*	2-3*	000: None																			
 0* None		bellibolt	938	False	True				bellibolt's Family	F	*	2-3*	000: None																			
-0* None		kilowattrel	940	False	True				kilowattrel's Family	A	*	5*	000: None																			
-0* None		kilowattrel	940	False	True				kilowattrel's Family	B	*	4*	000: None																			
-0* None		wattrel	940	False	True				wattrel's Family	C	*	1-2*	000: None																			
-0* None		wattrel	940	False	True				wattrel's Family	D	*	1-2*	000: None																			
-0* None		wattrel	940	False	True				wattrel's Family	E	*	2-3*	000: None																			
+0* None		kilowattrel	940	True	True				kilowattrel's Family	A	*	5*	000: None																			
+0* None		kilowattrel	940	True	True				kilowattrel's Family	B	*	4*	000: None																			
+0* None		wattrel	940	True	True				wattrel's Family	C	*	1-2*	000: None																			
+0* None		wattrel	940	True	True				wattrel's Family	D	*	1-2*	000: None																			
+0* None		wattrel	940	True	True				wattrel's Family	E	*	2-3*	000: None																			
 0* None		kilowattrel	940	False	True				kilowattrel's Family	F	*	2-3*	000: None																			
-0* None		scovillain	951	False	True				scovillain's Family	A	*	5*	000: None																			
-0* None		scovillain	951	False	True				scovillain's Family	B	*	4*	000: None																			
-0* None		capsakid	951	False	True				capsakid's Family	C	*	1-2*	000: None																			
-0* None		capsakid	951	False	True				capsakid's Family	D	*	1-2*	000: None																			
-0* None		capsakid	951	False	True				capsakid's Family	E	*	2-3*	000: None																			
+0* None		bramblin	946	False	False				bramblin	A	*	5*	000: None																			
+0* None		bramblin	946	False	False				bramblin	B	*	4*	000: None																			
+0* None		bramblin	946	False	False				bramblin	C	*	1-2*	000: None																			
+0* None		bramblin	946	False	False				bramblin	D	*	1-2*	000: None																			
+0* None		bramblin	946	False	False				bramblin	E	*	2-3*	000: None																			
+0* None		bramblin	946	False	False				bramblin	F	*	2-3*	000: None																			
+0* None	Super-Spicy Sash	scovillain	951	True	True			Super-Spicy Sash	scovillain's Family	A	*	5*	098: StatusOnTypeHit	grass	burn				35													
+2* Crest		scovillain	951	True	True			scovillain Crest	scovillain's Family	B	*	4*	093: AttackRangeInWeather							sunny												
+1* Tooth		capsakid	951	True	True			capsakid Tooth	capsakid's Family	C	*	1-2*	018: DoubleAttacker																			
+1* Gasp		capsakid	951	True	True			capsakid Gasp	capsakid's Family	D	*	1-2*	013: PPBoost						2													
+2* Brooch		capsakid	951	True	True			capsakid Brooch	capsakid's Family	E	*	2-3*	069: GapProber																			
 0* None		scovillain	951	False	True				scovillain's Family	F	*	2-3*	000: None																			
+0* None		rellor	953	False	False				rellor	A	*	5*	000: None																			
+0* None		rellor	953	False	False				rellor	B	*	4*	000: None																			
+0* None		rellor	953	False	False				rellor	C	*	1-2*	000: None																			
+0* None		rellor	953	False	False				rellor	D	*	1-2*	000: None																			
+0* None		rellor	953	False	False				rellor	E	*	2-3*	000: None																			
+0* None		rellor	953	False	False				rellor	F	*	2-3*	000: None																			
+0* None		flittle	955	False	False				flittle	A	*	5*	000: None																			
+0* None		flittle	955	False	False				flittle	B	*	4*	000: None																			
+0* None		flittle	955	False	False				flittle	C	*	1-2*	000: None																			
+0* None		flittle	955	False	False				flittle	D	*	1-2*	000: None																			
+0* None		flittle	955	False	False				flittle	E	*	2-3*	000: None																			
+0* None		flittle	955	False	False				flittle	F	*	2-3*	000: None																			
 3* Armlet		tinkaton	957	True	True			tinkaton Armlet	tinkaton's Family	A	*	5*	040: ExplosiveAttack																			
 2* Ore		tinkatuff	957	True	True			tinkatuff Ore	tinkatuff's Family	B	*	4*	041: TrapBuster																			
 1* Card		tinkatink	957	True	True			tinkatink Card	tinkatink's Family	C	*	1*	015: PracticeSwinger																			
 1* Hair		tinkatink	957	True	True			tinkatink Hair	tinkatink's Family	D	*	2*	014: DeepBreather																			
 2* Shard		tinkatink	957	True	True			tinkatink Shard	tinkatink's Family	E	*	3*	049: ExcessiveForce																			
 0* None		tinkatuff	957	False	True				tinkatuff's Family	F	*	2-3*	000: None																			
-0* None		wiglett	960	False	False				wiglett	A	*	5*	000: None																			
-0* None		wiglett	960	False	False				wiglett	B	*	4*	000: None																			
-0* None		wiglett	960	False	False				wiglett	C	*	1-2*	000: None																			
-0* None		wiglett	960	False	False				wiglett	D	*	1-2*	000: None																			
-0* None		wiglett	960	False	False				wiglett	E	*	2-3*	000: None																			
-0* None		wiglett	960	False	False				wiglett	F	*	2-3*	000: None																			
+0* None		wugtrio	960	True	False				wugtrio	A	*	5*	000: None																			
+0* None		wugtrio	960	True	False				wugtrio	B	*	4*	000: None																			
+0* None		wiglett	960	True	False				wiglett	C	*	1-2*	000: None																			
+0* None		wiglett	960	True	False				wiglett	D	*	1-2*	000: None																			
+0* None		wiglett	960	True	False				wiglett	E	*	2-3*	000: None																			
+0* None		wugtrio	960	False	False				wugtrio	F	*	2-3*	000: None																			
+0* None		bombirdier	962	False	False				bombirdier	A	*	5*	000: None																			
+0* None		bombirdier	962	False	False				bombirdier	B	*	4*	000: None																			
+0* None		bombirdier	962	False	False				bombirdier	C	*	1-2*	000: None																			
+0* None		bombirdier	962	False	False				bombirdier	D	*	1-2*	000: None																			
+0* None		bombirdier	962	False	False				bombirdier	E	*	2-3*	000: None																			
+0* None		bombirdier	962	False	False				bombirdier	F	*	2-3*	000: None																			
 3* Mask		palafin	963	True	True			palafin Mask	palafin's Family	A	*	5*	067: SecondSTAB	fighting																		
 2* Seal		palafin	963	True	True			palafin Seal	palafin's Family	B	*	4*	076: HealOnNewFloor																			
 1* Foam		finizen	963	True	True			finizen Foam	finizen's Family	C	*	1*	062: FastFriend																			
 1* Dew		finizen	963	True	True			finizen Dew	finizen's Family	D	*	2*	060: ErraticAttacker																			
 2* Brooch		finizen	963	True	True			finizen Brooch	finizen's Family	E	*	3*	096: TypeBodyguard	water																		
 0* None		palafin	963	False	True				palafin's Family	F	*	2-3*	000: None																			
-0* None		revavroom	965	False	True				revavroom's Family	A	*	5*	000: None																			
-0* None		revavroom	965	False	True				revavroom's Family	B	*	4*	000: None																			
-0* None		varoom	965	False	True				varoom's Family	C	*	1-2*	000: None																			
-0* None		varoom	965	False	True				varoom's Family	D	*	1-2*	000: None																			
-0* None		varoom	965	False	True				varoom's Family	E	*	2-3*	000: None																			
+0* None		revavroom	965	True	True				revavroom's Family	A	*	5*	000: None																			
+0* None		revavroom	965	True	True				revavroom's Family	B	*	4*	000: None																			
+0* None		varoom	965	True	True				varoom's Family	C	*	1-2*	000: None																			
+0* None		varoom	965	True	True				varoom's Family	D	*	1-2*	000: None																			
+0* None		varoom	965	True	True				varoom's Family	E	*	2-3*	000: None																			
 0* None		revavroom	965	False	True				revavroom's Family	F	*	2-3*	000: None																			
 3* Helmet		cyclizar	967	True	False			cyclizar Helmet	cyclizar	A	*	5*	038: LungeAttack																			
 2* Medal		cyclizar	967	True	False			cyclizar Medal	cyclizar	B	*	4*	097: StatOnCategoryUse		mod_speed			001: Physical	25													
@@ -2643,11 +2825,11 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Claw		cyclizar	967	True	False			cyclizar Claw	cyclizar	D	*	2*	033: AcuteSniffer																			
 0* None		cyclizar	967	True	False				cyclizar	E	*	3*	000: None																			
 0* None		cyclizar	967	False	False				cyclizar	F	*	2-3*	000: None																			
-0* None		orthworm	968	False	False				orthworm	A	*	5*	000: None																			
-0* None		orthworm	968	False	False				orthworm	B	*	4*	000: None																			
-0* None		orthworm	968	False	False				orthworm	C	*	1-2*	000: None																			
-0* None		orthworm	968	False	False				orthworm	D	*	1-2*	000: None																			
-0* None		orthworm	968	False	False				orthworm	E	*	2-3*	000: None																			
+0* None		orthworm	968	True	False				orthworm	A	*	5*	000: None																			
+0* None		orthworm	968	True	False				orthworm	B	*	4*	000: None																			
+0* None		orthworm	968	True	False				orthworm	C	*	1-2*	000: None																			
+0* None		orthworm	968	True	False				orthworm	D	*	1-2*	000: None																			
+0* None		orthworm	968	True	False				orthworm	E	*	2-3*	000: None																			
 0* None		orthworm	968	False	False				orthworm	F	*	2-3*	000: None																			
 3* Crown		glimmora	969	True	True			glimmora Crown	glimmora's Family	A	*	5*	104: WeaknessDodge	ground																		
 2* Jewel		glimmora	969	True	True			glimmora Jewel	glimmora's Family	B	*	4*	010: AllTerrain																			
@@ -2655,60 +2837,90 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Card		glimmet	969	True	True			glimmet Card	glimmet's Family	D	*	1-2*	094: PPSaver																			
 0* None		glimmet	969	True	True				glimmet's Family	E	*	2-3*	000: None																			
 0* None		glimmora	969	False	True				glimmora's Family	F	*	2-3*	000: None																			
-0* None		greavard	971	False	False				greavard	A	*	5*	000: None																			
-0* None		greavard	971	False	False				greavard	B	*	4*	000: None																			
-0* None		greavard	971	False	False				greavard	C	*	1-2*	000: None																			
-0* None		greavard	971	False	False				greavard	D	*	1-2*	000: None																			
-0* None		greavard	971	False	False				greavard	E	*	2-3*	000: None																			
-0* None		greavard	971	False	False				greavard	F	*	2-3*	000: None																			
-3* Float		veluza	976	True	False			veluza Float	veluza	A	*	5*	086: StatusOnCategoryUse		focus_energy			003: Status														
+0* None		houndstone	971	True	False				houndstone	A	*	5*	000: None																			
+0* None		houndstone	971	True	False				houndstone	B	*	4*	000: None																			
+0* None		greavard	971	True	False				greavard	C	*	1-2*	000: None																			
+0* None		greavard	971	True	False				greavard	D	*	1-2*	000: None																			
+0* None		greavard	971	True	False				greavard	E	*	2-3*	000: None																			
+0* None		houndstone	971	False	False				houndstone	F	*	2-3*	000: None																			
+0* None		cetitan	974	False	True				cetitan's Family	A	*	5*	000: None																			
+0* None		cetitan	974	False	True				cetitan's Family	B	*	4*	000: None																			
+0* None		cetoddle	974	False	True				cetoddle's Family	C	*	1-2*	000: None																			
+0* None		cetoddle	974	False	True				cetoddle's Family	D	*	1-2*	000: None																			
+0* None		cetoddle	974	False	True				cetoddle's Family	E	*	2-3*	000: None																			
+0* None		cetitan	974	False	True				cetitan's Family	F	*	2-3*	000: None																			
+0* None	Sashimi Sash	veluza	976	True	False			Sashimi Sash	veluza	A	*	5*	086: StatusOnCategoryUse		focus_energy			003: Status														
 2* Crest		veluza	976	True	False			veluza Crest	veluza	B	*	4*	048: Absorption																			
 1* Fang		veluza	976	True	False			veluza Fang	veluza	C	*	1-2*	088: DoubleDash																			
 1* Tail		veluza	976	True	False			veluza Tail	veluza	D	*	2*	053: ClutchPerformer																			
 0* None		veluza	976	True	False				veluza	E	*	2-3*	000: None																			
 0* None		veluza	976	False	False				veluza	F	*	2-3*	000: None																			
-0* None		tatsugiri	978	False	False				tatsugiri	A	*	5*	000: None																			
-0* None		tatsugiri	978	False	False				tatsugiri	B	*	4*	000: None																			
-0* None		tatsugiri	978	False	False				tatsugiri	C	*	1-2*	000: None																			
-0* None		tatsugiri	978	False	False				tatsugiri	D	*	1-2*	000: None																			
-0* None		tatsugiri	978	False	False				tatsugiri	E	*	2-3*	000: None																			
+0* None		dondozo	977	False	False				dondozo	A	*	5*	000: None																			
+0* None		dondozo	977	False	False				dondozo	B	*	4*	000: None																			
+0* None		dondozo	977	False	False				dondozo	C	*	1-2*	000: None																			
+0* None		dondozo	977	False	False				dondozo	D	*	1-2*	000: None																			
+0* None		dondozo	977	False	False				dondozo	E	*	2-3*	000: None																			
+0* None		dondozo	977	False	False				dondozo	F	*	2-3*	000: None																			
+0* None		tatsugiri	978	True	False				tatsugiri	A	*	5*	000: None																			
+0* None		tatsugiri	978	True	False				tatsugiri	B	*	4*	000: None																			
+0* None		tatsugiri	978	True	False				tatsugiri	C	*	1-2*	000: None																			
+0* None		tatsugiri	978	True	False				tatsugiri	D	*	1-2*	000: None																			
+0* None		tatsugiri	978	True	False				tatsugiri	E	*	2-3*	000: None																			
 0* None		tatsugiri	978	False	False				tatsugiri	F	*	2-3*	000: None																			
-0* None		great_tusk	984	False	False				great_tusk	A	*	5*	000: None																			
-0* None		great_tusk	984	False	False				great_tusk	B	*	4*	000: None																			
-0* None		great_tusk	984	False	False				great_tusk	C	*	1-2*	000: None																			
-0* None		great_tusk	984	False	False				great_tusk	D	*	1-2*	000: None																			
+0* None		great_tusk	984	True	False				great_tusk	A	*	5*	000: None																			
+0* None		great_tusk	984	True	False				great_tusk	B	*	4*	000: None																			
+0* None		great_tusk	984	True	False				great_tusk	C	*	1-2*	000: None																			
+0* None		great_tusk	984	True	False				great_tusk	D	*	1-2*	000: None																			
 0* None		great_tusk	984	False	False				great_tusk	E	*	2-3*	000: None																			
 0* None		great_tusk	984	False	False				great_tusk	F	*	2-3*	000: None																			
-0* None		scream_tail	985	False	False				scream_tail	A	*	5*	000: None																			
-0* None		scream_tail	985	False	False				scream_tail	B	*	4*	000: None																			
-0* None		scream_tail	985	False	False				scream_tail	C	*	1-2*	000: None																			
-0* None		scream_tail	985	False	False				scream_tail	D	*	1-2*	000: None																			
+0* None		scream_tail	985	True	False				scream_tail	A	*	5*	000: None																			
+0* None		scream_tail	985	True	False				scream_tail	B	*	4*	000: None																			
+0* None		scream_tail	985	True	False				scream_tail	C	*	1-2*	000: None																			
+0* None		scream_tail	985	True	False				scream_tail	D	*	1-2*	000: None																			
 0* None		scream_tail	985	False	False				scream_tail	E	*	2-3*	000: None																			
 0* None		scream_tail	985	False	False				scream_tail	F	*	2-3*	000: None																			
 0* None	Flutter Specs	flutter_mane	987	True	False			Flutter Specs	flutter_mane	A	*	5*	067: SecondSTAB	psychic																		
 0* None	Flutter Wings	flutter_mane	987	True	False			Flutter Wings	flutter_mane	B	*	4*	010: AllTerrain																			
 0* None	Flutter Fang	flutter_mane	987	True	False			Flutter Fang	flutter_mane	C	*	1*	027: SpecialAttacker																			
 0* None	Flutter Cape	flutter_mane	987	True	False			Flutter Cape	flutter_mane	D	*	2*	053: ClutchPerformer																			
-0* None		flutter_mane	987	True	False				flutter_mane	E	*	2-3*	000: None																			
+0* None		flutter_mane	987	False	False				flutter_mane	E	*	2-3*	000: None																			
 0* None		flutter_mane	987	False	False				flutter_mane	F	*	2-3*	000: None																			
-0* None		slither_wing	988	False	False				slither_wing	A	*	5*	000: None																			
-0* None		slither_wing	988	False	False				slither_wing	B	*	4*	000: None																			
-0* None		slither_wing	988	False	False				slither_wing	C	*	1-2*	000: None																			
-0* None		slither_wing	988	False	False				slither_wing	D	*	1-2*	000: None																			
+0* None		slither_wing	988	True	False				slither_wing	A	*	5*	000: None																			
+0* None		slither_wing	988	True	False				slither_wing	B	*	4*	000: None																			
+0* None		slither_wing	988	True	False				slither_wing	C	*	1-2*	000: None																			
+0* None		slither_wing	988	True	False				slither_wing	D	*	1-2*	000: None																			
 0* None		slither_wing	988	False	False				slither_wing	E	*	2-3*	000: None																			
 0* None		slither_wing	988	False	False				slither_wing	F	*	2-3*	000: None																			
+0* None		sandy_shocks	989	False	False				sandy_shocks	A	*	5*	000: None																			
+0* None		sandy_shocks	989	False	False				sandy_shocks	B	*	4*	000: None																			
+0* None		sandy_shocks	989	False	False				sandy_shocks	C	*	1-2*	000: None																			
+0* None		sandy_shocks	989	False	False				sandy_shocks	D	*	1-2*	000: None																			
+0* None		sandy_shocks	989	False	False				sandy_shocks	E	*	2-3*	000: None																			
+0* None		sandy_shocks	989	False	False				sandy_shocks	F	*	2-3*	000: None																			
 0* None	Freezing Bundle	iron_bundle	991	True	False			Freezing Bundle	iron_bundle	A	*	5*	100: ChanceStatusOnTypeHit	water	freeze				35													
 0* None	Bundle Guard	iron_bundle	991	True	False			Bundle Guard	iron_bundle	B	*	4*	028: StatusImmune		poison																	
 0* None	Bundle Beak	iron_bundle	991	True	False			Bundle Beak	iron_bundle	C	*	1*	103: TypeBecomesCategory	flying				002: Magical														
 0* None	Bundle Scope	iron_bundle	991	True	False			Bundle Scope	iron_bundle	D	*	2*	019: MasterHurler																			
-0* None		iron_bundle	991	True	False				iron_bundle	E	*	2-3*	000: None																			
+0* None		iron_bundle	991	False	False				iron_bundle	E	*	2-3*	000: None																			
 0* None		iron_bundle	991	False	False				iron_bundle	F	*	2-3*	000: None																			
-0* None		iron_hands	992	False	False				iron_hands	A	*	5*	000: None																			
-0* None		iron_hands	992	False	False				iron_hands	B	*	4*	000: None																			
-0* None		iron_hands	992	False	False				iron_hands	C	*	1-2*	000: None																			
-0* None		iron_hands	992	False	False				iron_hands	D	*	1-2*	000: None																			
+0* None		iron_hands	992	True	False				iron_hands	A	*	5*	000: None																			
+0* None		iron_hands	992	True	False				iron_hands	B	*	4*	000: None																			
+0* None		iron_hands	992	True	False				iron_hands	C	*	1-2*	000: None																			
+0* None		iron_hands	992	True	False				iron_hands	D	*	1-2*	000: None																			
 0* None		iron_hands	992	False	False				iron_hands	E	*	2-3*	000: None																			
 0* None		iron_hands	992	False	False				iron_hands	F	*	2-3*	000: None																			
+0* None		iron_moth	994	False	False				iron_moth	A	*	5*	000: None																			
+0* None		iron_moth	994	False	False				iron_moth	B	*	4*	000: None																			
+0* None		iron_moth	994	False	False				iron_moth	C	*	1-2*	000: None																			
+0* None		iron_moth	994	False	False				iron_moth	D	*	1-2*	000: None																			
+0* None		iron_moth	994	False	False				iron_moth	E	*	2-3*	000: None																			
+0* None		iron_moth	994	False	False				iron_moth	F	*	2-3*	000: None																			
+0* None		iron_thorns	995	False	False				iron_thorns	A	*	5*	000: None																			
+0* None		iron_thorns	995	False	False				iron_thorns	B	*	4*	000: None																			
+0* None		iron_thorns	995	False	False				iron_thorns	C	*	1-2*	000: None																			
+0* None		iron_thorns	995	False	False				iron_thorns	D	*	1-2*	000: None																			
+0* None		iron_thorns	995	False	False				iron_thorns	E	*	2-3*	000: None																			
+0* None		iron_thorns	995	False	False				iron_thorns	F	*	2-3*	000: None																			
 3* Blade		baxcalibur	996	False	True			baxcalibur Blade	baxcalibur's Family	A	*	5*	038: LungeAttack																			
 2* Crest		arctibax	996	False	True			arctibax Crest	arctibax's Family	B	*	4*	049: ExcessiveForce																			
 1* Fang		frigibax	996	False	True			frigibax Fang	frigibax's Family	C	*	1-2*	088: DoubleDash																			
@@ -2721,9 +2933,27 @@ Generic Name	Custom Name	User	Family	ON	Evos	Custom Group	Group Name	Name	Item F
 1* Card		gimmighoul	999	True	True			gimmighoul Card	gimmighoul's Family	D	*	2*	062: FastFriend																			
 2* Coin		gimmighoul	999	True	True			gimmighoul Coin	gimmighoul's Family	E	*	3*	063: CoinWatcher																			
 2* Key		gholdengo	999	False	True			gholdengo Key	gholdengo's Family	F	*	3*	065: ChestFinder																			
-0* None		iron_valiant	1006	False	False				iron_valiant	A	*	5*	000: None																			
-0* None		iron_valiant	1006	False	False				iron_valiant	B	*	4*	000: None																			
-0* None		iron_valiant	1006	False	False				iron_valiant	C	*	1-2*	000: None																			
-0* None		iron_valiant	1006	False	False				iron_valiant	D	*	1-2*	000: None																			
+0* None		chi_yu	1004	False	False				chi_yu	A	*	5*	000: None																			
+0* None		chi_yu	1004	False	False				chi_yu	B	*	4*	000: None																			
+0* None		chi_yu	1004	False	False				chi_yu	C	*	1-2*	000: None																			
+0* None		chi_yu	1004	False	False				chi_yu	D	*	1-2*	000: None																			
+0* None		chi_yu	1004	False	False				chi_yu	E	*	2-3*	000: None																			
+0* None		chi_yu	1004	False	False				chi_yu	F	*	2-3*	000: None																			
+0* None		iron_valiant	1006	True	False				iron_valiant	A	*	5*	000: None																			
+0* None		iron_valiant	1006	True	False				iron_valiant	B	*	4*	000: None																			
+0* None		iron_valiant	1006	True	False				iron_valiant	C	*	1-2*	000: None																			
+0* None		iron_valiant	1006	True	False				iron_valiant	D	*	1-2*	000: None																			
 0* None		iron_valiant	1006	False	False				iron_valiant	E	*	2-3*	000: None																			
 0* None		iron_valiant	1006	False	False				iron_valiant	F	*	2-3*	000: None																			
+0* None		walking_wake	1009	False	False				walking_wake	A	*	5*	000: None																			
+0* None		walking_wake	1009	False	False				walking_wake	B	*	4*	000: None																			
+0* None		walking_wake	1009	False	False				walking_wake	C	*	1-2*	000: None																			
+0* None		walking_wake	1009	False	False				walking_wake	D	*	1-2*	000: None																			
+0* None		walking_wake	1009	False	False				walking_wake	E	*	2-3*	000: None																			
+0* None		walking_wake	1009	False	False				walking_wake	F	*	2-3*	000: None																			
+0* None		iron_leaves	1010	False	False				iron_leaves	A	*	5*	000: None																			
+0* None		iron_leaves	1010	False	False				iron_leaves	B	*	4*	000: None																			
+0* None		iron_leaves	1010	False	False				iron_leaves	C	*	1-2*	000: None																			
+0* None		iron_leaves	1010	False	False				iron_leaves	D	*	1-2*	000: None																			
+0* None		iron_leaves	1010	False	False				iron_leaves	E	*	2-3*	000: None																			
+0* None		iron_leaves	1010	False	False				iron_leaves	F	*	2-3*	000: None																			
