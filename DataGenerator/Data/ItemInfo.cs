@@ -3472,6 +3472,38 @@ namespace DataGenerator.Data
                 //item.Price = 1000;
                 //item.MaxStack = 9;
             }
+            else if (ii == 498)
+            {
+                item.Name = new LocalText("Rotom Catalog");
+                item.Desc = new LocalText("A catalog of devices that Rotom like. It can be used on Rotom to cause a Forme change.");
+                item.Sprite = "Box_LightBlue";
+                item.UsageType = ItemData.UseType.UseOther;
+                item.Price = 1000;
+                item.UseEvent.BeforeTryActions.Add(0, new CheckItemActiveEvent());
+                item.UseEvent.BeforeTryActions.Add(1, new FormChoiceEvent("rotom"));
+                item.UseEvent.OnHits.Add(0, new SwitchFormEvent());
+                FormSkillEvent skillLearn = new FormSkillEvent();
+                skillLearn.FormSkillPair[1] = "overheat";
+                skillLearn.FormSkillPair[2] = "hydro_pump";
+                skillLearn.FormSkillPair[3] = "blizzard";
+                skillLearn.FormSkillPair[4] = "air_slash";
+                skillLearn.FormSkillPair[5] = "leaf_storm";
+                skillLearn.FallbackID = "thunder_shock";
+                item.UseEvent.OnHits.Add(0, skillLearn);
+                item.UseAction = new SelfAction();
+                item.UseAction.TargetAlignments |= Alignment.Self;
+                item.Explosion.TargetAlignments |= Alignment.Self;
+
+                BattleFX itemFX = new BattleFX();
+                itemFX.Sound = "DUN_Wonder_Tile";
+                itemFX.Emitter = new SingleEmitter(new AnimData("Circle_Small_Blue_In", 2));
+                itemFX.Delay = 20;
+                item.UseAction.PreActions.Add(itemFX);
+
+                item.UseEvent.HitFX.Delay = 20;
+                item.UseEvent.HitFX.Sound = "_UNK_EVT_043";
+                item.UseEvent.HitFX.Emitter = new SingleEmitter(new AnimData("Materialize", 2));
+            }
             else if (ii == 545)
             {
                 item.Name = new LocalText("Gold Berry");
