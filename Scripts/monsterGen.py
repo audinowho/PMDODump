@@ -48,14 +48,17 @@ class MonsterGen(SheetMerge):
         # maps key to row
         cmb_dict = {}
 
+        # get all existing rows from google sheet into cmb_dict
         for row in sheet:
             fam_idx = int(row[0])
             species_idx = int(row[2])
             form_idx = int(row[4])
             key = (fam_idx, species_idx, form_idx)
             cmb_keys.append(key)
+            # Local exists, Remote Exists, Changed
             cmb_dict[key] = [False, True, True, row]
 
+        # get all existing rows from local txt into cmb_dict
         for row in table:
             fam_idx = int(row[0])
             species_idx = int(row[2])
@@ -105,14 +108,14 @@ class MonsterGen(SheetMerge):
             row[8] = row[8].lower() == "true"
             row[9] = row[9].lower() == "true"
             if local_exist != remote_exist:
-                if local_exist:
+                if remote_exist:
                     # Entries missing in the local copy will be deleted directly from the google sheet.
                     body = { "deleteDimension": { "range": { "sheetId": sheet_id, "dimension": "ROWS", "startIndex": sheet_ind-1, "endIndex": sheet_ind } } }
                     self._service.spreadsheets().batchUpdate(spreadsheetId=self._id, body={'requests': [body]}).execute()
                     print("    * Deleted key "+str(cmb_key))
                     time.sleep(WAIT_TIME)
                     sheet_ind -= 1
-                elif remote_exist:
+                elif local_exist:
                     # Entries missing in the google sheet will be written directly to the google sheet.
                     moved_comment = ""
 
