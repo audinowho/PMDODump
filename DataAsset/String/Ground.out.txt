@@ -3,7 +3,7 @@ base_camp-0000|data.Name		Base Camp	Camp de Base	Basis-Lager	Campamento Base		Ca
 base_camp_2-0000|data.Name		Base Town	Ville de Base	Basis-Dorf			Città Base	베이스 타운	ベースタウン	ベースタウン	起点镇		
 canyon_camp-0000|data.Name		Ravine Camp	Camp du ravin	Schlucht-Lager	Campamento Desfiladero		Campo Crepaccio	협곡 캠프	けいこくのキャンプ	渓谷のキャンプ	峡谷营地		
 cliff_camp-0000|data.Name		Cliff Camp	Camp de Falaise	Klippen-Lager	Campamento Acantilado		Campo Collina	절벽 캠프	クリーフキャンプ	クリーフキャンプ	悬崖营地		
-dev_room-0000|data.Name		Developer Room	Salle des développeurs	Entwicklerraum	Sala del Desarrollador		Stanza Sviluppatore	개발자실	デバックルーム	デバックルーム	开发者房间		
+dev_room-0000|data.Name		Developer Room	Salle des développeurs	Entwicklerraum	Sala del Desarrollador		Stanza Sviluppatore	개발자실	デバッグルーム	デバッグルーム	开发者房间		
 end_ambush_forest-0000|data.Name		Ambush Forest Grove	Bosquet de l'embuscade	Hain im Auflauerwald					グローブ・フォレスト	グローブ・フォレスト	埋伏森林树丛		
 end_moonlit_temple-0000|data.Name		Moonlit Chamber	Salle au clair de lune	Mondhelle Kammer	Cámara Luz de Luna		Camera Brillaluna	달빛의 방	つきのチャンバー	月のチャンバー	月光厅堂		
 end_treacherous_mountain-0000|data.Name		Treacherous Mountain Cave	Grotte de la montagne traitresse	Höhle im tückischem Gebirge				위험한 산속 동굴	キケンなどうくつ	キケンなどうくつ	奸诈山洞		

@@ -1,17 +1,94 @@
 Sheet: Hardcode
+    * Added MENU_FILTER_ALL
+    * Added MENU_FILTER_BOXES
+    * Added MENU_FILTER_EQUIP
+    * Added MENU_FILTER_EXCL
+    * Added MENU_FILTER_FOOD
+    * Added MENU_FILTER_OTHER
+    * Added MENU_FILTER_THROW
+    * Added MENU_FILTER_TM
+    * Added MENU_FILTER_TOOLS
 
 Sheet: Content
+    * Changed MSG_CANT_RECRUIT_RATE from "But it wasn't good enough for {0}..." to "{0} doesn't seem interested in this Apricorn..."
 
 Sheet: Script
+    * Significantly changed ground\canyon_camp/Deliver_Line_007 from "" to "[tmp](Deliver) Thanks for discovering this cave.  We're putting supplies there."
+    * Changed ground\rest_stop/Special_Event_001 from "[emote=Special0]I am...[pause=0][emote=Normal] awake.[scroll]You've waited long for my awakening, haven't you?[br]Seven days and seven nights... you must be truly patient.[br]For that patience...[pause=0] I will grant you what you desire." to "[emote=Special0]I am...[pause=0][emote=Normal] awake.[scroll]Did you wait a long time for me?[br]Seven days and seven nights... you're really patient.[br]For that patience...[pause=0] I will grant you what you desire."
+    * Significantly changed ground\rest_stop/Storehouse_Line_001 from "[tmp]Thanks for discovering this cave.  We're putting supplies here." to "A new camp means a new supply route![pause=0]\nWe must set up storage here at once!"
 
 Sheet: Abilities
 
 Sheet: Items
+    * Added 0015-loot_rotom_catalog-0000|data.Name
+    * Added 0015-loot_rotom_catalog-0001|data.Desc
+    * Added 0017-xcl_family_amaura_00-0000|data.Name
+    * Added 0017-xcl_family_archen_00-0000|data.Name
+    * Added 0017-xcl_family_axew_00-0000|data.Name
+    * Added 0017-xcl_family_binacle_01-0000|data.Name
+    * Added 0017-xcl_family_capsakid_00-0000|data.Name
+    * Added 0017-xcl_family_carbink_00-0000|data.Name
+    * Added 0017-xcl_family_chespin_01-0000|data.Name
+    * Added 0017-xcl_family_clauncher_00-0000|data.Name
+    * Added 0017-xcl_family_deerling_00-0000|data.Name
+    * Added 0017-xcl_family_diancie_00-0000|data.Name
+    * Added 0017-xcl_family_drilbur_00-0000|data.Name
+    * Added 0017-xcl_family_durant_00-0000|data.Name
+    * Added 0017-xcl_family_emolga_00-0000|data.Name
+    * Added 0017-xcl_family_espurr_00-0000|data.Name
+    * Added 0017-xcl_family_fennekin_02-0000|data.Name
+    * Added 0017-xcl_family_ferroseed_00-0000|data.Name
+    * Added 0017-xcl_family_flabebe_00-0000|data.Name
+    * Added 0017-xcl_family_froakie_01-0000|data.Name
+    * Added 0017-xcl_family_furfrou_00-0000|data.Name
+    * Added 0017-xcl_family_galar_fossils_00-0000|data.Name
+    * Added 0017-xcl_family_galar_fossils_01-0000|data.Name
+    * Added 0017-xcl_family_galar_fossils_03-0000|data.Name
+    * Added 0017-xcl_family_galar_fossils_06-0000|data.Name
+    * Added 0017-xcl_family_galar_fossils_09-0000|data.Name
+    * Added 0017-xcl_family_golett_00-0000|data.Name
+    * Added 0017-xcl_family_goomy_04-0000|data.Name
+    * Added 0017-xcl_family_gothita_00-0000|data.Name
+    * Added 0017-xcl_family_helioptile_01-0000|data.Name
+    * Added 0017-xcl_family_honedge_02-0000|data.Name
+    * Added 0017-xcl_family_hoopa_00-0000|data.Name
+    * Added 0017-xcl_family_klefki_01-0000|data.Name
+    * Added 0017-xcl_family_lillipup_00-0000|data.Name
+    * Added 0017-xcl_family_litwick_00-0000|data.Name
+    * Added 0017-xcl_family_maractus_00-0000|data.Name
+    * Deleted key 0017-xcl_family_meowth_00-0000|data.Name
+    * Added 0017-xcl_family_meowth_01-0000|data.Name, transferred from 0017-xcl_family_meowth_00-0000|data.Name
+    * Added 0017-xcl_family_mienfoo_00-0000|data.Name
+    * Added 0017-xcl_family_minccino_00-0000|data.Name
+    * Added 0017-xcl_family_noibat_04-0000|data.Name
+    * Added 0017-xcl_family_oshawott_00-0000|data.Name
+    * Added 0017-xcl_family_patrat_00-0000|data.Name
+    * Added 0017-xcl_family_pawniard_00-0000|data.Name
+    * Added 0017-xcl_family_phantump_03-0000|data.Name
+    * Added 0017-xcl_family_pumpkaboo_02-0000|data.Name
+    * Added 0017-xcl_family_purrloin_00-0000|data.Name
+    * Added 0017-xcl_family_sewaddle_00-0000|data.Name
+    * Added 0017-xcl_family_sigilyph_00-0000|data.Name
+    * Added 0017-xcl_family_sigilyph_01-0000|data.Name
+    * Added 0017-xcl_family_sigilyph_04-0000|data.Name
+    * Significantly changed 0017-xcl_family_sneasel_00-0000|data.Name from "Ruin Armlet" to "Dire Armlet"
+    * Added 0017-xcl_family_sneasel_01-0000|data.Name, transferred from 0017-xcl_family_sneasel_00-0000|data.Name
+    * Added 0017-xcl_family_snivy_00-0000|data.Name
+    * Added 0017-xcl_family_solosis_00-0000|data.Name
+    * Added 0017-xcl_family_tepig_00-0000|data.Name
+    * Added 0017-xcl_family_timburr_00-0000|data.Name
+    * Added 0017-xcl_family_tympole_00-0000|data.Name
+    * Added 0017-xcl_family_veluza_00-0000|data.Name
+    * Added 0017-xcl_family_venipede_00-0000|data.Name
+    * Added 0017-xcl_family_volcanion_00-0000|data.Name
+    * Added 0017-xcl_family_woobat_00-0000|data.Name
+    * Added 0017-xcl_family_yamask_00-0000|data.Name
+    * Added 0017-xcl_family_zygarde_00-0000|data.Name
+    * Added 0017-xcl_family_zygarde_01-0000|data.Name
 
 Sheet: MapStatuses
 
 Sheet: Moves
-    * Erased contents of 0895-aqua_cutter-0001|data.Desc
 
 Sheet: Statuses
 

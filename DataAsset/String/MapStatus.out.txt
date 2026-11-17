@@ -13,7 +13,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-default_mapstatus-0001|data.Desc											
 0000-default_weather-0000|data.Name	Not displayed to players.  Low Priority.	Default Weather		Standard Wetter	Tiempo por defecto		Meteo predefenito				默认天气
 0000-default_weather-0001|data.Desc											
-0000-diamond_dust-0000|data.Name		Diamond Dust							ダイアモンド・ダスト	ダイアモンド・ダスト	
+0000-diamond_dust-0000|data.Name		Diamond Dust							ダイアモンド・ダスト	ダイアモンド・ダスト	冰晶
 0000-diamond_dust-0001|data.Desc											
 0000-electric_terrain-0000|data.Name		Electric Terrain	Champ Électrifié	Elektrofeld	Campo Eléctrico		Campo Elettrico		エレキフィールド	エレキフィールド	电气场地
 0000-electric_terrain-0001|data.Desc		Electric-type attacks are boosted, and all Pokémon on the floor cannot sleep.	Les attaques de type Électrik sont boostées et les Pokémon de l'étage ne peuvent pas s'endormir.	Elektro-Attacken sind verstärkt und alle Pokémon auf der Ebene können nicht schlafen.	Los ataques de tipo eléctrico se potencian, y todos los Pokémon en el suelo no pueden dormir.		La potenza delle mosse di tipo Elettro aumenta. Tutti i Pokémon che si trovano nel piano non possono dormire.				电属性攻击威力提高，地面上的宝可梦无法入眠。
@@ -41,9 +41,9 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-magic_room-0001|data.Desc		All Pokémon on the floor have their held items and abilities disabled.	Tout les Pokémon de l'étage perdent l'effet de leurs objets tenus.	Die Items und Fähigkeiten aller Pokémon auf der Ebene werden unbrauchbar.	Todos los Pokémon del piso tienen los objetos llevados y las habilidades desactivados.		Tutti i Pokémon nel piano hanno lo strumento tenuto e l'abilità annulati.				楼层内所有宝可梦的携带道具和特性都会失效。
 0000-map_clear_check-0000|data.Name		Map Clear Check		Prüfung des Kartenabschlusses							
 0000-map_clear_check-0001|data.Desc											
-0000-map_surveyed-0000|data.Name	Not displayed to players.  Low Priority.	Map Surveyed		Karte überschaut	Mapa Inspeccionado		Mappa ispezionata				
+0000-map_surveyed-0000|data.Name	Not displayed to players.  Low Priority.	Map Surveyed		Karte überschaut	Mapa Inspeccionado		Mappa ispezionata				全图探完
 0000-map_surveyed-0001|data.Desc											
-0000-mercy_revive-0000|data.Name	Not displayed to players.  Low Priority.	Mercy Revive		Gnädige Wiederbelebung							
+0000-mercy_revive-0000|data.Name	Not displayed to players.  Low Priority.	Mercy Revive		Gnädige Wiederbelebung							饶命续关
 0000-mercy_revive-0001|data.Desc											
 0000-misty_terrain-0000|data.Name		Misty Terrain	Champ Brumeux	Nebelfeld	Campo de niebla		Campo Nebbioso				薄雾场地
 0000-misty_terrain-0001|data.Desc		Dragon-type attacks are weakened, and all Pokémon are protected from major status problems.	Les attaques de type Dragon sont affaiblies et tout les Pokémon sont protégés des principaux problèmes de status.	Drachen-Attacken sind geschwächt und alle Pokémon auf der Ebene sind vor Statusproblemen geschützt.	Los ataques de tipo Dragón se debilitan, y todos los Pokémon están protegidos de graves problemas de estado.		La potenza delle mosse di tipo Drago diminuisce e tutti i Pokémon sono protetti dai principali problemi di stato.				龙属性攻击降低，且所有宝可梦都会受到保护，不会陷入异常状态。

@@ -86,7 +86,7 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-the_abyss-0000|data.Name		The Abyss	L'Abysse	Die Kluft	El Abismo		L'Abisso				深渊																																														
 0000-the_abyss-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Abyss\nB{0}F	L'Abysse\n{0}SS	Die Kluft\nU{0}	El Abismo\nP-{0}		L'Abisso\nP-{0}				深渊\nB{0}F																																														
 0000-the_neverending_tale-0000|data.Name		The NeverEnding Tale	L'Histoire Sans Fin	Die niemalsendende Geschichte			La Storia Senza Fine				无尽篇章																																														
-0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}	L'Histoire Sans Fin\nCh.{0}	Die niemalsendende Geschichte\nKap. {0}			La Storia Senza Fine\nCap. {0}				无尽篇章\n第{0}话																																														
+0000-the_neverending_tale-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The NeverEnding Tale\nCh. {0}	L'Histoire Sans Fin\nCh. {0}	Die niemalsendende Geschichte\nKap. {0}			La Storia Senza Fine\nCap. {0}				无尽篇章\n第{0}话																																														
 0000-the_sky-0000|data.Name		The Sky	Le Ciel	Der Himmel	El Cielo		Il Cielo				天空																																														
 0000-the_sky-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		The Sky\n{0}F	Le Ciel\n{0}E	Der Himmel\nE{0}	El Cielo\nP{0}		Il Cielo\nP{0}				天空\n{0}F																																														
 0000-thunderstruck_pass-0000|data.Name		Thunderstruck Pass	Col Foudroyé	Donnerschlag-Übergang	Senda Atónita		Sentiero Picchiatuono				雷霆山口																																														
@@ -103,23 +103,23 @@ Key	Comment	EN	FR	DE	ES	PT	IT	KO	JA	JA-JP	ZH-HANS	ZH-HANT	RU
 0000-tropical_path-0000|data.Name		Tropical Path	Sentier Tropical	Tropischer Pfad	Paso Tropical		Passaggio Tropicale				热带小径																																														
 0000-tropical_path-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Tropical Path\n{0}F	Sentier Tropical\n{0}E	Tropischer Pfad\nE{0}	Paso Tropical\nP{0}		Passaggio Tropicale\nP{0}				热带小径\n{0}F																																														
 0000-tropical_path-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0000]).Name		Secret Room	Salle Secrète	Geheimer Raum	Sala Secreta		Stanza Segreta				秘密之间																																														
-0000-uncharted_waters-0000|data.Name		Uncharted Waters	Eaux Inconnues																																																						
-0000-uncharted_waters-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Shallow Waters\nB{0}F	Eaux Improfondes\n{0}SS																																																						
-0000-uncharted_waters-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Chilly Waters\nB{0}F	Eaux Froides\n{0}SS																																																						
-0000-uncharted_waters-0003|((FloorNameIDZoneStep)data.Segments[0002].ZoneSteps[0001]).Name		Swift Waters\nB{0}F	Eaux Rapides\n{0}SS																																																						
-0000-uncharted_waters-0004|((FloorNameIDZoneStep)data.Segments[0003].ZoneSteps[0001]).Name		Frigid Waters\nB{0}F																																																							
-0000-uncharted_waters-0005|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0001]).Name		Rendevous Waters\nB{0}F																																																							
-0000-uncharted_waters-0006|((FloorNameIDZoneStep)data.Segments[0005].ZoneSteps[0001]).Name		Rushing Waters\nB{0}F	Eaux Impétueuses\n{0}SS																																																						
-0000-uncharted_waters-0007|((FloorNameIDZoneStep)data.Segments[0006].ZoneSteps[0001]).Name		Violent Waters\nB{0}F	Eaux Violentes\n{0}SS																																																						
-0000-uncharted_waters-0008|((FloorNameIDZoneStep)data.Segments[0007].ZoneSteps[0001]).Name		Tropical Waters\nB{0}F	Eaux Tropicales\n{0}SS																																																						
-0000-uncharted_waters-0009|((FloorNameIDZoneStep)data.Segments[0008].ZoneSteps[0001]).Name		Balmy Waters\nB{0}F																																																							
-0000-uncharted_waters-0010|((FloorNameIDZoneStep)data.Segments[0009].ZoneSteps[0001]).Name		Balmy Waters\nB{0}F																																																							
-0000-uncharted_waters-0011|((FloorNameIDZoneStep)data.Segments[0010].ZoneSteps[0001]).Name		Frothy Waters\nB{0}F																																																							
-0000-uncharted_waters-0012|((FloorNameIDZoneStep)data.Segments[0011].ZoneSteps[0001]).Name		Spawning Waters\nB{0}F																																																							
-0000-uncharted_waters-0013|((FloorNameIDZoneStep)data.Segments[0012].ZoneSteps[0001]).Name		Shadowy Waters\nB{0}F	Eaux Obscures\n{0}SS																																																						
-0000-uncharted_waters-0014|((FloorNameIDZoneStep)data.Segments[0013].ZoneSteps[0001]).Name		Luminous Waters\nB{0}F	Eaux Lumineuses\n{0}SS																																																						
-0000-uncharted_waters-0015|((FloorNameIDZoneStep)data.Segments[0014].ZoneSteps[0001]).Name		Spiraling Waters\nB{0}F																																																							
-0000-uncharted_waters-0016|((FloorNameIDZoneStep)data.Segments[0015].ZoneSteps[0001]).Name		Silver Waters\nB{0}F	Eaux Argentés\n{0}SS																																																						
+0000-uncharted_waters-0000|data.Name		Uncharted Waters	Eaux Inconnues								无名水域																																														
+0000-uncharted_waters-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Shallow Waters\nB{0}F	Eaux Improfondes\n{0}SS								浅层水域\nB{0}F																																														
+0000-uncharted_waters-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Chilly Waters\nB{0}F	Eaux Froides\n{0}SS								刺骨水域\nB{0}F																																														
+0000-uncharted_waters-0003|((FloorNameIDZoneStep)data.Segments[0002].ZoneSteps[0001]).Name		Swift Waters\nB{0}F	Eaux Rapides\n{0}SS								奔流水域\nB{0}F																																														
+0000-uncharted_waters-0004|((FloorNameIDZoneStep)data.Segments[0003].ZoneSteps[0001]).Name		Frigid Waters\nB{0}F									凝结水域\nB{0}F																																														
+0000-uncharted_waters-0005|((FloorNameIDZoneStep)data.Segments[0004].ZoneSteps[0001]).Name		Rendevous Waters\nB{0}F									汇流水域\nB{0}F																																														
+0000-uncharted_waters-0006|((FloorNameIDZoneStep)data.Segments[0005].ZoneSteps[0001]).Name		Rushing Waters\nB{0}F	Eaux Impétueuses\n{0}SS								湍急水域\nB{0}F																																														
+0000-uncharted_waters-0007|((FloorNameIDZoneStep)data.Segments[0006].ZoneSteps[0001]).Name		Violent Waters\nB{0}F	Eaux Violentes\n{0}SS								狂野水域\nB{0}F																																														
+0000-uncharted_waters-0008|((FloorNameIDZoneStep)data.Segments[0007].ZoneSteps[0001]).Name		Tropical Waters\nB{0}F	Eaux Tropicales\n{0}SS								热带水域\nB{0}F																																														
+0000-uncharted_waters-0009|((FloorNameIDZoneStep)data.Segments[0008].ZoneSteps[0001]).Name		Balmy Waters\nB{0}F									温和水域\nB{0}F																																														
+0000-uncharted_waters-0010|((FloorNameIDZoneStep)data.Segments[0009].ZoneSteps[0001]).Name		Balmy Waters\nB{0}F									温和水域\nB{0}F																																														
+0000-uncharted_waters-0011|((FloorNameIDZoneStep)data.Segments[0010].ZoneSteps[0001]).Name		Frothy Waters\nB{0}F									泡沫水域\nB{0}F																																														
+0000-uncharted_waters-0012|((FloorNameIDZoneStep)data.Segments[0011].ZoneSteps[0001]).Name		Spawning Waters\nB{0}F									涌跃水域\nB{0}F																																														
+0000-uncharted_waters-0013|((FloorNameIDZoneStep)data.Segments[0012].ZoneSteps[0001]).Name		Shadowy Waters\nB{0}F	Eaux Obscures\n{0}SS								幽暗水域\nB{0}F																																														
+0000-uncharted_waters-0014|((FloorNameIDZoneStep)data.Segments[0013].ZoneSteps[0001]).Name		Luminous Waters\nB{0}F	Eaux Lumineuses\n{0}SS								波粼水域\nB{0}F																																														
+0000-uncharted_waters-0015|((FloorNameIDZoneStep)data.Segments[0014].ZoneSteps[0001]).Name		Spiraling Waters\nB{0}F									漩涡水域\nB{0}F																																														
+0000-uncharted_waters-0016|((FloorNameIDZoneStep)data.Segments[0015].ZoneSteps[0001]).Name		Silver Waters\nB{0}F	Eaux Argentés\n{0}SS								银光水域\nB{0}F																																														
 0000-veiled_ridge-0000|data.Name		Veiled Ridge	Crète Voilée	Verdeckter Grat	Ladera Velada		Crinale Velato				朦胧山脊																																														
 0000-veiled_ridge-0001|((FloorNameIDZoneStep)data.Segments[0000].ZoneSteps[0001]).Name		Veiled Ridge\n{0}F	Crète Voilée\n{0}E	Verdeckter Grat\nE{0}	Ladera Velada\nP{0}		Crinale Velato\nP{0}				朦胧山脊\n{0}F																																														
 0000-veiled_ridge-0002|((FloorNameIDZoneStep)data.Segments[0001].ZoneSteps[0001]).Name		Illusion Ridge\nB{0}F	Crète Illusion\n{0}SS	Illusionsgrat\nU{0}	Ladera Ilusoria\nP-{0}		Cresta Illusione\nP-{0}				幻想山脊\nB{0}F																																														
