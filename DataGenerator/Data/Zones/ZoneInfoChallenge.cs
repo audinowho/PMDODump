@@ -889,7 +889,7 @@ namespace DataGenerator.Data
                         centerSpawner.Add(new EffectTile("trap_trip", true), 10);
                         centerSpawner.Add(new EffectTile("trap_pp_leech", true), 10);
 
-                        IGenStep trapStep = CreateTrapPatternStep<MapGenContext>(new RandRange(1, 3), patternList, spawner, centerSpawner, 35);
+                        IGenStep trapStep = CreateTrapPatternStep<ListMapGenContext>(new RandRange(1, 3), patternList, spawner, centerSpawner, 35);
                         zoneStep.Spawns.SetRange(trapStep, new IntRange(4, max_floors));
                     }
                     floorSegment.ZoneSteps.Add(zoneStep);
