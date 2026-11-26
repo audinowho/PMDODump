@@ -3445,6 +3445,8 @@ namespace DataGenerator.Data
                 item.Name = new LocalText("Music Box");
                 item.Desc = new LocalText("An enchanting music box that plays a beautiful melody. It is said to draw something special to it when it is kept close by.");
                 item.Sprite = "Box_Blue";
+                item.UsageType = ItemData.UseType.Treasure;
+                item.CannotDrop = true;
                 // This will trigger legendaries to appear.
                 // when they do appear, the music will change to a music box tune.
                 item.Price = 80000;

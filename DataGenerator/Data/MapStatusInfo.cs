@@ -732,6 +732,16 @@ namespace DataGenerator.Data
                 status.OnMapTurnEnds.Add(5, new MapTickEvent());
                 status.OnMapTurnEnds.Add(5, new MapStatusCountDownEvent());
             }
+            else if (ii == 46)
+            {
+                status.Name = new LocalText("Escape Sequence");
+                status.Desc = new LocalText("");
+                status.DefaultHidden = true;
+                status.CarryOver = true;
+                status.RepeatMethod = new MapStatusReplaceEvent();
+                status.BeforeTryActions.Add(0, new PreventSpecificItemUseEvent(new StringKey("MSG_ITEM_BAN"), "orb_escape", "machine_storage_box"));
+                status.BeforeActions.Add(0, new PreventSpecificItemUseEvent(new StringKey("MSG_ITEM_BAN"), "orb_escape", "machine_storage_box"));
+            }
 
 
             if (status.Name.DefaultText.StartsWith("**"))
