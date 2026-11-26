@@ -6930,12 +6930,14 @@ namespace DataGenerator.Data
                             chestStep.Items.Add(new MapItem(key), 4);//boosters
                         foreach (string key in IterateGummis(true))
                             chestStep.Items.Add(new MapItem(key), 4);//gummis
-                        chestStep.Items.Add(new MapItem("held_pierce_band"), 10);//pierce band
-                        chestStep.Items.Add(new MapItem("held_friend_bow"), 10);//friend bow
-                        chestStep.Items.Add(new MapItem("held_goggle_specs"), 10);//goggle specs
+                        chestStep.Items.Add(new MapItem("held_pierce_band"), 8);//pierce band
+                        chestStep.Items.Add(new MapItem("held_friend_bow"), 8);//friend bow
+                        chestStep.Items.Add(new MapItem("held_goggle_specs"), 8);//goggle specs
                         chestStep.Items.Add(new MapItem("evo_magmarizer"), 3);
                         chestStep.Items.Add(new MapItem("evo_electirizer"), 3);
                         chestStep.Items.Add(new MapItem("evo_reaper_cloth"), 3);
+                        chestStep.Items.Add(new MapItem("evo_reaper_cloth"), 3);
+                        chestStep.Items.Add(new MapItem("loot_rotom_catalog"), 3);
 
                         chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(HeldState)), false, true, new RandRange(1)), 10);//held
                         chestStep.ItemThemes.Add(new ItemStateType(new FlagType(typeof(DrinkState)), false, true, new RandRange(3, 6)), 10);//vitamins

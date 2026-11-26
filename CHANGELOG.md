@@ -1,10 +1,6 @@
-# 0.8.13 Changes #
+# 0.8.14 Changes #
 
-* Storage can be filtered using [S] button
-* Aqua Tail, Avalanche, Icicle Crash: Removes Lava
-* Tutor menu loads more efficiently
-* Fixed an issue with audino's dialogue
-* Modding: Map warps are more easily replaced for ground maps
-* Modding: Expose ways to modify music and sound pitch in real time.
-* Modding: Custom dungeon restrictions
-* Modding: Ability to set Sight Range and SightShape
+* Enable Mission Board Mod gives new rewards: The client may ask to join the team, or give exclusive items.
+* Enable Mission Board Mod no longer conflicts with zone unlocks/sidequest completion.
+* RC: Added Rotom Catalog for changing Rotom formes.
+* Modding: Fix an issue that causes editing Start Params to remove SightShape from the XML

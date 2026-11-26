@@ -13,7 +13,7 @@ using PMDC;
 using PMDC.Data;
 using System.Data.SQLite;
 using PMDC.Dev;
-using SkiaSharp;
+using RogueEssence.Script;
 
 namespace DataGenerator.Data
 {
@@ -154,6 +154,7 @@ namespace DataGenerator.Data
             m_dbTLConnection.Close();
 
             WritePersonalityChecklist(personalities, totalEntries);
+            WriteRescuePool(totalEntries);
 
 
             //string outpt = "";
@@ -162,7 +163,7 @@ namespace DataGenerator.Data
             for(int ii = 0; ii < 5; ii++)
                 evoBuckets[(EvoPosition)ii] = new List<int>();
             for (int ii = 0; ii < TOTAL_DEX; ii++)
-                MapJoinRateCount(ii, totalEntries, evoStatus, evoBuckets);
+                PreMapJoinRate(ii, totalEntries, evoStatus, evoBuckets);
             //for (int ii = 0; ii < 5; ii++)
             //{
             //    evoBuckets[(EvoPosition)ii].Sort();
@@ -174,26 +175,9 @@ namespace DataGenerator.Data
             //    }
             //}
 
-            //int improved = 0;
-            //int dropped = 0;
-            //int recruitableDiff = 0;
-            //int recruitable40Diff = 0;
             for (int ii = 0; ii < TOTAL_DEX; ii++)
             {
-                //int oldJoin = MapJoinRateOld(evoStatus, ii, totalEntries[ii].JoinRate);
                 int newJoin = MapJoinRate(evoStatus, ii, totalEntries[ii].JoinRate);
-                //if (newJoin > oldJoin)
-                //    improved++;
-                //else if (newJoin < oldJoin)
-                //    dropped++;
-                //if (newJoin > 0)
-                //    recruitableDiff++;
-                //if (oldJoin > 0)
-                //    recruitableDiff--;
-                //if (newJoin > -40)
-                //    recruitable40Diff++;
-                //if (oldJoin > -40)
-                //    recruitable40Diff--;
                 totalEntries[ii].JoinRate = newJoin;
                 MapFriendshipEvo(ii, totalEntries);
                 MapFormEvo(ii, totalEntries);
@@ -391,6 +375,136 @@ namespace DataGenerator.Data
                 for (int ii = 0; ii < personalities_out.Count; ii++)
                     file.WriteLine(personalities_out[ii]);
             }
+        }
+        public static IEnumerable<int> IterateEvosUpToGen(MonsterData[] totalEntries, int ii, int baselineIdx)
+        {
+            MonsterData monsterData = totalEntries[ii];
+            if (GetGenBoundary(ii) <= GetGenBoundary(baselineIdx))
+                yield return ii;
+
+            //all evos introduced before or during this mon's gen must be released
+            foreach (PromoteBranch branch in monsterData.Promotions)
+            {
+                int evoIdx = monsterKeys.IndexOf(branch.Result);
+                foreach (int evo in IterateEvosUpToGen(totalEntries, evoIdx, baselineIdx))
+                    yield return evo;
+            }
+        }
+
+        public static IEnumerable<int> IterateFamilyUpToGen(MonsterData[] totalEntries, int ii)
+        {
+            foreach (int evo in IterateEvosUpToGen(totalEntries, ii, ii))
+                yield return evo;
+
+            MonsterData monsterData = totalEntries[ii];
+
+            //all prevos introduced before or during this mon's gen must be released
+            MonsterData prevoData = monsterData;
+            while (!String.IsNullOrEmpty(prevoData.PromoteFrom))
+            {
+                int prevoIdx = monsterKeys.IndexOf(prevoData.PromoteFrom);
+                prevoData = totalEntries[prevoIdx];
+                
+                if (GetGenBoundary(prevoIdx) <= GetGenBoundary(ii))
+                {
+                    yield return prevoIdx;
+                }
+            }
+        }
+
+        public static bool IsFamilyReleased(MonsterData[] totalEntries, int ii)
+        {
+            foreach (int familyIdx in IterateFamilyUpToGen(totalEntries, ii))
+            {
+                if (!totalEntries[familyIdx].Released)
+                    return false;
+            }
+            return true;
+        }
+
+        public static int CalcBST(MonsterFormData form)
+        {
+            return form.BaseHP + form.BaseAtk + form.BaseDef + form.BaseMAtk + form.BaseMDef + form.BaseSpeed;
+        }
+
+        public static void WriteRescuePool(MonsterData[] totalEntries)
+        {
+            List<string> low = new List<string>();
+            List<string> mid = new List<string>();
+            List<string> high = new List<string>();
+
+            for (int ii = 1; ii < TOTAL_DEX; ii++)
+            {
+                string species_id = monsterKeys[ii];
+                for (int jj = 0; jj < totalEntries[ii].Forms.Count; jj++)
+                {
+                    bool include = !totalEntries[ii].Forms[jj].Temporary;
+                    
+
+                }
+
+                if (!IsFamilyReleased(totalEntries, ii))
+                    continue;
+
+                bool is_legend = false;
+                foreach (string legend in ZoneInfo.IterateLegendaries(true, true, true, true))
+                    if (legend == species_id)
+                        is_legend = true;
+
+                if (is_legend)
+                    continue;
+
+                int bst = CalcBST((MonsterFormData)totalEntries[ii].Forms[0]);
+                //High: BST >= 500
+                int tier = 0;
+                if (bst >= 500)
+                    tier = 2;
+                //Mid: BST >= 310 or a single stager
+                else if (bst >= 335)
+                    tier = 1;
+                else if (totalEntries[ii].Promotions.Count == 0 && String.IsNullOrEmpty(totalEntries[ii].PromoteFrom))
+                    tier = 1;
+                //Low: Everything else
+
+                //If the catch rate(not recruitment rate) is 45 or below, +1 stage
+                if (totalEntries[ii].JoinRate <= 45)
+                    tier += 1;
+
+                if (tier == 0)
+                    low.Add(species_id);
+                else if (tier == 1)
+                    mid.Add(species_id);
+                else
+                    high.Add(species_id);
+            }
+
+
+            string path = PathMod.ModPath(Path.Join("MODS", "Enable_Mission_Board", LuaEngine.SCRIPT_PATH, "enable_mission_board", "client_gen.lua"));
+            using (StreamWriter file = new StreamWriter(path))
+            {
+                file.Write("--[[\n" +
+                "    client_gen.lua\n" +
+                "    A generated collection of rescuees/outlaws\n" +
+                "]]--\n" +
+                "MISSION_GEN.POKEMON = {}\n" +
+                "\n" +
+                "MISSION_GEN.POKEMON[\"TIER_LOW\"] = {\n");
+                for (int ii = 0; ii < low.Count; ii++)
+                    low[ii] = "\"" + low[ii] + "\"";
+                file.Write(String.Join(", ", low));
+                file.Write("}\n\n");
+                file.Write("MISSION_GEN.POKEMON[\"TIER_MID\"] = {\n");
+                for (int ii = 0; ii < mid.Count; ii++)
+                    mid[ii] = "\"" + mid[ii] + "\"";
+                file.Write(String.Join(", ", mid));
+                file.Write("}\n\n");
+                file.Write("MISSION_GEN.POKEMON[\"TIER_HIGH\"] = {\n");
+                for (int ii = 0; ii < high.Count; ii++)
+                    high[ii] = "\"" + high[ii] + "\"";
+                file.Write(String.Join(", ", high));
+                file.Write("}\n\n");
+            }
+
         }
 
         public static MonsterData LoadZero()
@@ -2037,7 +2151,7 @@ namespace DataGenerator.Data
             skills.Insert(insertIdx, newSkill);
         }
 
-        public static void MapJoinRateCount(int dexIndex, MonsterData[] totalEntries, Dictionary<int, EvoPosition> evoStatus, Dictionary<EvoPosition, List<int>> evoBuckets)
+        public static void PreMapJoinRate(int dexIndex, MonsterData[] totalEntries, Dictionary<int, EvoPosition> evoStatus, Dictionary<EvoPosition, List<int>> evoBuckets)
         {
             MonsterData entry = totalEntries[dexIndex];
             int evoCount = 0;
@@ -2233,123 +2347,6 @@ namespace DataGenerator.Data
             newRate = Math.Round(newRate / 10) * 10;
 
             return (int)newRate;
-        }
-
-        public static int MapJoinRateOld(Dictionary<int, EvoPosition> evoStatus, int dexIndex, int origRate)
-        {
-            //special cases
-            switch (dexIndex)
-            {
-                //eeveelutions
-                case 134:
-                case 135:
-                case 136:
-                case 196:
-                case 197:
-                case 470:
-                case 471:
-                case 700:
-                    return -60;
-                //pseudolegend stage 1
-                case 147:
-                case 246:
-                case 371:
-                case 374:
-                case 443:
-                case 633:
-                case 704:
-                case 782:
-                case 885:
-                    return -5;
-                //pseudolegend stage 2
-                case 148:
-                case 247:
-                case 372:
-                case 375:
-                case 444:
-                case 634:
-                case 705:
-                case 783:
-                case 886:
-                    return -40;
-                //pseudolegend final
-                case 149:
-                case 248:
-                case 373:
-                case 376:
-                case 445:
-                case 635:
-                case 706:
-                case 784:
-                case 887:
-                    return -100;
-                //wandering legendaries
-                case 243:
-                case 244:
-                case 245:
-                    return -40;
-                //wandering unobtainables
-                case 251://celebi
-                case 647://keldeo
-                case 719://diancie
-                    return -50;
-                //UBs
-                case 793:
-                case 794:
-                case 795:
-                case 796:
-                case 797:
-                case 798:
-                case 799:
-                case 804:
-                case 805:
-                case 806:
-                    return -120;
-                case 803:
-                    return -80;
-                //heatran
-                case 485:
-                    return -60;
-
-            }
-
-            int newRate = 0;
-            switch (evoStatus[dexIndex])
-            {
-                case EvoPosition.SingleStage://single stager -20% to 70%
-                    newRate = origRate * 90 / 255 - 20;
-                    break;
-                case EvoPosition.First:
-                    {
-                        if (origRate <= 200)//0-200 -> 10% to 50%
-                            newRate = origRate * 40 / 200 + 10;
-                        else//200-255 -> 50% to 80%
-                            newRate = (origRate - 200) * 30 / 55 + 50;
-                    }
-                    break;
-                case EvoPosition.LastOf2://second stage -40% to 30%
-                    newRate = origRate * 70 / 255 - 40;
-                    break;
-                case EvoPosition.MidOf3://mid evos: -20% to 60%
-                    newRate = origRate * 80 / 255 - 20;
-                    break;
-                case EvoPosition.LastOf3://third stage: -60% to -10%
-                    newRate = origRate * 50 / 255 - 50;
-                    break;
-            }
-
-            //leave a gap at -50--40%, -25--15%, 0-10%, 25-35%
-            if (newRate < 50)
-            {
-                newRate += 100;
-                if ((newRate / 5) % 5 == 0)//round down
-                    newRate = newRate / 5 * 5;
-                else if ((newRate / 5) % 5 == 1)//round up
-                    newRate = (newRate / 5 + 1) * 5;
-                newRate -= 100;
-            }
-
-            return newRate;
         }
 
         private static decimal mapPercentile(List<int> sortedList, int val)

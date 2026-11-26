@@ -157,6 +157,8 @@ namespace DataGenerator.Data
                 yield return "mewtwo";
             if (mythical)
                 yield return "mew";
+            if (oddLegend)
+                yield return "unown";
             if (subLegend)
             {
                 yield return "entei";
@@ -355,6 +357,11 @@ namespace DataGenerator.Data
             {
                 yield return "koraidon";
                 yield return "miraidon";
+            }
+            if (oddLegend)
+            {
+                yield return "walking_wake";
+                yield return "iron_leaves";
             }
         }
 
